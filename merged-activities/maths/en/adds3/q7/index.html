@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+            href="../img/favicon.ico"
+            rel="shortcut icon"
+            sizes="32x32"
+            type="image/png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Adding-Subtract Numbers</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="./style/animation4.css" rel="stylesheet" type="text/css"/>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="../js/DragDropTouch.js"></script>
+</head>
+
+<body onload="setScore()">
+<div id="app">
+    <div class="exit-message">
+        Exit here
+        <i class="fa fa-angle-double-right"
+           style="font-size: 25px; font-weight: bold; transform: rotate(-90deg); margin-left: 5px"></i>
+    </div>
+
+    <div class="popup-container">
+        <div class="popup">
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+
+            <div class="popup-upper">
+                <div class="popup-check-icon">
+                    <img class="star-img" src="./img/star.gif" alt=""/>
+                    <img class="star-img" src="./img/star.gif" alt=""/>
+                    <img class="star-img" src="./img/star.gif" alt=""/>
+                </div>
+            </div>
+            <div class="popup-lower">
+                <div class="popup-great"><label id="salutation">Fluent Pro</label>!</div>
+                <div class="popup-msg">
+                    Your score: <label id="final-score">3</label> points
+                </div>
+                <div class="popup-action" onclick="switchQuestion()">
+                    <p>Play Again</p>&#160;
+                    <i class="fa fa-refresh" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container" style="margin-left: 1%">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">ANSWERED</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content"><span id="question-count">7</span><span
+                        class="all-count">/7</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">TIME</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <label
+                            id="timerhrs">00</label>:<label id="timermin">00</label>:<label
+                        id="timersec">00</label> H
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">SCORE</div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <label id="current-score">0</label>
+                </div>
+            </div>
+        </div>
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q65">
+                    <div class="question-title-box">
+                        <i class='fa fa-volume-up'
+                           onclick="playSound('Each picture below has a value shown in the boxes below.')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title-text">Each picture below has a value shown in the boxes below.</span>
+                    </div>
+                    <div>
+                        <div class="q5-image-value-container" style="margin-bottom: 5px">
+                            <div class="q5-image-value-div" style="margin-right: 50px">
+                                <div>
+                                    <img alt="" class="q5-grid-image-style" src="./img/fish_1.svg">
+                                </div>
+                                <div class="q5-maya-blue">= 15</div>
+                            </div>
+                            <div class="q5-image-value-div">
+                                <div>
+                                    <img alt="" class="q5-grid-image-style" src="./img/fish_3.svg">
+                                </div>
+                                <div class="q5-maya-blue"><span>= 28</span></div>
+                            </div>
+                        </div>
+                        <div class="q5-image-value-container" style="margin-bottom: 20px">
+                            <div class="q5-image-value-div" style="margin-right: 50px">
+                                <div>
+                                    <img alt="" class="q5-grid-image-style" src="./img/fish_4.svg">
+                                </div>
+                                <div class="q5-maya-blue"><span>= 32</span></div>
+                            </div>
+                            <div class="q5-image-value-div">
+                                <div>
+                                    <img alt="" class="q5-grid-image-style" src="./img/fish_2.svg">
+                                </div>
+                                <div class="q5-maya-blue"><span>= 19</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question-title-box">
+                        <i class='fa fa-volume-up'
+                           onclick="playSound('Work out the total of each horizontal and vertical line of the puzzle.')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title-text">Work out the total of each horizontal and vertical line of the puzzle.</span>
+                    </div>
+                    <div style="display: flex; justify-content: center">
+                        <div class="q5-image-grid">
+                            <div class="q5-grid-image-column">
+                                <div class="q5-grid-image-row-value">
+                                    <div style="height: 100%; width: 100%"><span></span></div>
+                                </div>
+                            </div>
+
+                            <div class="q5-grid-image-column">
+                                <div class="q5-grid-image-row">
+                                    <img alt="" class="q5-grid-image-style" src="./img/fish_3.svg">
+                                </div>
+                                <div class="q5-grid-image-row-value">
+                                    +
+                                </div>
+                                <div class="q5-grid-image-row">
+                                    <img alt="" class="q5-grid-image-style" src="./img/fish_1.svg">
+                                </div>
+                                <div class="q5-grid-image-row-value" style="height: 40px">
+                                    =
+                                </div>
+                                <div class="q5-grid-image-row" style="height: 20px">
+                                    <div>
+                                        <input class="q5-image-value-input"
+                                               id="q65input1" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="q5-grid-image-column">
+                                <div class="q5-grid-image-row">
+                                    +
+                                </div>
+                                <div class="q5-grid-image-row-value">
+                                </div>
+                                <div class="q5-grid-image-row">
+                                    +
+                                </div>
+                                <div class="q5-grid-image-row-value" style="height: 40px">
+                                </div>
+                                <div class="q5-grid-image-row" style="height: 20px">
+                                </div>
+                            </div>
+                            <div class="q5-grid-image-column">
+                                <div class="q5-grid-image-row">
+                                    <img alt="" class="q5-grid-image-style" src="./img/fish_4.svg">
+                                </div>
+                                <div class="q5-grid-image-row-value">
+                                    +
+                                </div>
+                                <div class="q5-grid-image-row">
+                                    <img alt="" class="q5-grid-image-style" src="./img/fish_2.svg">
+                                </div>
+                                <div class="q5-grid-image-row-value" style="height: 40px">
+                                    =
+                                </div>
+                                <div class="q5-grid-image-row" style="height: 20px">
+                                    <div>
+                                        <input class="q5-image-value-input"
+                                               id="q65input2" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="q5-grid-image-column">
+                                <div class="q5-grid-image-row">
+                                    +
+                                </div>
+                                <div class="q5-grid-image-row-value">
+                                </div>
+                                <div class="q5-grid-image-row">
+                                    +
+                                </div>
+                                <div class="q5-grid-image-row-value" style="height: 40px">
+                                </div>
+                                <div class="q5-grid-image-row" style="height: 20px">
+                                </div>
+                            </div>
+                            <div class="q5-grid-image-column">
+                                <div class="q5-grid-image-row">
+                                    <img alt="" class="q5-grid-image-style" src="./img/fish_4.svg">
+                                </div>
+                                <div class="q5-grid-image-row-value">
+                                    +
+                                </div>
+                                <div class="q5-grid-image-row">
+                                    <img alt="" class="q5-grid-image-style" src="./img/fish_3.svg">
+                                </div>
+                                <div class="q5-grid-image-row-value" style="height: 40px">
+                                    =
+                                </div>
+                                <div class="q5-grid-image-row" style="height: 20px">
+                                    <div>
+                                        <input class="q5-image-value-input"
+                                               id="q65input3" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="q5-grid-image-column">
+                                <div class="q5-grid-image-row">
+                                    =
+                                </div>
+                                <div class="q5-grid-image-row-value">
+                                </div>
+                                <div class="q5-grid-image-row">
+                                    =
+                                </div>
+                                <div class="q5-grid-image-row-value" style="height: 40px">
+                                </div>
+                                <div class="q5-grid-image-row" style="height: 20px">
+                                </div>
+                            </div>
+                            <div class="q5-grid-image-column">
+                                <div class="q5-grid-image-row" style="justify-content:left">
+                                    <div class="q5-span-value">
+                                        <div>&nbsp;92</div>
+                                    </div>
+                                </div>
+                                <div class="q5-grid-image-row-value">
+                                </div>
+                                <div class="q5-grid-image-row" style="justify-content:left">
+                                    <div>
+                                        <input class="q5-image-value-input"
+                                               id="q65input4" type="text">
+                                    </div>
+                                </div>
+                                <div class="q5-grid-image-row-value" style="height: 40px">
+                                </div>
+                                <div class="q5-grid-image-row" style="height: 20px">
+                                    <div style="height: 100%; width: 100%"><span></span></div>
+                                </div>
+                            </div>
+                            <div class="q5-grid-image-column">
+                                <div class="q5-grid-image-row-value">
+                                    <div style="height: 100%; width: 100%"><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="submit-button-div">
+                        <button class="q65-submit-button" onclick="q65CheckMissingValuesAll('q65')">Submit</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="./js/app.js"></script>
+
+</body>
+</html>

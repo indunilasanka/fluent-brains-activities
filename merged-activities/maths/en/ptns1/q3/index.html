@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <link href="../img/favicon.ico" rel="shortcut icon" sizes="32x32" type="image/png"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pattern</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="./style/animation4.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="../js/DragDropTouch.js"></script>
+</head>
+
+<body onload="setScore()">
+<div id="app">
+    <div class="popup-container">
+        <div class="popup">
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+
+            <div class="popup-upper">
+                <div class="popup-close-icon" onclick="switchQuestion()" style="font-size: 15px">
+                    <i class="fa fa-times close-icon"></i>
+                </div>
+                <div class="popup-check-icon">
+                    <img alt="" class="check-img" id="starId1" src="./img/great.gif"/>
+                </div>
+                <div class="popup-action" onclick="switchQuestion()">
+                    <p>Next Challenge</p>&#160;
+                    <i class="fa fa-arrow-circle-right" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+
+        <!-- Info panel -->
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container" style="margin-left: 1%">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">ANSWERED</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content"><span id="question-count">3</span><span
+                        class="all-count">/4</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">TIME</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <label id="timerhrs">00</label>:<label id="timermin">00</label>:<label id="timersec">00</label>
+                    H
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">SCORE</div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <label id="current-score">0</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question panel -->
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q5">
+                    <!-- Question title -->
+                    <div class="question-title-box">
+                        <i class="fa fa-volume-up" onclick="playSound('Guess the next step in the pattern.')"
+                           style="font-size: 20px; color: #419ae2; cursor: pointer"></i>
+                        <span class="question-title-text">Guess the next step in the pattern?</span>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        <div class="q5-qpanel-1">
+                            <div class="q5-dd-grid-ans-box-row">
+                                <div class="q5-dd-grid-ans-box-column" id="p5block1">
+                                    <img alt="" class="q5-ptrn-svg" src="./img/brown_tea.svg" srcset=""/>
+                                </div>
+                                <div class="q5-dd-grid-ans-box-column" id="p5block2">
+                                    <img alt="" class="q5-ptrn-svg" src="./img/yellow_tea.svg" srcset=""/>
+                                </div>
+                                <div class="q5-dd-grid-ans-box-column" id="p5block3">
+                                    <img alt="" class="q5-ptrn-svg" src="./img/brown_tea.svg" srcset=""/>
+                                </div>
+                                <div class="q5-dd-grid-ans-box-column" id="p5block4">
+                                    <img alt="" class="q5-ptrn-svg" src="./img/yellow_tea.svg" srcset=""/>
+                                </div>
+
+                                <div class="q5-dd-grid-ans-box-column">
+                                    <div class="drop-back" id="p5block7">
+                                        <div class="q5-answer-box-drop-div" draggable="true"
+                                             ondragover="allowDrop(event)"
+                                             ondragstart="drag(event)" ondrop="drop(event)"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="q5-answer-drop-container">
+                            <div class="q5-answer-drop-div">
+                                <img alt="" canswer="p5-2" class="q5-ptrn-svg" draggable="true"
+                                     id="q1answerp5-2"
+                                     ondragover="allowDrop(event)" ondragstart="drag(event)" ondrop="drop(event)"
+                                     src="./img/yellow_tea.svg" srcset=""/>
+                            </div>
+
+                            <div class="q5-animal-container">
+                                <img alt="" class="q5-animal-img" src="./img/elephant_face.svg"/>
+                            </div>
+
+                            <div class="q5-answer-drop-div">
+                                <img alt="" canswer="p5-4" class="q5-ptrn-svg" draggable="true"
+                                     id="q1answerp5-4"
+                                     ondragover="allowDrop(event)" ondragstart="drag(event)" ondrop="drop(event)"
+                                     src="./img/brown_tea.svg"
+                                     srcset=""/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <div style="display: flex; justify-content: center; margin-top: 20px;">
+                        <button class="submit-button" onclick="submitAnswerQ5()">
+                            Submit
+                        </button>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="./js/app.js"></script>
+</body>
+
+</html>

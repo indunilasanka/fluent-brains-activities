@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+            href="../img/favicon.ico"
+            rel="shortcut icon"
+            sizes="32x32"
+            type="image/png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Adding-Subtract Numbers</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="./style/animation2.css" rel="stylesheet" type="text/css"/>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="../js/DragDropTouch.js"></script>
+</head>
+
+<body onload="setScore()">
+<div id="app">
+
+    <div class="popup-container">
+        <div class="popup">
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+
+            <div class="popup-upper">
+                <div class="popup-close-icon" onclick="switchQuestion()" style="font-size: 15px">
+                    <i class="fa fa-times close-icon"></i>
+                </div>
+                <div class="popup-check-icon">
+                    <img alt="" class="check-img" id="starId1" src="./img/excellent.gif"/>
+                </div>
+                <div class="popup-action" onclick="switchQuestion()">
+                    <p>ඊළඟ අභියෝගය</p>&#160;
+                    <i class="fa fa-arrow-circle-right" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container" style="margin-left: 1%">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">ක්‍රියාකාරකම</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content"><span id="question-count">3</span><span
+                        class="all-count">/5</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">කාලය</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <label
+                            id="timerhrs">00</label>:<label id="timermin">00</label>:<label
+                        id="timersec">00</label> H
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">ලකුණු</div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <label id="current-score">0</label>
+                </div>
+            </div>
+        </div>
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q5">
+                    <div class="question-title-box">
+                        <i class='fa fa-volume-up'
+                           onclick="playTitleSin('පහත දැක්වෙන පරිදි සෑම පළතුරකටම අගයක් ඇත')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title-text">පහත දැක්වෙන පරිදි සෑම පළතුරකටම අගයක් ඇත</span>
+                    </div>
+                    <div>
+                        <div class="q5-image-value-container" style="margin-bottom: 5px">
+                            <div class="q5-image-value-div" style="margin-right: 50px">
+                                <div>
+                                    <img alt="" class="q5-grid-image-style" src="./img/apple.svg">
+                                </div>
+                                <div class="q5-maya-blue">= 5</div>
+                            </div>
+                            <div class="q5-image-value-div">
+                                <div>
+                                    <img alt="" class="q5-grid-image-style" src="./img/pear.svg">
+                                </div>
+                                <div class="q5-maya-blue"><span>= 3</span></div>
+                            </div>
+                        </div>
+                        <div class="q5-image-value-container" style="margin-bottom: 20px">
+                            <div class="q5-image-value-div" style="margin-right: 50px">
+                                <div>
+                                    <img alt="" class="q5-grid-image-style" src="./img/pineapple.svg">
+                                </div>
+                                <div class="q5-maya-blue"><span>= 1</span></div>
+                            </div>
+                            <div class="q5-image-value-div">
+                                <div>
+                                    <img alt="" class="q5-grid-image-style" src="./img/grapes.svg">
+                                </div>
+                                <div class="q5-maya-blue"><span>= 4</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question-title-box">
+                        <i class='fa fa-volume-up'
+                           onclick="playTitleSin('පහත වගුවේ තිරස් හා සිරස් පේලි වල එකතුව ගණනය කරන්න')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title-text">පහත වගුවේ තිරස් හා සිරස් පේලි වල එකතුව ගණනය කරන්න?</span>
+                    </div>
+                    <div style="display: flex; justify-content: center">
+                        <div class="q5-image-grid">
+                            <div class="q5-grid-image-column">
+                                <div class="q5-grid-image-row-value">
+                                    <div style="height: 100%; width: 100%"><span></span></div>
+                                </div>
+                            </div>
+
+                            <div class="q5-grid-image-column">
+                                <div class="q5-grid-image-row">
+                                    <img alt="" class="q5-grid-image-style" src="./img/pear.svg">
+                                </div>
+                                <div class="q5-grid-image-row-value">
+                                    +
+                                </div>
+                                <div class="q5-grid-image-row">
+                                    <img alt="" class="q5-grid-image-style" src="./img/apple.svg">
+                                </div>
+                                <div class="q5-grid-image-row-value" style="height: 40px">
+                                    =
+                                </div>
+                                <div class="q5-grid-image-row" style="height: 20px">
+                                    <div>
+                                        <input class="q5-image-value-input"
+                                               id="q5input1" type="text">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="q5-grid-image-column">
+                                <div class="q5-grid-image-row">
+                                    +
+                                </div>
+                                <div class="q5-grid-image-row-value">
+                                </div>
+                                <div class="q5-grid-image-row">
+                                    +
+                                </div>
+                                <div class="q5-grid-image-row-value" style="height: 40px">
+                                </div>
+                                <div class="q5-grid-image-row" style="height: 20px">
+                                </div>
+                            </div>
+                            <div class="q5-grid-image-column">
+                                <div class="q5-grid-image-row">
+                                    <img alt="" class="q5-grid-image-style" src="./img/pineapple.svg">
+                                </div>
+                                <div class="q5-grid-image-row-value">
+                                    +
+                                </div>
+                                <div class="q5-grid-image-row">
+                                    <img alt="" class="q5-grid-image-style" src="./img/grapes.svg">
+                                </div>
+                                <div class="q5-grid-image-row-value" style="height: 40px">
+                                    =
+                                </div>
+                                <div class="q5-grid-image-row" style="height: 20px">
+                                    <div>
+                                        <input class="q5-image-value-input"
+                                               id="q5input2" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="q5-grid-image-column">
+                                <div class="q5-grid-image-row">
+                                    +
+                                </div>
+                                <div class="q5-grid-image-row-value">
+                                </div>
+                                <div class="q5-grid-image-row">
+                                    +
+                                </div>
+                                <div class="q5-grid-image-row-value" style="height: 40px">
+                                </div>
+                                <div class="q5-grid-image-row" style="height: 20px">
+                                </div>
+                            </div>
+                            <div class="q5-grid-image-column">
+                                <div class="q5-grid-image-row">
+                                    <img alt="" class="q5-grid-image-style" src="./img/pineapple.svg">
+                                </div>
+                                <div class="q5-grid-image-row-value">
+                                    +
+                                </div>
+                                <div class="q5-grid-image-row">
+                                    <img alt="" class="q5-grid-image-style" src="./img/apple.svg">
+                                </div>
+                                <div class="q5-grid-image-row-value" style="height: 40px">
+                                    =
+                                </div>
+                                <div class="q5-grid-image-row" style="height: 20px">
+                                    <div>
+                                        <input class="q5-image-value-input"
+                                               id="q5input3" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="q5-grid-image-column">
+                                <div class="q5-grid-image-row">
+                                    =
+                                </div>
+                                <div class="q5-grid-image-row-value">
+                                </div>
+                                <div class="q5-grid-image-row">
+                                    =
+                                </div>
+                                <div class="q5-grid-image-row-value" style="height: 40px">
+                                </div>
+                                <div class="q5-grid-image-row" style="height: 20px">
+                                </div>
+                            </div>
+                            <div class="q5-grid-image-column">
+                                <div class="q5-grid-image-row" style="justify-content:left">
+                                    <div class="q5-span-value">
+                                        <div>&nbsp;5</div>
+                                    </div>
+                                </div>
+                                <div class="q5-grid-image-row-value">
+                                </div>
+                                <div class="q5-grid-image-row" style="justify-content:left">
+                                    <div>
+                                        <input class="q5-image-value-input"
+                                               id="q5input4" type="text">
+                                    </div>
+                                </div>
+                                <div class="q5-grid-image-row-value" style="height: 40px">
+                                </div>
+                                <div class="q5-grid-image-row" style="height: 20px">
+                                    <div style="height: 100%; width: 100%"><span></span></div>
+                                </div>
+                            </div>
+                            <div class="q5-grid-image-column">
+                                <div class="q5-grid-image-row-value">
+                                    <div style="height: 100%; width: 100%"><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="submit-button-div">
+                        <button class="q5-submit-button" onclick="q5CheckMissingValuesAll('q5')">තහවුරු කරන්න</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="./js/app.js"></script>
+
+</body>
+</html>

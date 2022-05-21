@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+            href="../img/favicon.ico"
+            rel="shortcut icon"
+            sizes="32x32"
+            type="image/png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Adding-Subtract Numbers</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="./style/animation2.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="../js/DragDropTouch.js"></script>
+</head>
+
+<body onload="setScore()">
+<div id="app">
+    <div class="exit-message">
+        Exit here
+        <i class="fa fa-angle-double-right"
+           style="font-size: 25px; font-weight: bold; transform: rotate(-90deg); margin-left: 5px"></i>
+    </div>
+    <div class="popup-container">
+        <div class="popup">
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+
+            <div class="popup-upper">
+                <div class="popup-check-icon">
+                    <img class="star-img" src="./img/star.gif" alt=""/>
+                    <img class="star-img" src="./img/star.gif" alt=""/>
+                    <img class="star-img" src="./img/star.gif" alt=""/>
+                </div>
+            </div>
+            <div class="popup-lower">
+                <div class="popup-great"><label id="salutation">Fluent Brainer</label>!</div>
+                <div class="popup-msg">
+                    Your score: <label id="final-score">3</label> points
+                </div>
+                <div class="popup-action" onclick="switchQuestion()">
+                    <p>Play Again</p>&#160;
+                    <i class="fa fa-refresh" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container" style="margin-left: 1%">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">ANSWERED</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content"><span id="question-count">5</span><span
+                        class="all-count">/5</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">TIME</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <label
+                            id="timerhrs">00</label>:<label id="timermin">00</label>:<label
+                        id="timersec">00</label> H
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">SCORE</div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <label id="current-score">0</label>
+                </div>
+            </div>
+        </div>
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q8">
+                    <div class="question-title-box">
+                        <i class='fa fa-volume-up'
+                           onclick="playSound('Which addition sentence does this model show?')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title-text">Which addition sentence does this model show?</span>
+                    </div>
+                    <div style="display: flex; justify-content:center;">
+                        <div class="q8-number-line-container">
+                            <div class="q8-number-line-image">
+                                <img src="./img/number_line.svg" style="width: 100%; height: 100%">
+                            </div>
+                            <div class="q8-number-line-answer">
+                                <button class="q8-answer-number-button" id="q8input1"
+                                        onclick="q8handleAnswerClick('q8input1', 0)">4+3=7
+                                </button>
+                                <button class="q8-answer-number-button" id="q8input2"
+                                        onclick="q8handleAnswerClick('q8input2', 0)">2+4=6
+                                </button>
+                                <button class="q8-answer-number-button" id="q8input3"
+                                        onclick="q8handleAnswerClick('q8input3', 0)">3+5=8
+                                </button>
+                                <button class="q8-answer-number-button" id="q8input4"
+                                        onclick="q8handleAnswerClick('q8input4', 1)">4+5=9
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="./js/app.js"></script>
+</body>
+</html>
