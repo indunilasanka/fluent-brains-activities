@@ -1,0 +1,1337 @@
+body {
+    font-family: Verdana, sans-serif;
+
+    color: #222;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px 10PX;
+}
+
+i.vol-icon {
+    font-size: 20px;
+    color: #419ae2;
+    cursor: pointer
+}
+
+/* Info-Panel styles start --------------------------------------------*/
+
+.info-panel {
+    text-align: center;
+    margin: 5px;
+}
+
+.stats-container {
+    float: left;
+    margin-right: 1%;
+    width: 32%;
+    border-radius: 0.5rem;
+}
+
+.problems-attempted-stats-container,
+.score-and-link-container,
+.time-elapsed-stats-container {
+    background-color: #E3E3E3C6;
+}
+
+.txt-question-answered {
+    display: block !important;
+}
+
+.txt-time-elapsed {
+    display: block;
+}
+
+.stats-content {
+    text-align: center;
+    align-content: center;
+}
+
+.problems-attempted-stats-content {
+    color: #777368;
+    font: bold 25px Verdana, sans-serif;
+    padding: 0.2rem;
+}
+
+.score-stats-content {
+    color: #777368;
+    font: bold 25px Verdana, sans-serif;
+    padding: 0.2rem;
+}
+
+.time-elapsed-stats-content {
+    padding: 0.22rem;
+}
+
+.practice-timer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.practice-timer td {
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+    color: #586656;
+    font-size: 12px;
+    height: 22px;
+    line-height: 1em;
+    padding-top: 1px;
+    text-align: center;
+    vertical-align: middle;
+    width: 50px;
+    border-radius: 0.2rem;
+}
+
+.stats-header {
+    box-sizing: border-box;
+    color: #fff;
+    font: 12px Verdana, sans-serif;
+    padding: 6px;
+    text-align: center;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.all-count {
+    font-size: 15px;
+    color: black;
+}
+
+.problems-attempted-stats-header {
+    background-color: #46cd46;
+}
+
+.time-elapsed-stats-header {
+    background-color: #419ae2;
+}
+
+.score-stats-header {
+    background-color: #e05d7c;
+}
+
+/* info-panel styles End -------------------------------------*/
+
+/* Question style start ------------------------------------ */
+
+.question-title {
+    font: 20px Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+
+.submit-button {
+    cursor: pointer;
+    padding: .5rem 1rem;
+    color: white;
+    font: 1rem Verdana, sans-serif;
+    background-color: #46cd46;
+    border: 1px solid transparent;
+    border-radius: 0.2rem;
+}
+
+.submit-button:hover {
+    background-color: #40af40;
+}
+
+.clear-button {
+    cursor: pointer;
+    margin: 20px auto;
+    margin-bottom: 0;
+    padding: .5rem 1rem;
+    color: white;
+    font: 1rem Verdana, sans-serif;
+    background-color: gray;
+    border: 1px solid transparent;
+    border-radius: 0.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Q2 --------------------- */
+#q2 .submit-button {
+    margin-top: 20px;
+}
+
+.data-list {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.data-list .data-list-title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #46cd46;
+}
+
+.data-list .data-list-all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.data-list .data-list-all div {
+    margin-right: 30px;
+}
+
+/* Q3 ------------------------ */
+
+.baseball-table {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.baseball-table th,
+.baseball-table td {
+    border: 1px solid #4FAEFFFF;
+
+}
+
+.t-head-01 th {
+    background: #40af40;
+    color: white;
+    font-weight: 500;
+
+}
+
+.t-head-02 th {
+    background: #46cd46;
+    color: white;
+    font-weight: 500;
+}
+
+/* Q5 & Q6 ------------------------ */
+
+.data-table {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.data-table img {
+    width: 40px;
+}
+
+
+/* Q7 ------------------------------- */
+
+#q7 .data-list .data-list-title {
+    font-size: 17px;
+    color: black;
+}
+
+#q7 .data-list .data-list-all {
+    font-size: 16px;
+}
+
+.stem-leaf {
+    margin-left: 10px;
+}
+
+.stem-leaf-title {
+    margin-bottom: 20px;
+    font-size: 17px;
+    width: 35%;
+    text-align: center;
+}
+
+.stem-leaf td {
+    border: none;
+}
+
+.stem-leaf table {
+    border: none;
+    width: 35%;
+    font-size: 17px;
+}
+
+.stem-leaf thead {
+    border-top: 1px solid #4FAEFFFF;
+    border-bottom: 1px solid #4FAEFFFF;
+}
+
+.stem-leaf tbody td {
+    text-align: center;
+    width: 20%;
+}
+
+.stem-leaf .stem {
+    border-right: 1px solid #4FAEFFFF;
+    text-align: end;
+}
+
+/* Q8 ------------------------------------- */
+
+.pet-data-table {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.pet-data-table th {
+    border: 1px solid #3B95E0FF;
+    background: #4FAEFFFF;
+    color: white;
+    font-size: 17px;
+}
+
+.pet-data-table td {
+    border: 1px solid #4FAEFFFF;
+}
+
+.pet-table {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #4FAEFFFF;
+}
+
+.pet-table td {
+    border: none;
+}
+
+.pet-table thead {
+    background: #40af40;
+    color: white;
+}
+
+.pet-table tbody th {
+    background: #46cd46;
+    color: white;
+}
+
+.pet-table th,
+.pet-table tr {
+    border: 1px solid #4FAEFFFF;
+}
+
+.pet-table img {
+    width: 50px;
+}
+
+.pet-table .dog img {
+    cursor: pointer;
+}
+
+.pet-symbol {
+    margin-left: 10px;
+    width: 40%;
+    text-align: center;
+}
+
+
+.pet-data-table ol li {
+    display: inline-block;
+    height: 20px;
+    border: 1px solid #000;
+}
+
+.pet-data-table ol li:nth-child(5n) {
+    transform: rotate(300deg);
+    height: 30px;
+    position: relative;
+    left: -20px;
+    top: 5px;
+    margin-top: -10px;
+}
+
+/* q14 ----------------------------- */
+.venn-img img {
+    margin-left: 10px;
+    width: 38%;
+}
+
+/* q15 ----------------------------- */
+.venn-img2 img {
+    margin-left: 10px;
+    width: 40%;
+}
+
+/* Question style end --------------------------------------- */
+
+/* Venn diagram style start--------------------------------- */
+
+.circle-left,
+.circle-right,
+.venn-middle {
+    display: inline-block;
+
+}
+
+.venn-title-left,
+.venn-title-right {
+    display: block;
+}
+
+.circle-left {
+    margin-left: 10px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #4FAEFFFF;
+    border-radius: 50%;
+    position: relative;
+}
+
+.circle-right {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #4FAEFFFF;
+    border-radius: 50%;
+    position: relative;
+    left: -300px;
+    margin-right: -300px;
+}
+
+.venn-middle {
+    width: 140px;
+    height: 220px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    /* border: 1px solid red; */
+    border-radius: 43%;
+    position: relative;
+    left: -150px;
+}
+
+.venn-title-left {
+    border: 1px solid #4FAEFFFF;
+    border-radius: 2px;
+    width: 80px;
+    position: relative;
+    left: 100px;
+    top: -310px;
+    font-size: 16px;
+    color: #4FAEFFFF;
+    padding: 2px;
+    background: white;
+    margin-bottom: -50px;
+}
+
+#q13 .venn-title-left {
+    width: 70px;
+}
+
+.venn-title-right {
+    border: 1px solid #4FAEFFFF;
+    border-radius: 2px;
+    width: 90px;
+    position: relative;
+    left: 280px;
+    top: -287px;
+    font-size: 16px;
+    color: #4FAEFFFF;
+    padding: 2px;
+    background: white;
+}
+
+#q13 .venn-title-right {
+    width: 70px;
+}
+
+.venn-content {
+    /* border: 1px solid red; */
+    z-index: 1;
+    width: 49%;
+    height: 70%;
+    border-radius: 50%;
+    margin-top: 40px;
+
+}
+
+.circle-left .venn-content {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.venn-middle .venn-content {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-right .venn-content {
+    position: absolute;
+    left: 51%;
+    top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.venn-content div {
+    margin: 2px;
+    width: 50px;
+    height: 50px;
+}
+
+.venn-content img {
+    width: 45px;
+    height: 45px;
+}
+
+/* Venn diagram style end ---------------------------------- */
+
+/* Bar chart style start ------------------------------- */
+
+.bar-chart {
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+
+#q-graph {
+    position: relative;
+    width: 420px;
+    height: 320px;
+    padding: 0;
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid #3B95E0FF;
+    border-left: 2px solid #3B95E0FF;
+}
+
+#q-graph caption {
+    letter-spacing: 0.5px;
+    z-index: 10;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+#q-graph tr,
+#q-graph th,
+#q-graph td {
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#q-graph #bar1 td:hover {
+    background: #46cd46;
+    opacity: 0.5;
+    border: 2px dotted black;
+    border-bottom: none;
+}
+
+#q-graph #bar2 {
+    left: 62px;
+
+}
+
+#q-graph #bar3 {
+    left: 123px;
+}
+
+#q-graph #bar4 {
+    left: 184px;
+}
+
+#q-graph #bar5 {
+    left: 245px;
+}
+
+#q-graph tbody th {
+    bottom: -25px;
+    font-weight: normal;
+    border: none;
+}
+
+#q-graph .bar {
+    width: 60px;
+    border: 1px solid #3B95E0FF;
+    border-bottom: none;
+}
+
+#q-graph #bar1 .bar {
+    border: none;
+}
+
+#q-graph #bar3 .sent,
+#q-graph #bar5 .sent {
+    background: #40af40;
+}
+
+#q-graph #bar2 .sent,
+#q-graph #bar4 .sent {
+    background: #B17BFB;
+}
+
+#ticks {
+    position: relative;
+    top: -300px;
+    z-index: 1;
+    margin-bottom: -300px;
+    font-size: 15px;
+}
+
+#ticks .tick {
+    position: relative;
+    border-bottom: 1px dotted #4FAEFFFF;
+    width: 400px;
+}
+
+#ticks .tick1 {
+    position: relative;
+    width: 400px;
+}
+
+#ticks .tick5 {
+    position: relative;
+    width: 400px;
+    border-top: 1px dotted #4FAEFFFF;
+    border-bottom: 1px dotted #4FAEFFFF;
+}
+
+#ticks p {
+    position: absolute;
+    left: -15px;
+    top: -25px;
+}
+
+.x-bar-text {
+    transform: rotate(-90deg);
+    transform-origin: left;
+    position: relative;
+    width: 200px;
+    left: -40px;
+    top: -100px;
+}
+
+.y-bar-text {
+    position: relative;
+    left: 8%;
+    top: 20px;
+}
+
+
+/* Bar chart style end --------------------------------- */
+
+/* Line graph style start ------------------------------ */
+
+.line-graph {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Line graph style end ------------------------------ */
+
+/* Pie chart q9, q12 style start ---------------------------- */
+
+.pie {
+    margin-left: 10px;
+    width: 45%;
+}
+
+/* Pie chart q9, q12  style end ------------------------------ */
+
+
+/* Pie chart q10 style start ---------------------------- */
+
+.pie-chart2 {
+    background: radial-gradient(circle closest-side,
+    transparent 95%,
+    white 0),
+    conic-gradient(from 309deg,
+            #e6a9ec 0,
+            #e6a9ec 14.29%,
+            #f7b386 0,
+            #f7b386 42.86%,
+            #84ddf7 0,
+            #84ddf7 57.14%,
+            #f7dc6b 0,
+            #f7dc6b 85.71%,
+            #b9b9f9 0,
+            #b9b9f9 100%);
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+}
+
+.pie-items2 {
+    position: relative;
+    bottom: 140px;
+    left: +500px;
+    width: 200px;
+    margin-bottom: -100px;
+}
+
+.pie-items2 span:after {
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 15px;
+    border-radius: 0.2em;
+    background: currentColor;
+}
+
+
+/* Pie chart q10 style end ------------------------------ */
+
+/* Pie chart q11 style start ---------------------------- */
+
+.pie-chart3 {
+    background: radial-gradient(circle closest-side,
+    transparent 95%,
+    white 0),
+    conic-gradient(from 306deg,
+            #f7b386 0,
+            #f7b386 65%,
+            #84ddf7 0,
+            #84ddf7 80%,
+            #f7dc6b 0,
+            #f7dc6b 100%);
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+}
+
+.pie-items3 {
+    position: relative;
+    bottom: 70px;
+    left: +500px;
+    width: 180px;
+    margin-bottom: -50px;
+}
+
+.pie-items3 span:after {
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 15px;
+    border-radius: 0.2em;
+    background: currentColor;
+}
+
+
+/* Pie chart q11 style end ------------------------------ */
+
+/* Start Answer style ------------------------------- */
+
+.answer-grid-row {
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#q13 .answer-grid-row {
+    margin: 0;
+}
+
+.answer-grid-column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#q12 .answer-grid-column {
+    width: 450px;
+}
+
+.question-text {
+    font-size: 17px;
+}
+
+.question-text p {
+    margin: 10px 1px;
+    line-height: 25px;
+}
+
+#q5 .question-text,
+#q6 .question-text {
+    width: 50%;
+}
+
+.answer-text-input-line {
+    border: none;
+    width: 100px;
+    font-size: 15px;
+    display: inline-block;
+    border-bottom: 1px dashed #000;
+    text-align: center;
+    padding: 0 !important;
+}
+
+#q6 .answer-text-input-line {
+    width: 200px;
+}
+
+
+.answer-text-input-line:focus {
+    outline: none;
+}
+
+.answer-grid-input {
+    border: solid 1px #4FAEFFFF;
+    width: auto;
+    font-size: 17px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+.answer-grid-input:focus {
+    outline: none;
+    border: solid 1px #3B95E0FF;
+}
+
+.answer-grid-box-unfilled {
+    text-align: center;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: 0.5rem 0.5rem;
+    font: 19px Verdana, sans-serif;
+    border: 1px solid #4FAEFFFF;
+    border-radius: 2px;
+}
+
+.answer-grid-box-unfilled:hover {
+    border: 1px solid #3B95E0FF;
+}
+
+#q10 .answer-grid-box-unfilled {
+    width: 40px;
+}
+
+#q14 .answer-grid-box-unfilled {
+    width: 40px;
+}
+
+#q15 .answer-grid-box-unfilled {
+    width: 40px;
+}
+
+/* Q1, q13 --------------------- */
+
+.drag-img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+
+.drag-img img {
+    width: 45px;
+    height: 45px;
+}
+
+#q1answer1 {
+    cursor: pointer;
+}
+
+/* Start Answer style ------------------------------- */
+
+/* Start media queries ------------------------------ */
+
+@media (min-width: 1100px) {
+
+    /* q15 --------------------------------- */
+    .venn-img2 img {
+        width: 450px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    /* q5 ------------------------------ */
+    #q5 .question-text,
+    #q6 .question-text {
+        width: 70%;
+    }
+
+    /* q9, q12  ------------------------------ */
+    .pie {
+        width: 65%;
+    }
+
+    /* q14 --------------------------------- */
+    .venn-img img {
+        width: 50%;
+    }
+
+    /* q15 --------------------------------- */
+    .venn-img2 img {
+        width: 45%;
+    }
+}
+
+@media (max-width: 900px) {
+
+    body,
+    .question-title {
+        font-size: 18px;
+    }
+
+    /* q2 -------------------------------- */
+    .data-list {
+        width: 85%;
+    }
+
+    .data-list .data-list-title {
+        font-size: 18px;
+    }
+
+    /* q14 --------------------------------- */
+    .venn-img img {
+        width: 55%;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    /* q5 ------------------------------ */
+    #q5 .question-text,
+    #q6 .question-text {
+        width: 80%;
+    }
+
+    .data-table {
+        font-size: 15px;
+    }
+
+    .data-table img {
+        width: 100%;
+    }
+
+    /* q7 -------------------------------- */
+    .stem-leaf-title {
+        width: 60%;
+    }
+
+    .stem-leaf table {
+        width: 60%;
+    }
+
+    /* q8 ------------------------------- */
+    #q8 table {
+        font-size: 15px;
+    }
+
+    .pet-table img {
+        width: 100%;
+    }
+
+    .pet-symbol {
+        width: 100%;
+    }
+
+    /* q9, q12  ------------------------------ */
+    .pie {
+        width: 90%;
+    }
+
+    /* q10 -------------------------------- */
+    .pie-items2 {
+        position: static;
+        margin-bottom: 20px;
+        margin-left: 10px;
+    }
+
+    /* q11 -------------------------------- */
+    .pie-items3 {
+        position: static;
+        margin-bottom: 20px;
+        margin-left: 10px;
+    }
+
+    /* q14 --------------------------------- */
+    .venn-img img {
+        width: 65%;
+    }
+
+    /* q15 --------------------------------- */
+    .venn-img2 img {
+        width: 55%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* q15 --------------------------------- */
+    .venn-img2 img {
+        width: 65%;
+    }
+}
+
+@media (max-width: 500px) {
+    /* q1, q13 -------------------------------- */
+    .circle-left {
+        width: calc(100vw / 1.6);
+        height: calc(100vw / 1.6);
+    }
+
+    .circle-right {
+        width: calc(100vw / 1.6);
+        height: calc(100vw / 1.6);
+        left: calc(-100vw / 1.7);
+        margin-right: -calc(-100vw/1.7);
+    }
+
+    .venn-middle {
+        width: calc(100vw / 3.7);
+        height: calc(100vw / 2.6);
+        margin-top: calc(100vw / 9);
+        margin-bottom: calc(100vw / 9);
+        left: calc(-100vw / 3.4);
+    }
+
+
+    .venn-title-left {
+        left: calc(100vw / 4.5);
+        top: calc(-100vw / 1.5);
+        font-size: 14px;
+        width: 65px;
+    }
+
+    #q13 .venn-title-left {
+        width: 60px;
+    }
+
+    .venn-title-right {
+        left: calc(100vw / 1.6);
+        top: calc(-100vw / 1.7);
+        font-size: 14px;
+        width: 72px;
+    }
+
+    #q13 .venn-title-right {
+        width: 60px;
+    }
+
+    .venn-content {
+        margin-top: 18%;
+        width: 55%;
+    }
+
+    .circle-right .venn-content {
+        position: absolute;
+        left: 48%;
+    }
+
+    .venn-content div {
+        margin: 2px;
+        width: 55px;
+        height: 55px;
+    }
+
+    /* q2 -------------------------------- */
+    .data-list {
+        width: 95%;
+    }
+
+    #q-graph {
+        width: 95%;
+        font-size: 13px;
+    }
+
+    #q-graph caption {
+        font-size: 15px;
+    }
+
+    #q-graph tr,
+    #q-graph th,
+    #q-graph td {
+        width: 45%;
+    }
+
+    #q-graph #bar2 {
+        left: 19%;
+
+    }
+
+    #q-graph #bar3 {
+        left: 37%;
+    }
+
+    #q-graph #bar4 {
+        left: 55.5%;
+    }
+
+    #q-graph #bar5 {
+        left: 74%;
+    }
+
+    #q-graph .bar {
+        width: 40%;
+    }
+
+    #ticks .tick,
+    #ticks .tick1,
+    #ticks .tick5 {
+        width: 95%;
+    }
+
+    .x-bar-text,
+    .y-bar-text {
+        font-size: 15px;
+    }
+
+    /* Q3 -------------------------- */
+    .baseball-table {
+        width: 95%;
+        height: 100px;
+    }
+
+    /* q5 ------------------------------ */
+    #q5 .question-text,
+    #q6 .question-text {
+        width: 95%;
+        font-size: 15px;
+    }
+
+    .data-table {
+        font-size: 13px;
+    }
+
+    .data-table td {
+        padding: 1px;
+    }
+
+    .data-table img {
+        width: 90%;
+    }
+
+    /* q8 ------------------------------- */
+    .pet-table img {
+        width: 100%;
+    }
+
+    .pet-table td {
+        padding: 0;
+    }
+
+    /* q9, q12  ------------------------------ */
+    .pie {
+        width: 100%;
+    }
+
+    /* q10 ------------------------------- */
+    .pie-chart2 {
+        width: 100%;
+        height: calc(100vw / 1.6);
+    }
+
+    /* q11 ------------------------------- */
+    .pie-chart3 {
+        width: 95%;
+        height: calc(100vw / 1.6);
+    }
+
+    /* q12 ------------------------------ */
+    #q12 .answer-grid-column {
+        width: auto;
+    }
+
+    #q12 .answer-grid-box-unfilled {
+        font-size: 15px;
+    }
+
+    /* q14 --------------------------------- */
+    .venn-img img {
+        width: 95%;
+    }
+
+
+    /* q15 --------------------------------- */
+    .venn-img2 img {
+        width: 85%;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    body,
+    .question-title {
+        font-size: 16px;
+    }
+
+    /* q1, q13 -------------------------------- */
+    .venn-content div {
+        margin: 1px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .venn-content img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .drag-img {
+        width: 35px;
+        height: 35px;
+    }
+
+
+    .drag-img img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* q2 -------------------------------- */
+    #q-graph,
+    #ticks {
+        font-size: 12px;
+    }
+
+    /* q8 ------------------------------- */
+    #q8 table {
+        font-size: 14px;
+    }
+
+    /* q9 ------------------------------ */
+    #q9 .answer-grid-box-unfilled {
+        font-size: 15px;
+    }
+
+
+    /* q10 ------------------------------ */
+    #q10 .answer-grid-box-unfilled {
+        font-size: 15px;
+    }
+
+    /* q11 ------------------------------ */
+    #q11 .answer-grid-box-unfilled {
+        font-size: 15px;
+    }
+
+
+    /* q14 ------------------------------ */
+    #q14 .answer-grid-box-unfilled {
+        font-size: 15px;
+    }
+
+    /* q15 --------------------------------- */
+    .venn-img2 img {
+        width: 95%;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    /* q5 ------------------------------- */
+    #q5 .question-text,
+    #q6 .question-text {
+        font-size: 14px;
+    }
+
+    .data-table {
+        font-size: 10px;
+    }
+
+    .data-table img {
+        width: 90%;
+    }
+
+    /* q8 ------------------------------- */
+    #q8 .pet-table {
+        font-size: 12px;
+    }
+
+    #q8 .pet-table tr {
+        height: 50px;
+    }
+
+    /* q12 ------------------------------ */
+    #q12 .answer-grid-box-unfilled {
+        font-size: 13px;
+    }
+
+
+}
+
+@media (max-width: 300px) {
+    /* q1, q13 -------------------------------- */
+    .venn-content div {
+        margin: 0.5px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .venn-content img {
+        width: 28px;
+        height: 28px;
+    }
+
+
+    .drag-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .drag-img img {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* q2 -------------------------------- */
+    #q-graph,
+    #ticks {
+        font-size: 10px;
+    }
+
+    #ticks p {
+        top: -19px;
+    }
+
+    /* q7 -------------------------------- */
+    .stem-leaf-title {
+        width: 90%;
+    }
+
+    .stem-leaf table {
+        font-size: 15px;
+    }
+
+    #q7 .answer-grid-input {
+        font-size: 15px;
+    }
+
+
+}
+
+
+/* End media queries ------------------------------ */

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../img/favicon.ico" rel="shortcut icon" sizes="32x32" type="image/png"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Geometry</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+</head>
+
+<body onload="setScore()">
+<div id="app">
+    <div class="popup-container">
+        <div class="popup">
+            <div class="animation1">
+                <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="popup-upper">
+                <div class="popup-close-icon" onclick="switchQuestion()" style="font-size: 15px">
+                    <i class="fa fa-times close-icon"></i>
+                </div>
+                <div class="popup-check-icon">
+                    <img alt="" class="check-img" id="starId1" src="./img/awesome.gif"/>
+                </div>
+                <div class="popup-action" onclick="switchQuestion()">
+                    <p>Next Challenge</p>&#160;
+                    <i class="fa fa-arrow-circle-right" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+
+        <!-- Info panel -->
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container" style="margin-left: 1%">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">ANSWERED</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content"><span id="question-count">1</span><span
+                        class="all-count">/8</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">TIME</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <label id="timerhrs">00</label>:<label id="timermin">00</label>:<label id="timersec">00</label>
+                    H
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">SCORE</div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <label id="current-score">0</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question panel -->
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q2">
+
+                    <!-- Question title -->
+                    <div class="question-title-box">
+                        <i class='fa fa-volume-up' onclick="playSound('Select whether the given statement are True or False.')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title-text">Select whether the given statement are True or
+                                False.</span>
+                    </div>
+
+                    <!-- daigram -->
+                    <div style="display: flex; justify-content:center;">
+                        <div class="q2-main-container">
+                            <div class="q2-line-container">
+                                <div class="q2-line-arrow">&lsaquo;</div>
+
+                                <div class="q2-middle-line"></div>
+
+                                <div class="q2-line-arrow q2-arrow-left">&rsaquo;</div>
+
+                                <div class="q2-line-box1">
+                                    <div class="q2-mark-container">
+                                        <div class="q2-mark-circle"></div>
+                                    </div>
+                                    <div class="q2-points">
+                                        <p class="q2-text">Q</p>
+                                    </div>
+                                </div>
+
+                                <div class="q2-line-box2">
+                                    <div class="q2-mark-container">
+                                        <div class="q2-mark-circle"></div>
+                                    </div>
+                                    <div class="q2-points">
+                                        <p class="q2-text">P</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="q2-line-container">
+                                <div class="q2-line-arrow">&lsaquo;</div>
+
+                                <div class="q2-middle-line"></div>
+
+                                <div class="q2-line-arrow q2-arrow-left">&rsaquo;</div>
+
+                                <div class="q2-line-box1">
+                                    <div class="q2-mark-container">
+                                        <div class="q2-mark-circle"></div>
+                                    </div>
+                                    <div class="q2-points">
+                                        <p class="q2-text">S</p>
+                                    </div>
+                                </div>
+
+                                <div class="q2-line-box2">
+                                    <div class="q2-mark-container">
+                                        <div class="q2-mark-circle"></div>
+                                    </div>
+                                    <div class="q2-points">
+                                        <p class="q2-text">R</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="q2-line-container-2" style="position: absolute;">
+                                <div class="q2-line-arrow">&lsaquo;</div>
+
+                                <div class="q2-middle-line"></div>
+
+                                <div class="q2-line-arrow q2-arrow-left">&rsaquo;</div>
+
+                                <div class="q2-line-box1">
+                                    <div class="q2-mark-container">
+                                        <div class="q2-mark-circle"></div>
+                                    </div>
+                                    <div class="q2-points3">
+                                        <p class="q2-text">W</p>
+                                    </div>
+                                </div>
+
+                                <div class="q2-line-box3">
+                                    <div class="q2-mark-container">
+                                        <div class="q2-mark-circle"></div>
+                                    </div>
+                                    <div class="q2-points3">
+                                        <p class="q2-text">V</p>
+                                    </div>
+                                </div>
+
+                                <div class="q2-line-box4">
+                                    <div class="q2-mark-container">
+                                        <div class="q2-mark-circle"></div>
+                                    </div>
+                                    <div class="q2-points3">
+                                        <p class="q2-text">U</p>
+                                    </div>
+                                </div>
+
+                                <div class="q2-line-box5">
+                                    <div class="q2-mark-container">
+                                        <div class="q2-mark-circle"></div>
+                                    </div>
+                                    <div class="q2-points3">
+                                        <p class="q2-text">T</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question section -->
+                    <div style="display: flex; justify-content:center;">
+                        <ul style="margin-top: 30px;">
+
+                            <li class="q2-question-grid">
+                                <div>a)</div>
+                                <div>Points T,U and V are collinear.</div>
+                                <div width="10px"></div>
+                                <div id="q1-block-1" style="display: inline-flex; justify-content: end;">
+                                    <button class="q2-button" id="q2input1">True</button>
+                                    <button class="q2-button" id="q2input2">False</button>
+                                </div>
+                            </li>
+
+                            <li class="q2-question-grid">
+                                <div>b)</div>
+                                <div>Point U is collinear with the points R and S.</div>
+                                <div width="10px"></div>
+                                <div id="q1-block-2" style="display: inline-flex; justify-content: end;">
+                                    <button class="q2-button" id="q2input3">True</button>
+                                    <button class="q2-button" id="q2input4">False</button>
+                                </div>
+                            </li>
+
+                            <li class="q2-question-grid">
+                                <div>c)</div>
+                                <div>Points S,R and Q are not collinear.</div>
+                                <div width="10px"></div>
+                                <div id="q1-block-3" style="display: inline-flex; justify-content: end;">
+                                    <button class="q2-button" id="q2input5">True</button>
+                                    <button class="q2-button" id="q2input6">False</button>
+                                </div>
+                            </li>
+
+                            <li class="q2-question-grid">
+                                <div>d)</div>
+                                <div>Points P,R and U are collinear.</div>
+                                <div width="10px"></div>
+                                <div id="q1-block-4" style="display: inline-flex; justify-content: end;">
+                                    <button class="q2-button" id="q2input7">True</button>
+                                    <button class="q2-button" id="q2input8">False</button>
+                                </div>
+                            </li>
+
+                            <li class="q2-question-grid">
+                                <div class="q2-e-box">e)</div>
+                                <div>Points S is not collinear to TM <span class="q2-vector">&#8596; </span> &nbsp;
+                                    and
+                                    collinear
+                                    with the point V.
+                                </div>
+                                <div width="10px"></div>
+                                <div id="q1-block-5" style="display: inline-flex; justify-content: end;">
+                                    <button class="q2-button" id="q2input9">True</button>
+                                    <button class="q2-button" id="q2input10">False</button>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- Submit button -->
+                    <div style="display: flex; justify-content: center; margin-top: 20px;">
+                        <button class="submit-button" id="q1-submit" onclick="submitAnswerQ2()">Submit
+                        </button>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="./js/app.js"></script>
+</body>
+
+</html>

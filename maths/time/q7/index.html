@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../img/favicon.ico" rel="shortcut icon" sizes="32x32" type="image/png"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Time</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+</head>
+
+<body onload="setScore()">
+<div id="app">
+    <div class="popup-container">
+        <div class="popup">
+            <div class="animation1">
+                <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="popup-upper">
+                <div class="popup-close-icon" onclick="switchQuestion()" style="font-size: 15px">
+                    <i class="fa fa-times close-icon"></i>
+                </div>
+                <div class="popup-check-icon">
+                    <img alt="" class="check-img" id="starId1" src="./img/awesome.gif"/>
+                </div>
+                <div class="popup-action" onclick="switchQuestion()">
+                    <p>Next Challenge</p>&#160;
+                    <i class="fa fa-arrow-circle-right" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+
+        <!-- Info panel -->
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container" style="margin-left: 1%">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">ANSWERED</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content"><span id="question-count">1</span><span
+                        class="all-count">/8</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">TIME</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <label id="timerhrs">00</label>:<label id="timermin">00</label>:<label id="timersec">00</label>
+                    H
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">SCORE</div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <label id="current-score">0</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question panel -->
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q7">
+
+                    <!-- Question title -->
+                    <div class="question-title-box">
+                        <i class='fa fa-volume-up'
+                           onclick="playSound('Complete the table. Fill missing starting times, Duration and Finishing times.')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title-text"> Complete the table. Fill missing starting times, Duration
+                                and
+                                Finishing times.</span>
+                    </div>
+
+
+                    <div class="q7-answer-grid-row">
+                        <table class="q7-duration-table">
+                            <tr>
+                                <th>Starting Time</th>
+                                <th>Duration</th>
+                                <th>Finishing Time</th>
+                            </tr>
+                            <tr>
+                                <td>2:05 p.m</td>
+                                <td><input class="q7-answer-grid-input" id="q7input1" maxlength="2"
+                                           onchange="checkAnswerQ7('q7input1')" style="width: 20px;" type="text"> hours
+                                    <input class="q7-answer-grid-input" id="q7input2" maxlength="2"
+                                           onchange="checkAnswerQ7('q7input2')" style="width: 20px;" type="text">
+                                    minutes
+                                </td>
+                                <td>3:40 p.m</td>
+                            </tr>
+                            <tr>
+                                <td><input class="q7-answer-grid-input" id="q7input3" maxlength="5"
+                                           onchange="checkAnswerQ7('q7input3')" style="width: 50px;" type="text"> a.m
+                                </td>
+                                <td>4 hours 50 minutes</td>
+                                <td>7.15 a.m</td>
+                            </tr>
+                            <tr>
+                                <td>1820 hours</td>
+                                <td>7 hours 10 minutes</td>
+                                <td><input class="q7-answer-grid-input" id="q7input4" maxlength="4"
+                                           onchange="checkAnswerQ7('q7input4')" style="width: 40px;" type="text"> hours
+                                    <input class="q7-answer-grid-input" id="q7input5" maxlength="2"
+                                           onchange="checkAnswerQ7('q7input5')" style="width: 20px;" type="text">
+                                    minutes
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1 October</td>
+                                <td>45 days</td>
+                                <td><input class="q7-answer-grid-input" id="q7input6" maxlength="11"
+                                           onchange="checkAnswerQ7('q7input6')" style="width: 130px;" type="text"></td>
+                            </tr>
+                            <tr>
+                                <td>1 July</td>
+                                <td>5 weeks 2 days</td>
+                                <td><input class="q7-answer-grid-input" id="q7input7" maxlength="9"
+                                           onchange="checkAnswerQ7('q7input7')" style="width: 130px;" type="text"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Submit button -->
+                    <div style="display: flex; justify-content: center; margin-top: 20px;">
+                        <button class="submit-button" id="q7-submit" onclick="submitAnswerQ7()">Submit
+                        </button>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="./js/app.js"></script>
+</body>
+
+</html>

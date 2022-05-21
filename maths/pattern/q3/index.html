@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <link href="../img/favicon.ico" rel="shortcut icon" sizes="32x32" type="image/png"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pattern</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="./style/animation2.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="../js/DragDropTouch.js"></script>
+</head>
+
+<body onload="setScore()">
+<div id="app">
+    <div class="popup-container">
+        <div class="popup">
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+
+            <div class="popup-upper">
+                <div class="popup-close-icon" onclick="switchQuestion()" style="font-size: 15px">
+                    <i class="fa fa-times close-icon"></i>
+                </div>
+                <div class="popup-check-icon">
+                    <img alt="" class="check-img" id="starId1" src="./img/success.gif"/>
+                </div>
+                <div class="popup-action" onclick="switchQuestion()">
+                    <p>Next Challenge</p>&#160;
+                    <i class="fa fa-arrow-circle-right" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+
+        <!-- Info panel -->
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container" style="margin-left: 1%">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">ANSWERED</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content"><span id="question-count">1</span><span
+                        class="all-count">/8</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">TIME</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <label id="timerhrs">00</label>:<label id="timermin">00</label>:<label id="timersec">00</label>
+                    H
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">SCORE</div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <label id="current-score">0</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question panel -->
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q3">
+
+                    <!-- Question title -->
+                    <div class="question-title-box">
+                        <i class="fa fa-volume-up" onclick="playSound('Guess the next steps in the pattern.')"
+                           style="font-size: 20px; color: #419ae2; cursor: pointer"></i>
+                        <span class="question-title-text">Guess the next steps in the pattern?</span>
+                    </div>
+
+                    <div
+                            style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        <div class="q3-qpanel-container">
+
+                            <div class="q3-qpanel-1">
+                                <div class="q3-dd-grid-ans-box-row">
+                                    <div class="q3-dd-grid-ans-box-column">
+                                        <div>
+                                            <img alt="" class="q3-ptrn-svg" src="./img/ggsquare.svg" srcset=""/>
+                                        </div>
+                                    </div>
+
+                                    <div class="q3-dd-grid-ans-box-column">
+                                        <div>
+                                            <img alt="" class="q3-ptrn-svg" src="./img/8circle.svg" srcset=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="q3-qpanel-1">
+                                <div class="q3-dd-grid-ans-box-row">
+                                    <div class="q3-dd-grid-ans-box-column">
+                                        <div>
+                                            <img alt="" class="q3-ptrn-svg" src="./img/ggsquare.svg" srcset=""/>
+                                        </div>
+                                    </div>
+
+                                    <div class="q3-dd-grid-ans-box-column">
+                                        <div>
+                                            <img alt="" class="q3-ptrn-svg" src="./img/ggsquare.svg" srcset=""/>
+                                        </div>
+                                    </div>
+
+                                    <div class="q3-dd-grid-ans-box-column">
+                                        <div>
+                                            <img alt="" class="q3-ptrn-svg" src="./img/8circle.svg" srcset=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="q3-qpanel-1">
+                                <div class="q3-dd-grid-ans-box-row">
+                                    <div class="q3-dd-grid-ans-box-column">
+                                        <div>
+                                            <img alt="" class="q3-ptrn-svg" src="./img/ggsquare.svg" srcset=""/>
+                                        </div>
+                                    </div>
+
+                                    <div class="q3-dd-grid-ans-box-column" id="p33block2">
+                                        <div>
+                                            <img alt="" class="q3-ptrn-svg" src="./img/ggsquare.svg" srcset=""/>
+                                        </div>
+                                    </div>
+
+                                    <div class="q3-dd-grid-ans-box-column" id="p33block3">
+                                        <div>
+                                            <img alt="" class="q3-ptrn-svg" src="./img/ggsquare.svg" srcset=""/>
+                                        </div>
+                                    </div>
+
+                                    <div class="q3-dd-grid-ans-box-column" id="p33block4">
+                                        <div>
+                                            <img alt="" class="q3-ptrn-svg" src="./img/8circle.svg" srcset=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="q3-answer-drop-box-container" id="q3-answer-drop-box-container">
+                                <div class="q3-dd-grid-ans-box-column" id="q3block1">
+                                    <div class="q3-answer-box-drop-div" draggable="true" id="q3Ans1"
+                                         ondragover="allowDropQ3(event)" ondragstart="dragQ3(event)"
+                                         ondrop="dropQ3(event)"></div>
+                                </div>
+
+                                <div class="q3-dd-grid-ans-box-column" id="q3block2">
+                                    <div class="q3-answer-box-drop-div" draggable="true" id="q3Ans2"
+                                         ondragover="allowDropQ3(event)" ondragstart="dragQ3(event)"
+                                         ondrop="dropQ3(event)"></div>
+                                </div>
+
+                                <div class="q3-dd-grid-ans-box-column" id="q3block3">
+                                    <div class="q3-answer-box-drop-div" draggable="true" id="q3Ans3"
+                                         ondragover="allowDropQ3(event)" ondragstart="dragQ3(event)"
+                                         ondrop="dropQ3(event)"></div>
+                                </div>
+
+                                <div class="q3-dd-grid-ans-box-column" id="q3block4">
+                                    <div class="q3-answer-box-drop-div" draggable="true" id="q3Ans4"
+                                         ondragover="allowDropQ3(event)" ondragstart="dragQ3(event)"
+                                         ondrop="dropQ3(event)"></div>
+                                </div>
+
+                                <div class="q3-dd-grid-ans-box-column" id="q3block5">
+                                    <div class="q3-answer-box-drop-div" draggable="true" id="q3Ans5"
+                                         ondragover="allowDropQ3(event)" ondragstart="dragQ3(event)"
+                                         ondrop="dropQ3(event)"></div>
+                                </div>
+                            </div>
+
+                            <div class="q3-answer-drop-container" id="imgCnt">
+                                <div class="q3-img-cnt" id="greenCnt">
+                                    <img alt="" canswer="q2-gs" class="q3-answer-drop-div" draggable="true"
+                                         id="q2-gs1" ondragover="allowDropQ3(event)" ondragstart="dragQ3(event)"
+                                         ondrop="dropQ3(event)" src="./img/ggsquare.svg" srcset=""/>
+
+                                    <img alt="" canswer="q2-gs" class="q3-answer-drop-div" draggable="true"
+                                         id="q2-gs2" ondragover="allowDropQ3(event)" ondragstart="dragQ3(event)"
+                                         ondrop="dropQ3(event)" src="./img/ggsquare.svg" srcset=""/>
+
+                                    <img alt="" canswer="q2-gs" class="q3-answer-drop-div" draggable="true"
+                                         id="q2-gs3" ondragover="allowDropQ3(event)" ondragstart="dragQ3(event)"
+                                         ondrop="dropQ3(event)" src="./img/ggsquare.svg" srcset=""/>
+
+                                    <img alt="" canswer="q2-gs" class="q3-answer-drop-div" draggable="true"
+                                         id="q2-gs4" ondragover="allowDropQ3(event)" ondragstart="dragQ3(event)"
+                                         ondrop="dropQ3(event)" src="./img/ggsquare.svg" srcset=""/>
+
+                                    <img alt="" canswer="q2-gs" class="q3-answer-drop-div c2" draggable="true"
+                                         id="q2-gs5" ondragover="allowDropQ3(event)" ondragstart="dragQ3(event)"
+                                         ondrop="dropQ3(event)" src="./img/ggsquare.svg" srcset=""/>
+                                </div>
+
+                                <div class="q3-img-cnt" id="redCnt">
+                                    <img alt="" canswer="q2-bc" class="q3-answer-drop-div" draggable="true"
+                                         id="q2-bc1" ondragover="allowDropQ3(event)" ondragstart="dragQ3(event)"
+                                         ondrop="dropQ3(event)" src="./img/8circle.svg" srcset=""/>
+
+                                    <img alt="" canswer="q2-bc" class="q3-answer-drop-div" draggable="true"
+                                         id="q2-bc2" ondragover="allowDropQ3(event)" ondragstart="dragQ3(event)"
+                                         ondrop="dropQ3(event)" src="./img/8circle.svg" srcset=""/>
+
+                                    <img alt="" canswer="q2-bc" class="q3-answer-drop-div" draggable="true"
+                                         id="q2-bc3" ondragover="allowDropQ3(event)" ondragstart="dragQ3(event)"
+                                         ondrop="dropQ3(event)" src="./img/8circle.svg" srcset=""/>
+
+                                    <img alt="" canswer="q2-bc" class="q3-answer-drop-div" draggable="true"
+                                         id="q2-bc4" ondragover="allowDropQ3(event)" ondragstart="dragQ3(event)"
+                                         ondrop="dropQ3(event)" src="./img/8circle.svg" srcset=""/>
+
+                                    <img alt="" canswer="q2-bc" class="q3-answer-drop-div" draggable="true"
+                                         id="q2-bc5" ondragover="allowDropQ3(event)" ondragstart="dragQ3(event)"
+                                         ondrop="dropQ3(event)" src="./img/8circle.svg" srcset=""/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <div style="display: flex; justify-content: center; margin-top: 20px;">
+                        <button class="submit-button" onclick="submitAnswerQ3()">
+                            Submit
+                        </button>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="./js/app.js"></script>
+</body>
+
+</html>

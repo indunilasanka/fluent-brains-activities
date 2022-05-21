@@ -1,0 +1,24 @@
+<svg id="q8-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 219.2 156.6">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: none;
+            stroke: #000;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 3px;
+            }
+        </style>
+    </defs>
+    <title>q8-cube</title>
+    <g id="Layer_12" data-name="Layer 12">
+        <g>
+            <rect class="cls-1" x="1.7" y="23.1" width="140.4" height="132.02"/>
+            <rect class="cls-1" x="77.3" y="1.5" width="140.4" height="132.02"/>
+            <path class="cls-1" d="M117,168l75.5-21.5" transform="translate(-115.5 -144.9)"/>
+            <path class="cls-1" d="M257.2,168.4l75.3-21.9" transform="translate(-115.5 -144.9)"/>
+            <path class="cls-1" d="M257.2,300l75.3-21.5" transform="translate(-115.5 -144.9)"/>
+            <path class="cls-1" d="M117.2,300l75.3-21.5" transform="translate(-115.5 -144.9)"/>
+        </g>
+    </g>
+</svg>

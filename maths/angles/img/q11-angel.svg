@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.5, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px"
+     y="0px"
+     viewBox="0 0 336.7 256.6" style="enable-background:new 0 0 336.7 256.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#1414FF;stroke-width:3;stroke-miterlimit:10;}
+	.st2{font-family:'Verdana';}
+	.st3{font-size:19px;}
+</style>
+    <title>q11-angel</title>
+    <g>
+	<path class="st0" d="M220.3,94"/>
+        <path class="st0" d="M219.3,95c5-2.3,10.8-1.5,15,2c4.6,3.9,6.2,10.4,4,16"/>
+        <path class="st0" d="M146.8,140.5c3.5-11.8,11.6-21.8,22.5-27.5c18.7-10.1,36.5-3.3,38.5-1.8"/>
+        <path class="st0" d="M134.3,136c-1,1.2-7.5,8.9-6,20c1,6.8,4.6,12.9,10,17"/>
+</g>
+    <g id="Layer_3">
+	<line class="st1" x1="37.3" y1="226" x2="43.3" y2="236"/>
+        <line class="st1" x1="313.3" y1="61" x2="319.3" y2="71"/>
+</g>
+    <g>
+	<g>
+		<line class="st1" x1="23.5" y1="241" x2="333.7" y2="55.8"/>
+        <polyline class="st1" points="25.9,229.4 23.5,241 35.1,243.5 		"/>
+        <polyline class="st1" points="331.2,67.4 333.7,55.8 322.1,53.3 		"/>
+        <line class="st1" x1="179.5" y1="147.2" x2="287.7" y2="4.4"/>
+        <line class="st1" x1="179.5" y1="147.2" x2="5.8" y2="103.4"/>
+        <polyline class="st1" points="290.5,14.6 288.9,2.8 277.1,4.4 		"/>
+        <polyline class="st1" points="13.6,96.6 3.4,102.8 9.6,113 		"/>
+	</g>
+</g>
+    <text transform="matrix(1 0 0 1 43.3002 254.44)" class="st2 st3">P</text>
+    <text transform="matrix(1 0 0 1 310.2797 91.5201)" class="st2 st3">Q</text>
+    <text transform="matrix(1 0 0 1 177.2998 168.7998)" class="st2 st3">O</text>
+    <text transform="matrix(1 0 0 1 246.4404 83.8398)" class="st2 st3">22°</text>
+    <text transform="matrix(1 0 0 1 136.52 94.8799)" class="st2 st3">113°</text>
+    <text transform="matrix(1 0 0 1 53 168.7998)" class="st2 st3">45°</text>
+</svg>

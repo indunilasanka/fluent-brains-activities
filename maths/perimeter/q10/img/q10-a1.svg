@@ -1,0 +1,23 @@
+<svg id="q10-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 301.5 186.7">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: none;
+            stroke: #000;
+            stroke-miterlimit: 10;
+            stroke-width: 3px;
+            }
+
+            .cls-2 {
+            font-size: 21px;
+            font-family: Verdana;
+            }
+        </style>
+    </defs>
+    <title>q10-a1</title>
+    <g id="Layer_9" data-name="Layer 9">
+        <rect class="cls-1" x="60" y="1.5" width="240" height="160"/>
+    </g>
+    <text class="cls-2" transform="translate(0 61.5)">4 cm</text>
+    <text class="cls-2" transform="translate(160 181.5)">6 cm</text>
+</svg>

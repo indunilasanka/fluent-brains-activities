@@ -1,0 +1,31 @@
+<svg id="Layer_15" data-name="Layer 15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 301.5 240.1">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: none;
+            stroke: #000;
+            stroke-miterlimit: 10;
+            stroke-width: 3px;
+            }
+
+            .cls-2 {
+            font-size: 18px;
+            font-family: Verdana;
+            }
+        </style>
+    </defs>
+    <title>q24-img</title>
+    <line class="cls-1" y1="38.5" x2="301" y2="38.5"/>
+    <line class="cls-1" x1="0.5" y1="199.5" x2="301.5" y2="199.5"/>
+    <line class="cls-1" x1="86.3" y1="239.6" x2="172" y2="0.5"/>
+    <polyline class="cls-1" points="197.8 194.6 210.1 200.4 197.8 206.2"/>
+    <polyline class="cls-1" points="223.8 32.6 236.1 38.4 223.8 44.2"/>
+    <text class="cls-2" transform="translate(144.2 32.9)">a</text>
+    <text class="cls-2" transform="translate(169.6 32.8)">b</text>
+    <text class="cls-2" transform="translate(135.4 55.6)">c</text>
+    <text class="cls-2" transform="translate(164.7 55.9)">d</text>
+    <text class="cls-2" transform="translate(83.6 194.2)">e</text>
+    <text class="cls-2" transform="translate(115.8 193.7)">f</text>
+    <text class="cls-2" transform="translate(76.5 220.9)">h</text>
+    <text class="cls-2" transform="translate(104.5 220.6)">g</text>
+</svg>

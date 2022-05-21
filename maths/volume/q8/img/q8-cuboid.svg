@@ -1,0 +1,30 @@
+<svg id="q8-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 397.3 120.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        font-size: 18px;
+        font-family: Verdana;
+      }
+    </style>
+  </defs>
+  <title>q8-cuboid</title>
+  <g id="Layer_14" data-name="Layer 14">
+    <rect class="cls-1" x="1.5" y="24.1" width="254.4" height="64.03"/>
+    <rect class="cls-1" x="91.3" y="1.5" width="254.4" height="64.03"/>
+    <line class="cls-1" x1="1.5" y1="24.3" x2="92.1" y2="1.5"/>
+    <line class="cls-1" x1="255.1" y1="24.3" x2="345.7" y2="1.5"/>
+    <line class="cls-1" x1="255.1" y1="88.1" x2="345.7" y2="65.3"/>
+    <line class="cls-1" x1="1.5" y1="88.1" x2="92.1" y2="65.3"/>
+  </g>
+  <text class="cls-2" transform="translate(110.9 114.8)">8 cm</text>
+  <text class="cls-2" transform="translate(297.2 97.6)">4 cm</text>
+  <text class="cls-2" transform="translate(352.6 36.2)">2 cm</text>
+</svg>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+            href="./img/favicon.ico"
+            rel="shortcut icon"
+            sizes="32x32"
+            type="image/png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Angles</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="./js/DragDropTouch.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <div class="popup-container">
+        <div class="popup">
+            <div class="animation1">
+                <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="popup-upper">
+                <div class="popup-close-icon" onclick="swapNextQuestion()" style="font-size: 15px">
+                    <i class="fa fa-times close-icon"></i>
+                </div>
+                <div class="popup-check-icon">
+                    <img alt="" class="check-img" id="starId1" src="./img/good-job.gif"/>
+                </div>
+                <div class="popup-action" onclick="swapNextQuestion()">
+                    <p>Next Challenge</p>&#160;
+                    <i class="fa fa-arrow-circle-right" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container" style="margin-left: 1%">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">ANSWERED</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content"><span id="question-count">1</span><span
+                        class="all-count">/8</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">TIME</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <label
+                            id="timerhrs">00</label>:<label id="timermin">00</label>:<label
+                        id="timersec">00</label> H
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">SCORE</div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <label id="current-score">0</label>
+                </div>
+            </div>
+        </div>
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q7">
+                    <div class="question-title-box">
+                        <i class='fa fa-volume-up'
+                           onclick="playSound('How many triangles in this figure?')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title-text">How many triangles in this figure?</span>
+                    </div>
+                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column">
+                      <div class="q7-angle-div">
+                        <div class="q7-angle-right">
+                          <div class="q7-angle-line-right"></div>
+                        </div>
+                        <div class="q7-angle-middle">
+                          <div class="q7-angle-line-middle"></div>
+                        </div>
+                        <div class="q7-angle-left">
+                          <div class="q7-angle-line-left"></div>
+                        </div>
+                        <div class="q7-angle-left-1">
+                          <div class="q7-angle-line"></div>
+                        </div>
+                        <div class="q7-angle-right-1">
+                          <div class="q7-angle-line"></div>
+                        </div>
+                      </div>
+
+                      <div class="q7-answer-div">
+                        <button class="q7-btn-color" id="3" onclick="q7CheckAnswer(event)">3</button>
+                        <button class="q7-btn-color" id="4" onclick="q7CheckAnswer(event)">4</button>
+                        <button class="q7-btn-color" id="5" onclick="q7CheckAnswer(event)">5</button>
+                        <button class="q7-btn-color" id="6" onclick="q7CheckAnswer(event)">6</button>
+                      </div>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="./js/app.js"></script>
+</body>
+</html>

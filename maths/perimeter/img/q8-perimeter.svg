@@ -1,0 +1,29 @@
+<svg id="q8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 239.8">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: #fff;
+            }
+
+            .cls-2 {
+            font-size: 15px;
+            font-family: Verdana;
+            }
+        </style>
+    </defs>
+    <title>q8-perimeter</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g>
+            <polygon class="cls-1"
+                     points="51.5 218.2 51.5 21.2 98.5 21.2 98.5 71.2 148.5 71.2 148.5 121.2 198.5 121.2 198.5 171.2 248.5 171.2 248.5 218.2 51.5 218.2"/>
+            <path d="M112,53v50h50v50h50v50h50v44H68V53h44m3-3H65V250H265V200H215V150H165V100H115V50Z"
+                  transform="translate(-15 -30.3)"/>
+        </g>
+    </g>
+    <text class="cls-2" transform="translate(0 114.7)">8 cm</text>
+    <text class="cls-2" transform="translate(110 234.7)">8 cm</text>
+    <text class="cls-2" transform="translate(50 14.7)">2 cm</text>
+    <text class="cls-2" transform="translate(105 64.7)">2 cm</text>
+    <text class="cls-2" transform="translate(155 114.7)">2 cm</text>
+    <text class="cls-2" transform="translate(205 164.7)">2 cm</text>
+</svg>

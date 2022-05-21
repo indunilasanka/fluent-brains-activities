@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+            href="../img/favicon.ico"
+            rel="shortcut icon"
+            sizes="32x32"
+            type="image/png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Mean-Median</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="../js/DragDropTouch.js"></script>
+</head>
+
+<body onload="setScore()">
+<div id="app">
+    <div class="popup-container">
+        <div class="popup">
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+
+            <div class="popup-upper">
+                <div class="popup-close-icon" onclick="switchQuestion()" style="font-size: 15px">
+                    <i class="fa fa-times close-icon"></i>
+                </div>
+                <div class="popup-check-icon">
+                    <img alt="" class="check-img" id="starId1" src="./img/nice.gif"/>
+                </div>
+                <div class="popup-action" onclick="switchQuestion()">
+                    <p>Next Challenge</p>&#160;
+                    <i class="fa fa-arrow-circle-right" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container" style="margin-left: 1%">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">ANSWERED</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content"><span id="question-count">1</span><span
+                        class="all-count">/8</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">TIME</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <label
+                            id="timerhrs">00</label>:<label id="timermin">00</label>:<label
+                        id="timersec">00</label> H
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">SCORE</div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <label id="current-score">0</label>
+                </div>
+            </div>
+        </div>
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q15">
+                    <div class="question-title-box">
+                        <i class='fa fa-volume-up'
+                           onclick="playSound('Meena prepared the below tally chart using the data of no of vehicle passing her home on a given day.')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title-text">Meena prepared the below tally chart using the data of no of vehicle passing her home on a given day.</span>
+                    </div>
+                    <div class="question-title-box">
+                        <i class='fa fa-volume-up'
+                           onclick="playSound('Find the mean of this data set.')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title-text">Find the mean of this data set.</span>
+                    </div>
+                    <div style="display: flex; justify-content:center;flex-direction: column; align-items: center">
+                        <div class="q15-table-container">
+                            <table>
+                                <tr>
+                                    <td width="80px">Vehicle</td>
+                                    <td width="100px">Frequency</td>
+                                </tr>
+                                <tr>
+                                    <td>Car</td>
+                                    <td>
+                                        <img alt="" src="./img/tally3.svg">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Bus</td>
+                                    <td>
+                                        <img alt="" src="./img/tally5.svg" style="margin-right: 10px;">
+                                        <img alt="" src="./img/tally3.svg">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Van</td>
+                                    <td>
+                                        <img alt="" src="./img/tally5.svg" style="margin-right: 10px;">
+                                        <img alt="" src="./img/tally5.svg" style="margin-right: 10px;">
+                                        <img alt="" src="./img/tally2.svg">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Lorry</td>
+                                    <td>
+                                        <img alt="" src="./img/tally4.svg">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Bicycle</td>
+                                    <td>
+                                        <img alt="" src="./img/tally5.svg">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="question-container" style="margin-top: 20px">
+                            <input class="q15-answer-input" id="q15input" maxlength="2" type="text">
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: center; margin-top: 20px;">
+                        <button class="q15-submit-button" onclick="q15checkAnswer()">Submit</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="./js/app.js"></script>
+</body>
+</html>

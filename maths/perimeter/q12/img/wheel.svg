@@ -1,0 +1,83 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="473.58" height="550" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="filter5583">
+            <feGaussianBlur stdDeviation="27.211825" id="feGaussianBlur5585"/>
+        </filter>
+        <linearGradient id="linearGradient4174">
+            <stop stop-color="#555753" offset="0" id="stop4176"/>
+            <stop stop-color="#91938e" offset="1" id="stop4178"/>
+        </linearGradient>
+        <radialGradient r="1151.6" gradientTransform="matrix(.18225 0 0 .18278 1891.4 799.18)" cx="2312.9" cy="977.92"
+                        gradientUnits="userSpaceOnUse" id="radialGradient4129">
+            <stop stop-color="#555753" offset="0" id="stop4125"/>
+            <stop stop-color="#7e807c" offset="0.96429" id="stop4131"/>
+            <stop stop-color="#a8aaa6" offset="1" id="stop4127"/>
+        </radialGradient>
+        <linearGradient x1="0.499955" y1="-0.006834" x2="0.499955" spreadMethod="reflect"
+                        xlink:href="#linearGradient4174" y2="0.510163" id="linearGradient4865"/>
+        <radialGradient r="133.34" gradientTransform="matrix(.76370 0 0 .73563 526.09 233.35)" cx="2226.4" cy="882.66"
+                        gradientUnits="userSpaceOnUse" id="radialGradient4999">
+            <stop stop-color="#2e3436" offset="0" id="stop4995"/>
+            <stop stop-color="#505a5e" offset="0.82143" id="stop5192"/>
+            <stop stop-color="#2e3436" offset="1" id="stop4997"/>
+        </radialGradient>
+    </defs>
+    <metadata>image/svg+xmlOpenclipartBikeWheel2007-11-02T14:45:25Simple bicycle wheel
+        drawing.https://openclipart.org/detail/7902/bikewheel-by-carlitoscarlitosbicyclebikecircletransportationwheel
+    </metadata>
+    <g>
+        <title>background</title>
+        <rect fill="none" id="canvas_background" height="552" width="475.58" y="-1" x="-1"/>
+    </g>
+    <g>
+        <title>Layer 1</title>
+        <path fill-rule="evenodd" fill="url(#linearGradient4865)"
+              d="m451.399902,299.184612l-214.6,0l0,2.01l214.6,0l0,-2.01z" id="path4202"/>
+        <path stroke-linejoin="round" stroke="#2e3436" stroke-linecap="round" stroke-width="3.7882" fill="#2e3436"
+              d="m236.799902,63.990844c-129.6,0 -234.9,105.23 -234.9,234.9c0,129.68 105.3,234.88 234.9,234.88c129.7,0 234.9,-105.2 234.9,-234.88c0,-129.67 -105.2,-234.9 -234.9,-234.9zm0,16.78c120.4,0 218.2,97.72 218.2,218.12c0,120.38 -97.8,218.08 -218.2,218.08s-218.1,-97.7 -218.1,-218.08c0,-120.4 97.7,-218.12 218.1,-218.12z"
+              id="path2160"/>
+        <path opacity="0.16477" filter="url(#filter5583)" fill="#eeeeec"
+              d="m236.786291,73.396164c-125.181069,0 -226.780593,101.601418 -226.780593,226.780593c0,125.182963 101.599524,226.780593 226.780593,226.780593s226.780593,-101.599524 226.780593,-226.780593s-101.599524,-226.780593 -226.780593,-226.780593zm0,8.665507c120.407937,0 218.124556,97.716619 218.124556,218.124556c0,120.400361 -97.716619,218.124556 -218.124556,218.124556c-120.388996,0 -218.105615,-97.716619 -218.105615,-218.124556c0,-120.400361 97.716619,-218.124556 218.105615,-218.124556z"
+              id="path5560"/>
+        <path fill="url(#radialGradient4129)"
+              d="m236.799902,82.064612c-120.4,0 -218.1,97.72 -218.1,218.12c0,120.38 97.7,218.08 218.1,218.08s218.2,-97.7 218.2,-218.08c0,-120.4 -97.8,-218.12 -218.2,-218.12zm0,16.78c111.2,0 201.4,90.2 201.4,201.34c0,111.18 -90.2,201.38 -201.4,201.38c-111.1,0 -201.3,-90.2 -201.3,-201.38c0,-111.14 90.2,-201.34 201.3,-201.34z"
+              id="path2164"/>
+        <path fill="url(#radialGradient4999)"
+              d="m260.284654,300.183998a23.489174,23.489174 0 1 1 -46.981872,0a23.489174,23.489174 0 1 1 46.981872,0z"
+              id="path4151"/>
+        <path fill="#2e3436"
+              d="m250.974147,300.184173a14.114039,14.114039 0 1 1 -28.230195,0a14.114039,14.114039 0 1 1 28.230195,0z"
+              id="path4983"/>
+        <g transform="matrix(8.433957104354931,0,0,8.433957104354931,0,0) " id="svg_7"/>
+        <g id="svg_8"/>
+        <g id="svg_16"/>
+        <g transform="matrix(25.208280559081913,0,0,25.208280559081913,0,0) " id="svg_25"/>
+        <g transform="matrix(25.208280559081913,0,0,25.208280559081913,0,0) " id="svg_26"/>
+        <g transform="matrix(25.208280559081913,0,0,25.208280559081913,0,0) " id="svg_27"/>
+        <g transform="matrix(25.208280559081913,0,0,25.208280559081913,0,0) " id="svg_28"/>
+        <g transform="matrix(25.208280559081913,0,0,25.208280559081913,0,0) " id="svg_29"/>
+        <g transform="matrix(25.208280559081913,0,0,25.208280559081913,0,0) " id="svg_30"/>
+        <g id="svg_31"/>
+        <line stroke="null" stroke-linecap="null" stroke-linejoin="null" id="svg_36" y2="581.332978" x2="432.795817"
+              y1="536.051111" x1="17.496375" stroke-opacity="null" stroke-width="null" fill="none"/>
+        <text font-weight="bold" stroke="null"
+              transform="matrix(1.797550047120723,0,0,1.911213369633984,-341.68672436331076,-274.34496565431726) "
+              xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24"
+              id="svg_37" y="296.896138" x="355.257505" stroke-opacity="null" stroke-width="0"
+              fill="#000000">7 cm</text>
+
+        <g transform="matrix(-0.08372219973404071,0,0,0.08372219973404071,42.0871104568684,5.535742739906476e-7) "
+           id="svg_58"/>
+        <g opacity="0.6"
+           transform="rotate(7.759255409240723 241.68005371093733,34.00813674926752) matrix(0.659061455944044,0,0,0.3156324313158173,-576.3856697847863,-103.02698399961038) "
+           id="svg_56">
+            <path stroke-dasharray="2,2" stroke-width="0" fill="#000000" id="svg_57"
+                  d="m1327.586747,357.394832l-10.1875,24.46875c-68.66943,-12.201277 -137.84596,9.797165 -186.75,56.46875c-17.49676,16.69804 -32.404495,36.54749 -43.75,59.125l26.78125,13.46875c36.12493,-71.88846 113.68382,-111.643126 191.875,-100.59375l-9.09375,21.875l99.15625,-2.59375l-68.03125,-72.21875z"/>
+        </g>
+        <g id="svg_60"/>
+        <rect stroke="null" id="svg_62" height="2.587521" width="469.637648" y="540.357255" x="1.971195"
+              stroke-opacity="null" stroke-width="0" fill="#000000"/>
+        <rect stroke="null" id="svg_63" height="2.587521" width="469.637648" y="545.532326" x="1.971195"
+              stroke-opacity="null" stroke-width="0" fill="#000000"/>
+    </g>
+</svg>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link
+            href="./img/favicon.ico"
+            rel="shortcut icon"
+            sizes="32x32"
+            type="image/png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Adjectives</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="./style/animation2.css" rel="stylesheet" type="text/css"/>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+    />
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="../js/DragDropTouch.js"></script>
+</head>
+
+<body onload="setScore()">
+<div id="app">
+
+    <div class="popup-container">
+        <div class="popup">
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+
+            <div class="popup-upper">
+                <div class="popup-close-icon" onclick="switchQuestion()" style="font-size: 15px">
+                    <i class="fa fa-times close-icon"></i>
+                </div>
+                <div class="popup-check-icon">
+                    <img alt="" class="check-img" id="starId1" src="./img/great.gif"/>
+                </div>
+                <div class="popup-action" onclick="switchQuestion()">
+                    <p>Next Challenge</p>&#160;
+                    <i class="fa fa-arrow-circle-right" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="info-panel">
+            <div
+                    class="stats-container problems-attempted-stats-container"
+                    style="margin-left: 1%"
+            >
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">ANSWERED</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content">
+              <span id="question-count">1</span
+              ><span class="all-count">/8</span>
+                </div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">TIME</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <label id="timerhrs">00</label>:<label id="timermin">00</label
+                >:<label id="timersec">00</label> H
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">SCORE</div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <label id="current-score">0</label>
+                </div>
+            </div>
+        </div>
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q6">
+                    <div class="question-title-box">
+                        <i
+                                class="fa fa-volume-up"
+                                onclick="playSound('Fill in the blank boxes. The answers are given in the box')"
+                                style='font-size:20px; color: #419ae2; cursor: pointer'
+                        ></i>
+                        <span class="question-title-text"
+                        >Fill in the blank boxes. The answers are given in the
+                  box</span
+                        >
+                    </div>
+                    <div class="q6-main-container">
+                        <div class="q6-sub-cnt">
+                            <div class="q6-ans-box-cnt">
+                                <div class="q6-ans-box">
+                                    <div class="q6-ans">Pretty</div>
+                                    <div class="q6-ans">Red</div>
+                                    <div class="q6-ans">Wooden</div>
+                                    <div class="q6-ans">Beautiful</div>
+                                </div>
+                            </div>
+
+                            <div class="q6-row">
+                                <div class="q6-inp-box-cnt">
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input1', 'P')"
+                                                type="text"
+                                                id="q6input1"
+                                        />
+                                    </div>
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input2', 'R')"
+                                                type="text"
+                                                id="q6input2"
+                                        />
+                                    </div>
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input3', 'E')"
+                                                type="text"
+                                                id="q6input3"
+                                        />
+                                    </div>
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input4', 'T')"
+                                                type="text"
+                                                id="q6input4"
+                                        />
+                                    </div>
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input5', 'T')"
+                                                type="text"
+                                                id="q6input5"
+                                        />
+                                    </div>
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input6', 'y')"
+                                                type="text"
+                                                id="q6input6"
+                                        />
+                                    </div>
+                                </div>
+                                <img class="q6-img1" src="./img/pretty_girl.svg" alt=""/>
+                            </div>
+                            <!-- // -->
+                            <div class="q6-row">
+                                <div class="q6-inp-box-cnt">
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input7', 'B')"
+                                                type="text"
+                                                id="q6input7"
+                                        />
+                                    </div>
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input8', 'E')"
+                                                type="text"
+                                                id="q6input8"
+                                        />
+                                    </div>
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input9', 'A')"
+                                                type="text"
+                                                id="q6input9"
+                                        />
+                                    </div>
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input10', 'U')"
+                                                type="text"
+                                                id="q6input10"
+                                        />
+                                    </div>
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input11', 'T')"
+                                                type="text"
+                                                id="q6input11"
+                                        />
+                                    </div>
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input12', 'I')"
+                                                type="text"
+                                                id="q6input12"
+                                        />
+                                    </div>
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input13', 'F')"
+                                                type="text"
+                                                id="q6input13"
+                                        />
+                                    </div>
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input14', 'U')"
+                                                type="text"
+                                                id="q6input14"
+                                        />
+                                    </div>
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input15', 'L')"
+                                                type="text"
+                                                id="q6input15"
+                                        />
+                                    </div>
+                                </div>
+                                <img class="q6-img1" src="./img/flowers.svg" alt=""/>
+                            </div>
+                            <!-- ///// -->
+                            <div class="q6-row">
+                                <div class="q6-inp-box-cnt">
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input16', 'W')"
+                                                type="text"
+                                                id="q6input16"
+                                        />
+                                    </div>
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input17', 'O')"
+                                                type="text"
+                                                id="q6input17"
+                                        />
+                                    </div>
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input18', 'O')"
+                                                type="text"
+                                                id="q6input18"
+                                        />
+                                    </div>
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input19', 'D')"
+                                                type="text"
+                                                id="q6input19"
+                                        />
+                                    </div>
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input20', 'E')"
+                                                type="text"
+                                                id="q6input20"
+                                        />
+                                    </div>
+                                    <div class="q6-count-grid-column">
+                                        <input
+                                                maxlength="1"
+                                                class="q6-count-grid-input"
+                                                onchange="checkMissingLetter('q6input21', 'N')"
+                                                type="text"
+                                                id="q6input21"
+                                        />
+                                    </div>
+                                </div>
+                                <img class="q6-img1" src="./img/wooden_boat.svg" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                            style="display: flex; justify-content: center; margin-top: 20px"
+                    >
+                        <button class="submit-button" onclick="q6SubmitAnswer('q6')">
+                            Submit
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="./js/app.js"></script>
+
+</body>
+</html>

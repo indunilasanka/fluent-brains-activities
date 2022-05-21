@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+            href="./img/favicon.ico"
+            rel="shortcut icon"
+            sizes="32x32"
+            type="image/png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Counting Numbers</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="./js/DragDropTouch.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <div class="popup-container">
+        <div class="popup">
+            <div class="animation1">
+                <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="popup-upper">
+                <div class="popup-close-icon" onclick="swapNextQuestion()" style="font-size: 15px">
+                    <i class="fa fa-times close-icon"></i>
+                </div>
+                <div class="popup-check-icon">
+                    <img alt="" class="check-img" id="starId1" src="./img/good-job.gif"/>
+                </div>
+                <div class="popup-action" onclick="swapNextQuestion()">
+                    <p>Next Challenge</p>&#160;
+                    <i class="fa fa-arrow-circle-right" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container" style="margin-left: 1%">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">ANSWERED</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content"><span id="question-count">1</span><span
+                        class="all-count">/8</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">TIME</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <label
+                            id="timerhrs">00</label>:<label id="timermin">00</label>:<label
+                        id="timersec">00</label> H
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">SCORE</div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <label id="current-score">0</label>
+                </div>
+            </div>
+        </div>
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q3">
+                    <div class="question-title-box">
+                        <i class='fa fa-volume-up'
+                           onclick="playSound('Lets count numbers from 1 to 10!')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title-text">Lets count numbers from 1 to 10!</span>
+                    </div>
+                    <div style="display: flex; justify-content: center; align-items: center">
+                        <div style="display: inline;">
+                            <ul>
+                                <li class="q3-count-question" id="cq1">
+                                    <div class="q3-question-con">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('one')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="q3-question-txt">1</span>
+                                    </div>
+                                    <div style="margin-top: 1rem;">
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                        </div>
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column">
+                                                <img alt="" src="./img/empty.png" style="width:100%;">
+                                            </div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                        </div>
+                                    </div>
+                                    <div class="q3-btn-con">
+                                        <button class="q3-answer-txt-button" id="cq11"
+                                                onclick="handleCountAnswerClick('ten', 'cq1', 'cq11')">ten
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq12"
+                                                onclick="handleCountAnswerClick('three', 'cq1', 'cq12')">three
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq13"
+                                                onclick="handleCountAnswerClick('four', 'cq1', 'cq13')">four
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq14"
+                                                onclick="handleCountAnswerClick('one', 'cq1', 'cq14')">one
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq15" style="margin-right: 0"
+                                                onclick="handleCountAnswerClick('five', 'cq1', 'cq15')">five
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="q3-count-question" id="cq2">
+                                    <div class="q3-question-con">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('two')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="q3-question-txt">2</span>
+                                    </div>
+                                    <div style="margin-top: 1rem;">
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                        </div>
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                        </div>
+                                    </div>
+                                    <div class="q3-btn-con">
+                                        <button class="q3-answer-txt-button" id="cq21"
+                                                onclick="handleCountAnswerClick('two', 'cq2', 'cq21')">two
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq22"
+                                                onclick="handleCountAnswerClick('seven', 'cq2', 'cq22')">seven
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq23"
+                                                onclick="handleCountAnswerClick('one', 'cq2', 'cq23')">one
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq24"
+                                                onclick="handleCountAnswerClick('nine', 'cq2', 'cq24')">nine
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq25" style="margin-right: 0"
+                                                onclick="handleCountAnswerClick('five', 'cq2', 'cq25')">five
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="q3-count-question" id="cq3">
+                                    <div class="q3-question-con">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('three')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="q3-question-txt">3</span>
+                                    </div>
+                                    <div style="margin-top: 1rem;">
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                        </div>
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                        </div>
+                                    </div>
+                                    <div class="q3-btn-con">
+                                        <button class="q3-answer-txt-button" id="cq31"
+                                                onclick="handleCountAnswerClick('ten', 'cq3', 'cq31')">ten
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq32"
+                                                onclick="handleCountAnswerClick('three', 'cq3', 'cq32')">three
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq33"
+                                                onclick="handleCountAnswerClick('four', 'cq3', 'cq33')">four
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq34"
+                                                onclick="handleCountAnswerClick('six', 'cq3', 'cq34')">six
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq35" style="margin-right: 0"
+                                                onclick="handleCountAnswerClick('eight', 'cq3', 'cq35')">eight
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="q3-count-question" id="cq4">
+                                    <div class="q3-question-con">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('four')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="q3-question-txt">4</span>
+                                    </div>
+                                    <div style="margin-top: 1rem;">
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                        </div>
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                        </div>
+                                    </div>
+                                    <div class="q3-btn-con">
+                                        <button class="q3-answer-txt-button" id="cq41"
+                                                onclick="handleCountAnswerClick('one', 'cq4', 'cq41')">one
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq42"
+                                                onclick="handleCountAnswerClick('three', 'cq4', 'cq42')">three
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq43"
+                                                onclick="handleCountAnswerClick('four', 'cq4', 'cq43')">four
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq44"
+                                                onclick="handleCountAnswerClick('two', 'cq4', 'cq44')">two
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq45" style="margin-right: 0"
+                                                onclick="handleCountAnswerClick('eight', 'cq4', 'cq45')">eight
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="q3-count-question" id="cq5">
+                                    <div class="q3-question-con">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('five')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="q3-question-txt">5</span>
+                                    </div>
+                                    <div style="margin-top: 1rem;">
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                        </div>
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="../img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                        </div>
+                                    </div>
+                                    <div class="q3-btn-con">
+                                        <button class="q3-answer-txt-button" id="cq51"
+                                                onclick="handleCountAnswerClick('nine', 'cq5', 'cq51')">nine
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq52"
+                                                onclick="handleCountAnswerClick('three', 'cq5', 'cq52')">three
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq53"
+                                                onclick="handleCountAnswerClick('two', 'cq5', 'cq53')">two
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq54"
+                                                onclick="handleCountAnswerClick('six', 'cq5', 'cq54')">six
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq55" style="margin-right: 0"
+                                                onclick="handleCountAnswerClick('five', 'cq5', 'cq55')">five
+                                        </button>
+                                    </div>
+                                </li>
+
+                                <li class="q3-count-question" id="cq6">
+                                    <div class="q3-question-con">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('six')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="q3-question-txt">6</span>
+                                    </div>
+                                    <div style="margin-top: 1rem;">
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                        </div>
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                        </div>
+                                    </div>
+                                    <div class="q3-btn-con">
+                                        <button class="q3-answer-txt-button" id="cq61"
+                                                onclick="handleCountAnswerClick('three', 'cq6', 'cq61')">three
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq62"
+                                                onclick="handleCountAnswerClick('seven', 'cq6', 'cq62')">seven
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq63"
+                                                onclick="handleCountAnswerClick('four', 'cq6', 'cq63')">four
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq64"
+                                                onclick="handleCountAnswerClick('eight', 'cq6', 'cq64')">eight
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq65" style="margin-right: 0"
+                                                onclick="handleCountAnswerClick('six', 'cq6', 'cq65')">six
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="q3-count-question" id="cq7">
+                                    <div class="q3-question-con">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('seven')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="q3-question-txt">7</span>
+                                    </div>
+                                    <div style="margin-top: 1rem; ">
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column"></div>
+                                        </div>
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column"></div>
+                                            <div class="q3-image-grid-column"></div>
+                                        </div>
+                                    </div>
+                                    <div class="q3-btn-con">
+                                        <button class="q3-answer-txt-button" id="cq71"
+                                                onclick="handleCountAnswerClick('seven', 'cq7', 'cq71')">seven
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq72"
+                                                onclick="handleCountAnswerClick('two', 'cq7', 'cq72')">two
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq73"
+                                                onclick="handleCountAnswerClick('nine', 'cq7', 'cq73')">nine
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq74"
+                                                onclick="handleCountAnswerClick('one', 'cq7', 'cq74')">one
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq75" style="margin-right: 0"
+                                                onclick="handleCountAnswerClick('four', 'cq7', 'cq75')">four
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="q3-count-question" id="cq8">
+                                    <div class="q3-question-con">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('eight')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="q3-question-txt">8</span>
+                                    </div>
+                                    <div style="margin-top: 1rem;">
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column"></div>
+                                        </div>
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column"></div>
+                                        </div>
+                                    </div>
+                                    <div class="q3-btn-con">
+                                        <button class="q3-answer-txt-button" id="cq81"
+                                                onclick="handleCountAnswerClick('one', 'cq8', 'cq81')">one
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq82"
+                                                onclick="handleCountAnswerClick('eight', 'cq8', 'cq82')">eight
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq83"
+                                                onclick="handleCountAnswerClick('four', 'cq8', 'cq83')">four
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq84"
+                                                onclick="handleCountAnswerClick('three', 'cq8', 'cq84')">three
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq85" style="margin-right: 0"
+                                                onclick="handleCountAnswerClick('five', 'cq8', 'cq85')">five
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="q3-count-question" id="cq9">
+                                    <div class="q3-question-con">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('nine')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="q3-question-txt">9</span>
+                                    </div>
+                                    <div style="margin-top: 1rem;">
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                        </div>
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column"></div>
+                                        </div>
+                                    </div>
+                                    <div class="q3-btn-con">
+                                        <button class="q3-answer-txt-button" id="cq91"
+                                                onclick="handleCountAnswerClick('teo', 'cq9', 'cq91')">two
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq92"
+                                                onclick="handleCountAnswerClick('three', 'cq9', 'cq92')">three
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq93"
+                                                onclick="handleCountAnswerClick('six', 'cq9', 'cq93')">six
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq94"
+                                                onclick="handleCountAnswerClick('nine', 'cq9', 'cq94')">nine
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq95" style="margin-right: 0"
+                                                onclick="handleCountAnswerClick('eight', 'cq9', 'cq95')">eight
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="q3-count-question" id="cq10">
+                                    <div class="q3-question-con">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('ten')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="q3-question-txt">10</span>
+                                    </div>
+                                    <div style="margin-top: 1rem;">
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                        </div>
+                                        <div class="q3-image-grid-row">
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="q3-image-grid-column image-card">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="q3-btn-con">
+                                        <button class="q3-answer-txt-button" id="cq101"
+                                                onclick="handleCountAnswerClick('ten', 'cq10', 'cq101')">ten
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq102"
+                                                onclick="handleCountAnswerClick('three', 'cq10', 'cq102')">three
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq103"
+                                                onclick="handleCountAnswerClick('four', 'cq10', 'cq103')">four
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq104"
+                                                onclick="handleCountAnswerClick('six', 'cq10', 'cq104')">six
+                                        </button>
+                                        <button class="q3-answer-txt-button" id="cq105" style="margin-right: 0"
+                                                onclick="handleCountAnswerClick('eight', 'cq10', 'cq105')">eight
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="./js/app.js"></script>
+</body>
+</html>

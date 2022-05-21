@@ -1,0 +1,32 @@
+<svg width="108" height="88" xmlns="http://www.w3.org/2000/svg">
+    <title/>
+
+    <g>
+        <title>background</title>
+        <rect fill="none" id="canvas_background" height="90" width="110" y="-1" x="-1"/>
+    </g>
+    <g>
+        <title>Layer 1</title>
+        <path fill="#5656ff" id="svg_1"
+              d="m51.120789,43.095769l-38,-20l0,43.3964a1,1 0 0 0 0.5342,0.8848l37.4658,19.7188l0,-44z"/>
+        <path fill="#5656ff" id="svg_2"
+              d="m52.120789,41.362169l38,-20l-37.5342,-19.7548a1.001,1.001 0 0 0 -0.9316,0l-37.5342,19.7548l38,20z"/>
+        <path fill="#5656ff" id="svg_3"
+              d="m53.120789,43.095769l0,44l37.4658,-19.7188a1.0008,1.0008 0 0 0 0.5342,-0.8848l0,-43.3963l-38,19.9999z"/>
+        <text stroke="null" transform="matrix(1,0,0,0.4562813937664032,0,45.99519584607333) " xml:space="preserve"
+              text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_4" y="80.622483"
+              x="91.125186" stroke-opacity="null" stroke-width="0" fill="#000000"/>
+        <text font-weight="bold" stroke="null"
+              transform="rotate(0.5694009065628052 98.9567108154293,47.49547195434541) matrix(0.25022275060666743,0,0,0.3159324748530122,62.65682050133082,57.476224691486536) "
+              xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24"
+              id="svg_7" y="-23.244253" x="114.390245" stroke-opacity="null" stroke-width="0" fill="#191919">10cm</text>
+        <text font-weight="bold" stroke="null"
+              transform="rotate(0.5694009065628052 81.48608398437344,78.74909210205175) matrix(0.25022275060666743,0,0,0.3159324748530122,62.65682050133082,57.476224691486536) "
+              xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24"
+              id="svg_8" y="75.677938" x="44.564461" stroke-opacity="null" stroke-width="0" fill="#191919">10cm</text>
+        <text font-weight="bold" stroke="null"
+              transform="rotate(0.5694009065628052 22.91831970214865,78.01010894775399) matrix(0.25022275060666743,0,0,0.3159324748530122,62.65682050133082,57.476224691486536) "
+              xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24"
+              id="svg_9" y="73.341194" x="-189.499433" stroke-opacity="null" stroke-width="0" fill="#191919">10cm</text>
+    </g>
+</svg>

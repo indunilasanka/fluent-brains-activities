@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../img/favicon.ico" rel="shortcut icon" sizes="32x32" type="image/png"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Graph</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body onload="setScore()">
+<div id="app">
+    <div class="popup-container">
+        <div class="popup">
+            <div class="animation1">
+                <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="popup-upper">
+                <div class="popup-close-icon" onclick="switchQuestion()" style="font-size: 15px">
+                    <i class="fa fa-times close-icon"></i>
+                </div>
+                <div class="popup-check-icon">
+                    <img alt="" class="check-img" id="starId1" src="./img/awesome.gif"/>
+                </div>
+                <div class="popup-action" onclick="switchQuestion()">
+                    <p>Next Challenge</p>&#160;
+                    <i class="fa fa-arrow-circle-right" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+
+        <!-- Info panel -->
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container" style="margin-left: 1%">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">ANSWERED</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content"><span id="question-count">1</span><span
+                        class="all-count">/8</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">TIME</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <label id="timerhrs">00</label>:<label id="timermin">00</label>:<label id="timersec">00</label>
+                    H
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">SCORE</div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <label id="current-score">0</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question panel -->
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q3">
+
+                    <!-- Question title -->
+                    <div class="question-title-box">
+                        <i class='fa fa-volume-up vol-icon'
+                           onclick="playSound('Fans of the Woodside baseball team compared the number of games won by their team each year.')"></i>
+                        <span class="question-title-text"> Fans of the Woodside baseball team compared the number of
+                                games won by their team each year.</span>
+                    </div>
+
+                    <div class="question-title-box">
+                        <i class='fa fa-volume-up vol-icon'
+                           onclick="playSound('Use the data in the table to complete the line graph below.')"></i>
+                        <span class="question-title-text"> Use the data in the table to complete the line graph
+                                below.</span>
+                    </div>
+
+                    <!-- Data table start -------------------------- -->
+
+                    <div style="display: flex; justify-content:center;">
+                        <table class="q3-baseball-table">
+                            <thead>
+                            <tr class="q3-t-head-01">
+                                <th colspan="2">
+                                    <i class='fa fa-volume-up'
+                                       onclick="playSound('Games won by the Woodside baseball team')"></i>
+                                    Games
+                                    won by the Woodside baseball team
+                                </th>
+                            </tr>
+
+                            <tr class="q3-t-head-02">
+                                <th><i class='fa fa-volume-up' onclick="playSound('Year')"></i> Year</th>
+                                <th><i class='fa fa-volume-up' onclick="playSound('Games won')"></i> Games won
+                                </th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td>2007</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>2009</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <td>2011</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>2013</td>
+                                <td>40</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Data table end -------------------------- -->
+
+                    <div class="question-title-box">
+                        <i class='fa fa-volume-up vol-icon'
+                           onclick="playSound('Click to select points on the graph.')"></i>
+                        <span class="question-title-text"> Click to select points on the graph. </span>
+                    </div>
+
+                    <!-- Line chart start -------------------------- -->
+
+                    <div class="q3-line-graph">
+                        <canvas id="line-chart" style="width:100%;max-width:600px; height:500px"></canvas>
+                    </div>
+
+                    <!-- Line chart end -------------------------- -->
+
+                    <!-- Submit button -->
+                    <div style="display: flex; justify-content: center; margin-top: 20px;">
+                        <button class="submit-button" onclick="submitAnswerQ3()">Submit</button>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="./js/app.js"></script>
+</body>
+
+</html>

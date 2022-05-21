@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+            href="../img/favicon.ico"
+            rel="shortcut icon"
+            sizes="32x32"
+            type="image/png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Equations</title>
+    <link href="../style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="../js/DragDropTouch.js"></script>
+</head>
+<!--<body onload="startAll()">-->
+<body onload="startAll()">
+<div id="app" style="position: absolute; width: 100%; height: 100%">
+    <div class="flex-container">
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">Answered</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content">0<span class="all-count">/20</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">Time</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <table class="timer practice-timer">
+                        <tbody>
+                        <tr class="box-value-hr-min-sec">
+                            <td id="timerhrs">02 hrs</td>
+                            <td id="timermin">00 mins</td>
+                            <td id="timersec">00 secs</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">Score <i
+                            class="fa fa-question-circle"
+                            title="This is not your final score. When calculating the final score elapsed time also will be considering"></i></div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <span id="currentscore">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q6">
+                    <div style="margin-bottom: 20px; margin-left: 10px;">
+                        <i class='fa fa-volume-up' onclick="playSound('Select the number line matching the below inequality.')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title">Select the number line matching the below inequality.</span>
+                    </div>
+                    <div style="margin-left: 10px">
+                        <div style="font-size: 18px; letter-spacing: 2px">X>2</div>
+                        <div class="q6-outer-box" id="q6input1" onclick="handleSubmitQ6('q6input1', 1)"
+                             style="margin-top: 20px">
+                            <div class="q6-line-container">
+                                <div class="q6-line-arrow"><</div>
+                                <div class="middle-line"></div>
+                                <div class="q6-line-arrow q6-arrow-left">></div>
+                                <div class="q6-line-box">
+                                    <div class="q6-mark-container">
+                                        <div class="q6-line-marker"></div>
+                                    </div>
+                                    <div class="q6-box-content">
+                                        <p class="q6-text">6</p>
+                                    </div>
+                                    <div class="line1"></div>
+
+                                </div>
+                                <div class="q6-line-box">
+                                    <div class="q6-mark-container">
+                                        <div class="q6-line-marker"></div>
+                                    </div>
+                                    <div class="q6-box-content">
+                                        <p class="q6-text">5</p>
+                                    </div>
+                                    <div class="line2"></div>
+
+
+                                </div>
+                                <div class="q6-line-box">
+                                    <div class="q6-mark-container">
+                                        <div class="q6-line-marker"></div>
+                                    </div>
+                                    <div class="q6-box-content">
+                                        <p class="q6-text">4</p>
+                                    </div>
+                                    <div class="line2"></div>
+
+                                </div>
+                                <div class="q6-line-box">
+                                    <div class="q6-mark-container">
+                                        <div class="q6-line-marker"></div>
+                                    </div>
+                                    <div class="q6-box-content">
+                                        <p class="q6-text">3</p>
+                                    </div>
+                                    <div class="line2"></div>
+
+                                </div>
+                                <div class="q6-line-box">
+                                    <div class="q6-mark-container">
+                                        <div class="q6-line-marker">
+                                            <div class="q6-mark-circle1"></div>
+                                        </div>
+                                    </div>
+                                    <div class="q6-box-content">
+                                        <p class="q6-text">2</p>
+                                    </div>
+                                    <div class="line2" style="left: 10px"></div>
+
+                                </div>
+                                <div class="q6-line-box">
+                                    <div class="q6-mark-container">
+                                        <div class="q6-line-marker"></div>
+                                    </div>
+                                    <div class="q6-box-content">
+                                        <p class="q6-text">1</p>
+                                    </div>
+
+                                </div>
+                                <div class="q6-line-box">
+                                    <div class="q6-mark-container">
+                                        <div class="q6-line-marker"></div>
+                                    </div>
+                                    <div class="q6-box-content">
+                                        <p class="q6-text">0</p>
+                                    </div>
+
+                                </div>
+                                <div class="q6-line-box">
+                                    <div class="q6-mark-container">
+                                        <div class="q6-line-marker"></div>
+                                    </div>
+                                    <div class="q6-box-content">
+                                        <p class="q6-text">-1</p>
+                                    </div>
+
+                                </div>
+                                <div class="q6-line-box">
+                                    <div class="q6-mark-container">
+                                        <div class="q6-line-marker"></div>
+                                    </div>
+                                    <div class="q6-box-content">
+                                        <p class="q6-text">-2</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="q6-outer-box" id="q6input2" onclick="handleSubmitQ6('q6input2', 0)"
+                             style="margin-top: 20px">
+                            <div class="q6-line-container">
+                                <div class="q6-line-arrow"><</div>
+                                <div class="middle-line"></div>
+                                <div class="q6-line-arrow q6-arrow-left">></div>
+                                <div class="q6-line-box">
+                                    <div class="q6-mark-container">
+                                        <div class="q6-line-marker"></div>
+                                    </div>
+                                    <div class="q6-box-content">
+                                        <p class="q6-text">6</p>
+                                    </div>
+                                    <div class="line1"></div>
+
+                                </div>
+                                <div class="q6-line-box">
+                                    <div class="q6-mark-container">
+                                        <div class="q6-line-marker"></div>
+                                    </div>
+                                    <div class="q6-box-content">
+                                        <p class="q6-text">5</p>
+                                    </div>
+                                    <div class="line2"></div>
+
+
+                                </div>
+                                <div class="q6-line-box">
+                                    <div class="q6-mark-container">
+                                        <div class="q6-line-marker"></div>
+                                    </div>
+                                    <div class="q6-box-content">
+                                        <p class="q6-text">4</p>
+                                    </div>
+                                    <div class="line2"></div>
+
+                                </div>
+                                <div class="q6-line-box">
+                                    <div class="q6-mark-container">
+                                        <div class="q6-line-marker"></div>
+                                    </div>
+                                    <div class="q6-box-content">
+                                        <p class="q6-text">3</p>
+                                    </div>
+                                    <div class="line2"></div>
+
+                                </div>
+                                <div class="q6-line-box">
+                                    <div class="q6-mark-container">
+                                        <div class="q6-line-marker">
+                                            <div class="q6-mark-circle2"></div>
+                                        </div>
+                                    </div>
+                                    <div class="q6-box-content">
+                                        <p class="q6-text">2</p>
+                                    </div>
+                                    <div class="line2" style="left: 10px"></div>
+
+                                </div>
+                                <div class="q6-line-box">
+                                    <div class="q6-mark-container">
+                                        <div class="q6-line-marker"></div>
+                                    </div>
+                                    <div class="q6-box-content">
+                                        <p class="q6-text">1</p>
+                                    </div>
+
+                                </div>
+                                <div class="q6-line-box">
+                                    <div class="q6-mark-container">
+                                        <div class="q6-line-marker"></div>
+                                    </div>
+                                    <div class="q6-box-content">
+                                        <p class="q6-text">0</p>
+                                    </div>
+
+                                </div>
+                                <div class="q6-line-box">
+                                    <div class="q6-mark-container">
+                                        <div class="q6-line-marker"></div>
+                                    </div>
+                                    <div class="q6-box-content">
+                                        <p class="q6-text">-1</p>
+                                    </div>
+
+                                </div>
+                                <div class="q6-line-box">
+                                    <div class="q6-mark-container">
+                                        <div class="q6-line-marker"></div>
+                                    </div>
+                                    <div class="q6-box-content">
+                                        <p class="q6-text">-2</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </li>
+            </ul>
+        </div>
+        <!--        <div class="canvas-container">-->
+        <!--            <canvas id="gameCanvas" width="1920px" height="350px" style="position: absolute">Your browser doesnt-->
+        <!--                support HTML5 canvas-->
+        <!--            </canvas>-->
+        <!--        </div>-->
+    </div>
+</div>
+<script src="../js/app.js"></script>
+</body>
+</html>

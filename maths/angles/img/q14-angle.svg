@@ -1,0 +1,41 @@
+<svg id="angle-q14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 348.3 262">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: none;
+            stroke: #000;
+            stroke-miterlimit: 10;
+            stroke-width: 3px;
+            }
+
+            .cls-2 {
+            font-size: 19px;
+            font-family: Verdana;
+            }
+        </style>
+    </defs>
+    <title>q14-angle</title>
+    <g id="Layer_14" data-name="Layer 14">
+        <line class="cls-1" x1="99.6" y1="5.4" x2="346.8" y2="243.5"/>
+        <polyline class="cls-1" points="110.9 4.7 99.6 5.4 100.2 16.6"/>
+        <polyline class="cls-1" points="335.5 244.1 346.8 243.5 346.2 232.3"/>
+        <line class="cls-1" x1="110.8" y1="20.8" x2="115.3" y2="15.7"/>
+        <line class="cls-1" x1="333.6" y1="235.9" x2="338.2" y2="230.7"/>
+    </g>
+    <g id="Layer_15" data-name="Layer 15">
+        <polyline class="cls-1" points="254.1 16.2 253.5 1.8 239.1 2.4"/>
+        <line class="cls-1" x1="243.5" y1="18.5" x2="236.9" y2="12.6"/>
+        <polyline class="cls-1" points="343.9 162.4 18.7 239.8 253.5 1.8"/>
+        <polyline class="cls-1" points="336.8 175 343.9 162.4 331.4 155.3"/>
+        <line class="cls-1" x1="326.6" y1="171.2" x2="324.1" y2="162.8"/>
+        <text class="cls-2" transform="translate(0 256.2)">B</text>
+        <text class="cls-2" transform="translate(265.2 201.5)">C</text>
+        <text class="cls-2" transform="translate(308.8 160.4)">D</text>
+        <text class="cls-2" transform="translate(100.1 39.3)">X</text>
+        <text class="cls-2" transform="translate(222.8 16.4)">Y</text>
+        <text class="cls-2" transform="translate(312.1 245)">Z</text>
+    </g>
+    <g id="Layer_16" data-name="Layer 16">
+        <polyline class="cls-1" points="170.5 85.3 164.9 79.7 170.4 74.1"/>
+    </g>
+</svg>

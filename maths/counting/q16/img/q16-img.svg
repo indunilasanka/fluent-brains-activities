@@ -1,0 +1,41 @@
+<svg id="q16"
+  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350.7 35.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        font-size: 16px;
+        font-family: Verdana;
+      }
+
+      @media (max-width: 350px) {
+        .cls-2 {
+          font-size: 19px;
+        }
+      }
+    </style>
+  </defs>
+  <title>q16-img</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <line class="cls-1" x1="288.7" x2="288.7" y2="10"/>
+    <line class="cls-1" x1="232" x2="232" y2="10"/>
+    <line class="cls-1" x1="175.3" x2="175.3" y2="10"/>
+    <line class="cls-1" x1="118.6" x2="118.6" y2="10"/>
+    <line class="cls-1" x1="62" x2="62" y2="10"/>
+    <g>
+      <line class="cls-1" x1="4.6" y1="5.5" x2="346.1" y2="5.5"/>
+      <polygon points="14.2 10.7 14.7 9.1 4.7 5.5 14.7 1.9 14.2 0.3 0 5.5 14.2 10.7"/>
+      <polygon points="336.5 10.7 335.9 9.1 345.9 5.5 335.9 1.9 336.5 0.3 350.7 5.5 336.5 10.7"/>
+    </g>
+  </g>
+  <text class="cls-2" transform="translate(55.2 29.6)">9</text>
+  <text class="cls-2" transform="translate(106.7 29.7)">10</text>
+  <text class="cls-2" transform="translate(164.1 30)">11</text>
+  <text class="cls-2" transform="translate(222.2 29.3)">12</text>
+</svg>

@@ -1,0 +1,247 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <link-->
+<!--            rel="shortcut icon"-->
+<!--            type="image/png"-->
+<!--            sizes="32x32"-->
+<!--            href="../img/favicon.ico"-->
+<!--    />-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Division</title>-->
+<!--    <link rel="stylesheet" href="../style/style.css" type="text/css"/>-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>-->
+<!--    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>-->
+<!--    <script src="../js/DragDropTouch.js"></script>-->
+<!--</head>-->
+<!--&lt;!&ndash;<body onload="startAll()">&ndash;&gt;-->
+<!--<body onload="setScore()">-->
+<!--<div id="app" style="position: absolute; width: 100%; height: 100%">-->
+<!--    <div class="flex-container">-->
+<!--        <div class="info-panel">-->
+<!--            <div class="stats-container problems-attempted-stats-container">-->
+<!--                <div class="stats-header problems-attempted-stats-header">-->
+<!--                    <span class="txt-question-answered">Answered</span>-->
+<!--                </div>-->
+<!--                <div class="stats-content problems-attempted-stats-content">0<span class="all-count">/20</span></div>-->
+<!--            </div>-->
+
+<!--            <div class="stats-container time-elapsed-stats-container">-->
+<!--                <div class="stats-header time-elapsed-stats-header">-->
+<!--                    <span class="txt-time-elapsed">Time</span>-->
+<!--                </div>-->
+<!--                <div class="stats-content time-elapsed-stats-content">-->
+<!--                    <table class="timer practice-timer">-->
+<!--                        <tbody>-->
+<!--                        <tr class="box-value-hr-min-sec">-->
+<!--                            <td id="timerhrs">02 hrs</td>-->
+<!--                            <td id="timermin">00 mins</td>-->
+<!--                            <td id="timersec">00 secs</td>-->
+<!--                        </tr>-->
+<!--                        </tbody>-->
+<!--                    </table>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="stats-container score-and-link-container">-->
+<!--                <div class="stats-header score-stats-header">-->
+<!--                    <div class="txt-smartscore">Score <i-->
+<!--                            title="This is not your final score. When calculating the final score elapsed time also will be considering"-->
+<!--                            class="fa fa-question-circle"></i></div>-->
+<!--                </div>-->
+<!--                <div class="stats-content score-stats-content">-->
+<!--                    <span id="currentscore">0</span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="question-panel" id="qpanel">-->
+<!--            <ul class="question-list">-->
+<!--                <li class="question" id="q21">-->
+<!--                    <div style="margin-bottom: 20px; margin-left: 10px;">-->
+<!--                        <i class='fa fa-volume-up' style='font-size:20px; color: #419ae2; cursor: pointer'-->
+<!--                           onclick="playSound('Fill in the blank to describe the model.')"></i>-->
+<!--                        <span class="question-title">Fill in the blank to describe the model.</span>-->
+<!--                    </div>-->
+<!--                    <div class="q21-main-con">-->
+<!--                        <div class="q21-sub-con">-->
+<!--                            <img src="../img/star_ring.svg" width="100%" height="100%">-->
+<!--                        </div>-->
+<!--                        <div class="q21-sub-con">-->
+<!--                            <img src="../img/star_ring.svg" width="100%" height="100%">-->
+<!--                        </div>-->
+<!--                        <div class="q21-sub-con">-->
+<!--                            <img src="../img/star_ring.svg" width="100%" height="100%">-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                    <div style="margin-bottom: 20px; margin-left: 10px;">-->
+<!--                        <i class='fa fa-volume-up' style='font-size:20px; color: #419ae2; cursor: pointer'-->
+<!--                           onclick="playSound('There are 8 toffees into 2 equal rows.')"></i>-->
+<!--                        <span class="question-title">The model has 6 stars divided into 3 equal groups.</span>-->
+<!--                    </div>-->
+
+<!--                    <div style="margin-bottom: 20px; margin-left: 10px;">-->
+<!--                        <span class="question-title"> There are </span>-->
+<!--                        <input class="q20-input-answer" type="text" maxlength="1" id="q21input1" />-->
+<!--                        <span class="question-title"> stars in each group. </span>-->
+<!--                    </div>-->
+
+<!--                    <div style="margin-bottom: 20px; margin-left: 10px;">-->
+<!--                        <span class="question-title"> So, 6 &#247; 3 = </span>-->
+<!--                        <input class="q20-input-answer" type="text" maxlength="1" id="q21input2" />-->
+<!--                    </div>-->
+
+<!--                    <div style="margin-top: 20px; margin-left: 10px;">-->
+<!--                        <button class="submit-button" onclick="submitQ21()" id="q21-submit">Submit-->
+<!--                        </button>-->
+<!--                    </div>-->
+
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        <div class="canvas-container">&ndash;&gt;-->
+<!--        &lt;!&ndash;            <canvas id="gameCanvas" width="1920px" height="350px" style="position: absolute">Your browser doesnt&ndash;&gt;-->
+<!--        &lt;!&ndash;                support HTML5 canvas&ndash;&gt;-->
+<!--        &lt;!&ndash;            </canvas>&ndash;&gt;-->
+<!--        &lt;!&ndash;        </div>&ndash;&gt;-->
+<!--    </div>-->
+<!--</div>-->
+<!--<script src="../js/app.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+            href="../img/favicon.ico"
+            rel="shortcut icon"
+            sizes="32x32"
+            type="image/png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Division</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="../js/DragDropTouch.js"></script>
+</head>
+
+<body onload="setScore()">
+<div id="app">
+    <div class="popup-container">
+        <div class="popup">
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+
+            <div class="popup-upper">
+                <div class="popup-close-icon" onclick="switchQuestion()" style="font-size: 15px">
+                    <i class="fa fa-times close-icon"></i>
+                </div>
+                <div class="popup-check-icon">
+                    <img alt="" class="check-img" id="starId1" src="./img/nice.gif"/>
+                </div>
+                <div class="popup-action" onclick="switchQuestion()">
+                    <p>Next Challenge</p>&#160;
+                    <i class="fa fa-arrow-circle-right" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container" style="margin-left: 1%">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">ANSWERED</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content"><span id="question-count">1</span><span
+                        class="all-count">/8</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">TIME</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <label
+                            id="timerhrs">00</label>:<label id="timermin">00</label>:<label
+                        id="timersec">00</label> H
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">SCORE</div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <label id="current-score">0</label>
+                </div>
+            </div>
+        </div>
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q21">
+                    <div class="question-title-box">
+                        <i class='fa fa-volume-up'
+                           onclick="playSound('Fill in the blank to describe the model.')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title-text">Fill in the blank to describe the model.</span>
+                    </div>
+                    <div style="display: flex; justify-content:center;flex-direction: column; align-items: center">
+                        <div class="q21-main-con">
+                            <div class="q21-sub-con">
+                                <img height="100%" src="./img/star_ring.svg" width="100%">
+                            </div>
+                            <div class="q21-sub-con">
+                                <img height="100%" src="./img/star_ring.svg" width="100%">
+                            </div>
+                            <div class="q21-sub-con">
+                                <img height="100%" src="./img/star_ring.svg" width="100%">
+                            </div>
+
+                        </div>
+                        <div class="question-title-box">
+                            <i class='fa fa-volume-up'
+                               onclick="playSound('The model has 6 stars divided into 3 equal groups.')"
+                               style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                            <span class="question-title-text">The model has 6 stars divided into 3 equal groups.</span>
+                        </div>
+                        <div style="margin-right: 10px; margin-left: 10px">
+                            <span class="question-title"> There are </span>
+                            <input class="q21-input-answer" id="q21input1" maxlength="1" type="text"/>
+                            <span class="question-title"> stars in each group. </span>
+                        </div>
+
+                        <div style="margin-top: 20px">
+                            <span class="question-title"> So, 6 &#247; 3 = </span>
+                            <input class="q21-input-answer" id="q21input2" maxlength="1" type="text"/>
+                        </div>
+
+                    </div>
+                    <div style="display: flex; justify-content: center; margin-top: 20px;">
+                        <button class="q21-submit-button" onclick="q21checkAnswer()">Submit</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="./js/app.js"></script>
+</body>
+</html>
+
+

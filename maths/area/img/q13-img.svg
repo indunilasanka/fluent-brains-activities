@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.5, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_6"
+     xmlns="http://www.w3.org/2000/svg"
+     x="0px" y="0px" viewBox="0 0 404 263.2"
+     style="enable-background:new 0 0 404 263.2;" xml:space="preserve">
+  <style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st1{fill:#999999;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st2{font-family:'Verdana';}
+	.st3{font-size:18px;}
+	.st4{font-size:10px;}
+
+  @media (max-width: 400px) {
+    .st3{font-size:20px;}
+  }
+  </style>
+    <title>q13-img</title>
+    <g id="Layer_7">
+    <rect x="74.2" y="30.3" class="st0" width="304" height="183.3"/>
+        <path class="st0" d="M141.7,212.8"/>
+        <path class="st1" d="M164.7,31.2c-0.5,0.2-1,0.3-1.5,0.3h-0.1L74.3,211.1c0.1,0.1,0.1,0.1,0.1,0.2c0.7,0.5,1.4,1,2,1.6h299.5
+		c0.1-0.4,0.2-0.7,0.4-1L164.7,31.2z"/>
+        <g>
+      <line class="st0" x1="75.4" y1="230.8" x2="375.9" y2="229.8"/>
+            <polygon points="80.9,237.5 82.1,236.3 76.1,230.8 82,225.3 80.9,224.1 73.7,230.8 		"/>
+            <polygon points="370.4,236.6 369.3,235.4 375.2,229.8 369.3,224.3 370.4,223.1 377.7,229.8 		"/>
+    </g>
+        <g>
+      <line class="st0" x1="57.7" y1="32.6" x2="57.7" y2="211"/>
+            <polygon points="50.9,38.1 52.1,39.2 57.7,33.2 63.2,39.2 64.4,38.1 57.7,30.8 		"/>
+            <polygon points="50.9,205.6 52.1,204.4 57.7,210.4 63.2,204.4 64.4,205.6 57.7,212.8 		"/>
+    </g>
+        <text transform="matrix(1 0 0 1 5 125.4)" class="st2 st3">3 cm</text>
+        <text transform="matrix(1 0 0 1 205.6 258)" class="st2 st3">5 cm</text>
+        <text transform="matrix(1 0 0 1 88 77.4)" class="st2 st3">2 cm</text>
+        <text transform="matrix(1 0 0 1 292.8 101.7)" class="st2 st3">5 cm</text>
+        <text transform="matrix(1 0 0 1 59.7 20.1)" class="st2 st3">A</text>
+        <text transform="matrix(1 0 0 1 378.3 20)" class="st2 st3">B</text>
+        <text transform="matrix(1 0 0 1 384 235.2)" class="st2 st3">C</text>
+        <text transform="matrix(1 0 0 1 57.5 234.8)" class="st2 st3">D</text>
+        <text transform="matrix(1 0 0 1 133.08 64.3002)" class="st2 st4">2</text>
+        <text transform="matrix(1 0 0 1 341.36 87.42)" class="st2 st4">2</text>
+        <text transform="matrix(1 0 0 1 159.6 19.7)" class="st2 st3">E</text>
+  </g>
+</svg>

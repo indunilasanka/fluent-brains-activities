@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.5, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="q7-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 175.3 193.2" style="enable-background:new 0 0 175.3 193.2;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st1{font-family:'Verdana';}
+	.st2{font-size:15px;}
+	.st3{font-size:12px;}
+</style>
+<title>q7-cube_small</title>
+<g id="Layer_8">
+	<rect x="1.5" y="43.8" class="st0" width="127.4" height="119.7"/>
+	<rect x="46.5" y="1.5" class="st0" width="127.4" height="119.7"/>
+	<line class="st0" x1="1.5" y1="44.1" x2="46.9" y2="1.5"/>
+	<line class="st0" x1="128.4" y1="44.1" x2="173.8" y2="1.5"/>
+	<line class="st0" x1="128.4" y1="163.5" x2="173.8" y2="120.9"/>
+	<line class="st0" x1="1.5" y1="163.5" x2="46.9" y2="120.9"/>
+</g>
+<text transform="matrix(1 0 0 1 39.2 187.5)" class="st1 st2">64 cm</text>
+<text transform="matrix(1 0 0 1 84.84 180.24)" class="st1 st3">3</text>
+</svg>

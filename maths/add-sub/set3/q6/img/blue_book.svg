@@ -1,0 +1,30 @@
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+
+    <g>
+        <title>background</title>
+        <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+    </g>
+    <g>
+        <title>Layer 1</title>
+        <path id="svg_2" fill="#086bce"
+              d="m3,8l0,2l0,1l0,3l0,1l0,5l0,1c0,1.105 0.8954,2 2,2l14,0c1.105,0 2,-0.895 2,-2l0,-1l0,-5l0,-4l0,-3l-18,0z"/>
+        <path id="svg_3" fill="#ecf0f1"
+              d="m3,6.999976l0,2l0,1l0,3l0,1l0,5l0,1c0,1.1 0.8954,2 2,2l14,0c1.105,0 2,-0.9 2,-2l0,-1l0,-5l0,-4l0,-3l-18,0z"/>
+        <path id="svg_4" fill="#bdc3c7"
+              d="m3,5.999976l0,2l0,1l0,3l0,1l0,5l0,1c0,1.1 0.8954,2 2,2l14,0c1.105,0 2,-0.9 2,-2l0,-1l0,-5l0,-4l0,-3l-18,0z"/>
+        <path id="svg_5" fill="#ecf0f1"
+              d="m3,4.999976l0,2l0,1l0,3l0,1l0,5l0,1c0,1.1 0.8954,2 2,2l14,0c1.105,0 2,-0.9 2,-2l0,-1l0,-5l0,-4l0,-3l-18,0z"/>
+        <path id="svg_6" fill="#086bce"
+              d="m5,1c-1.1046,0 -2,0.8954 -2,2l0,1l0,4l0,2l0,1l0,3l0,1l0,5l0,1c0,1.105 0.8954,2 2,2l2,0l0,-1l-1.5,0c-0.8284,0 -1.5,-0.672 -1.5,-1.5s0.6716,-1.5 1.5,-1.5l12.5,0l1,0c1.105,0 2,-0.895 2,-2l0,-1l0,-5l0,-4l0,-3l0,-1c0,-1.1046 -0.895,-2 -2,-2l-4,0l-10,0z"/>
+        <path id="svg_7" fill="#3e8ad6"
+              d="m8,1l0,18l1,0l9,0l1,0c1.105,0 2,-0.895 2,-2l0,-1l0,-5l0,-4l0,-3l0,-1c0,-1.1046 -0.895,-2 -2,-2l-4,0l-6,0l-1,0z"/>
+        <text stroke="#000"
+              transform="matrix(0.237664488080159,0,0,0.24316274035994898,8.05486565088243,8.413619854403924) "
+              xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24"
+              id="svg_8" y="-11.024755" x="1.509176" stroke-width="0" fill="#000000">Note</text>
+        <text stroke="#000"
+              transform="matrix(0.157989552223411,0,0,0.13028989714084643,11.182698848485916,7.610983333041553) "
+              xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24"
+              id="svg_9" y="7.697377" x="2.745535" stroke-width="0" fill="#000000">Book</text>
+    </g>
+</svg>

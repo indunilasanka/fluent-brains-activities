@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link
+            href="../img/favicon.ico"
+            rel="shortcut icon"
+            sizes="32x32"
+            type="image/png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Arithmetic</title>
+    <link href="../style/style.css" rel="stylesheet" type="text/css"/>
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+    />
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="../js/DragDropTouch.js"></script>
+</head>
+<!--<body onload="startAll()">-->
+<body onload="startAll()">
+<div id="app" style="position: absolute; width: 100%; height: 100%">
+    <div class="flex-container">
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">Answered</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content">
+                    0<span class="all-count">/20</span>
+                </div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">Time</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <table class="timer practice-timer">
+                        <tbody>
+                        <tr class="box-value-hr-min-sec">
+                            <td id="timerhrs">02 hrs</td>
+                            <td id="timermin">00 mins</td>
+                            <td id="timersec">00 secs</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">
+                        Score
+                        <i
+                                class="fa fa-question-circle"
+                                title="This is not your final score. When calculating the final score elapsed time also will be considering"
+                        ></i>
+                    </div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <span id="currentscore">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q4">
+                    <div style="margin-bottom: 20px; margin-left: 10px">
+                        <i
+                                class="fa fa-volume-up"
+                                onclick="playSound('9025 equals to')"
+                                style="font-size: 20px; color: #419ae2; cursor: pointer"
+                        ></i>
+                        <span class="question-title">9025 equals to,</span>
+                    </div>
+
+                    <div style="margin-top: 1rem; margin-left: 10px">
+                        <div class="q4-ans-box-container">
+                            <div class="q4-ans-box" id="5319" onclick="checkQ4(event)">
+                                <span>5<sup>3</sup> x 19</span>
+                            </div>
+                            <div class="q4-ans-box" id="52192" onclick="checkQ4(event)">
+                                <span>5<sup>2</sup> x 19<sup>2</sup></span>
+                            </div>
+                            <div class="q4-ans-box" id="5192" onclick="checkQ4(event)">
+                                <span>5 x 19<sup>2</sup></span>
+                            </div>
+                            <div class="q4-ans-box" id="5193" onclick="checkQ4(event)">
+                                <span>5 x 19<sup>3</sup></span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="../js/app.js"></script>
+</body>
+</html>

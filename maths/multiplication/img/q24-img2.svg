@@ -1,0 +1,15 @@
+<svg id="q24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 122">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: none;
+            stroke: #000;
+            stroke-miterlimit: 10;
+            stroke-width: 3px;
+            }
+        </style>
+    </defs>
+    <title>q24-img2</title>
+    <path class="cls-1" d="M119.5,60.5v59h-60s-1,60,60,60,61-60,61-60S180.5,60.5,119.5,60.5Z"
+          transform="translate(-58 -59)"/>
+</svg>

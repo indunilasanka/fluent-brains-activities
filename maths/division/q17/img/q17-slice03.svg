@@ -1,0 +1,16 @@
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 245 319.2">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: none;
+            stroke: #000;
+            stroke-miterlimit: 10;
+            stroke-width: 3px;
+            }
+        </style>
+    </defs>
+    <title>q17-slice03</title>
+    <path class="cls-1"
+          d="M218.2,333.3q55.5-133,111.9-265.9a314.3,314.3,0,0,0-241-.6L208.4,356.9C210.5,351.7,216,338.5,218.2,333.3Z"
+          transform="translate(-87.1 -41.6)"/>
+</svg>

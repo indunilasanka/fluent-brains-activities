@@ -1,0 +1,104 @@
+.cube {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 10px;
+  height: 10px;
+  z-index: 1;
+  border: solid 1px #5c8df1;
+  overflow: hidden;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  -webkit-animation: cube 6s ease-in forwards infinite;
+          animation: cube 6s ease-in forwards infinite;
+}
+
+.cube:nth-child(2n) {
+  border-color: #fff58c;
+}
+
+.cube:nth-child(9) {
+  -webkit-animation-delay: 220ms;
+  animation-delay: 220ms;
+  left: 15%;
+  top: 60%;
+}
+
+.cube:nth-child(2) {
+  -webkit-animation-delay: 60ms;
+  animation-delay: 60s;
+  left: 20%;
+  top: 10%;
+}
+
+.cube:nth-child(3) {
+  -webkit-animation-delay: 10ms;
+          animation-delay: 10ms;
+  left: 25%;
+  top: 40%;
+}
+
+.cube:nth-child(4) {
+  -webkit-animation-delay: 120ms;
+          animation-delay: 120ms;
+  left: 55%;
+  top: 20%;
+}
+
+.cube:nth-child(5) {
+  -webkit-animation-delay: 220ms;
+  animation-delay: 220ms;
+  left: 90%;
+  top: 10%;
+}
+
+.cube:nth-child(6) {
+  -webkit-animation-delay: 10ms;
+  animation-delay: 10ms;
+  left: 80%;
+  top: 50%;
+}
+
+.cube:nth-child(8) {
+  -webkit-animation-delay: 20ms;
+          animation-delay: 20ms;
+  left: 10%;
+  top: 90%;
+}
+
+.cube:nth-child(7) {
+  -webkit-animation-delay: 220ms;
+  animation-delay: 220ms;
+  left: 90%;
+  top: 85%;
+}
+
+.cube:nth-child(10) {
+  -webkit-animation-delay: 220ms;
+  animation-delay: 220ms;
+  left: 60%;
+  top: 80%;
+}
+
+
+@-webkit-keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(6) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(6) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}

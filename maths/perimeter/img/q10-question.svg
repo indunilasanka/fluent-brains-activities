@@ -1,0 +1,23 @@
+<svg id="q10-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 245 199.8">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: none;
+            stroke: #000;
+            stroke-miterlimit: 10;
+            stroke-width: 3px;
+            }
+
+            .cls-2 {
+            font-size: 17px;
+            font-family: Verdana;
+            }
+        </style>
+    </defs>
+    <title>q10-question</title>
+    <polygon class="cls-1" points="2.8 174.7 202.8 174.7 162.8 14.7 82.8 54.7 2.8 174.7"/>
+    <text class="cls-2" transform="translate(2.8 94.7)">3 cm</text>
+    <text class="cls-2" transform="translate(102.8 194.7)">5 cm</text>
+    <text class="cls-2" transform="translate(202.8 94.7)">4 cm</text>
+    <text class="cls-2" transform="translate(82.8 14.7)">2 cm</text>
+</svg>

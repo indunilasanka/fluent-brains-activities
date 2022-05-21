@@ -1,0 +1,41 @@
+<svg id="Layer_8" data-name="Layer 8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 284 284">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: #b3b3b3;
+            }
+
+            .cls-1, .cls-2, .cls-3 {
+            stroke: #000;
+            stroke-miterlimit: 10;
+            stroke-width: 3px;
+            }
+
+            .cls-2 {
+            fill: #f2f2f2;
+            }
+
+            .cls-3 {
+            fill: none;
+            }
+
+            .cls-4 {
+            font-size: 17px;
+            font-family: Verdana;
+            }
+        </style>
+    </defs>
+    <title>q14-img</title>
+    <circle class="cls-1" cx="142" cy="142" r="140.5"/>
+    <circle class="cls-2" cx="139" cy="210" r="59.5"/>
+    <circle class="cls-2" cx="90.5" cy="81.5" r="40"/>
+    <circle class="cls-2" cx="192.5" cy="81.5" r="40"/>
+    <line class="cls-3" x1="142.5" y1="142.5" x2="282.5" y2="142.5"/>
+    <line class="cls-3" x1="138.5" y1="209.5" x2="198.5" y2="209.5"/>
+    <line class="cls-3" x1="90.5" y1="81.5" x2="130.5" y2="81.5"/>
+    <line class="cls-3" x1="192.5" y1="81.5" x2="232.5" y2="81.5"/>
+    <text class="cls-4" transform="translate(216.6 163.7)">7 cm</text>
+    <text class="cls-4" transform="translate(145.1 230.2)">3 cm</text>
+    <text class="cls-4" transform="translate(77.4 74)">2 cm</text>
+    <text class="cls-4" transform="translate(183.3 73.8)">2 cm</text>
+</svg>

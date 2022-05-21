@@ -1,0 +1,55 @@
+<svg id="q15"
+  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 378.9 248.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #999;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: #f2f2f2;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        font-size: 17px;
+        font-family: Verdana;
+      }
+
+      @media (max-width: 400px) {
+        .cls-4 {
+          font-size: 19px;
+        }
+      }
+    </style>
+  </defs>
+  <title>q15-img</title>
+  <g id="Layer_10" data-name="Layer 10">
+    <polygon class="cls-1" points="97.6 22.4 4.7 223.4 284.5 223.4 376.2 22.4 97.6 22.4"/>
+    <path class="cls-2" d="M124.1,99,31.5,299.5h92.9V99.1Z" transform="translate(-26.8 -76.1)"/>
+  </g>
+  <g id="Layer_11" data-name="Layer 11">
+    <polyline class="cls-3" points="185.8 29.6 207.4 23 186.7 14.6"/>
+    <polyline class="cls-3" points="140.6 230.6 162.1 224 141.4 215.6"/>
+    <polyline class="cls-3" points="322.4 155.4 325.2 135.9 307.2 148"/>
+    <polyline class="cls-3" points="328.2 143.4 331 123.9 313 136"/>
+    <polyline class="cls-3" points="54.2 131.4 57 111.9 39 124"/>
+    <polyline class="cls-3" points="60 119.4 62.8 99.9 44.8 112"/>
+  </g>
+  <text class="cls-4" transform="translate(97.8 14.7)">A</text>
+  <text class="cls-4" transform="translate(367.2 14.7)">B</text>
+  <text class="cls-4" transform="translate(289.2 242.6)">C</text>
+  <text class="cls-4" transform="translate(0 242.6)">D</text>
+  <text class="cls-4" transform="translate(34.7 242.8)">2 cm</text>
+  <text class="cls-4" transform="translate(199.8 243.3)">6 cm</text>
+  <text class="cls-4" transform="translate(108.5 128.8)">5 cm</text>
+</svg>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+            href="../img/favicon.ico"
+            rel="shortcut icon"
+            sizes="32x32"
+            type="image/png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Division</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="../js/DragDropTouch.js"></script>
+</head>
+
+<body onload="setScore()">
+<div id="app">
+    <div class="popup-container">
+        <div class="popup">
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+
+            <div class="popup-upper">
+                <div class="popup-close-icon" onclick="switchQuestion()" style="font-size: 15px">
+                    <i class="fa fa-times close-icon"></i>
+                </div>
+                <div class="popup-check-icon">
+                    <img alt="" class="check-img" id="starId1" src="./img/nice.gif"/>
+                </div>
+                <div class="popup-action" onclick="switchQuestion()">
+                    <p>Next Challenge</p>&#160;
+                    <i class="fa fa-arrow-circle-right" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container" style="margin-left: 1%">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">ANSWERED</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content"><span id="question-count">1</span><span
+                        class="all-count">/8</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">TIME</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <label
+                            id="timerhrs">00</label>:<label id="timermin">00</label>:<label
+                        id="timersec">00</label> H
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">SCORE</div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <label id="current-score">0</label>
+                </div>
+            </div>
+        </div>
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q13">
+                    <div class="question-title-box">
+                        <i class='fa fa-volume-up'
+                           onclick="playSound('The number line shows two unknown numbers,x and y.')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title-text">The number line shows two unknown numbers, <span
+                                style="font-weight: bold">X </span>and <span style="font-weight: bold">Y</span> .</span>
+                    </div>
+                    <div style="display: flex; justify-content:center;flex-direction: column; align-items: center">
+                        <div class="q13-container">
+                            <div class="q13-marker-left"><</div>
+                            <div class="q13-mid-line"></div>
+                            <div class="q13-marker-right">></div>
+                            <div class="q13-line-box line-width1">
+                                <div class="q13-mark-container">
+                                    <div class="q13-circle-marker" style="background-color: rgba(255,255,0,0.97);">
+                                    </div>
+                                </div>
+
+                                <div class="q13-box-content">
+                                    <p class="text">Y</p>
+                                </div>
+                            </div>
+                            <div class="q13-line-box line-width2">
+                                <div class="q13-mark-container">
+                                    <div class="q13-circle-marker" style="background-color:#419ae2">
+                                    </div>
+                                </div>
+
+                                <div class="q13-box-content">
+                                    <p class="text">X</p>
+                                </div>
+                            </div>
+                            <div class="q13-line-box line-width3">
+                                <div class="q13-mark-container">
+                                    <div class="q13-line-marker">
+                                    </div>
+                                </div>
+
+                                <div class="q13-box-content">
+                                    <p class="text">1</p>
+                                </div>
+                            </div>
+                            <div class="q13-line-box line-width4">
+                                <div class="q13-mark-container">
+                                    <div class="q13-line-marker">
+                                    </div>
+                                </div>
+
+                                <div class="q13-box-content">
+                                    <p class="text">0</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-title-box">
+                            <i class='fa fa-volume-up'
+                               onclick="playSound('Is x divide by y is positive or negative.')"
+                               style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                            <span class="question-title-text">Is <span style="font-weight: bold">X/Y </span>is positive or negative.</span>
+                        </div>
+                        <div class="q13-answer-div" id="q13-answerId">
+                            <div class="q13-answer" id="q13input1" style="margin-right: 10px">Negative</div>
+                            <div class="q13-answer" id="q13input2">Positive</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: center; margin-top: 20px;">
+                        <button class="q13-submit-button" onclick="q13checkAnswer()">Submit</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="./js/app.js"></script>
+</body>
+</html>
+

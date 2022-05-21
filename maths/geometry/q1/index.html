@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../img/favicon.ico" rel="shortcut icon" sizes="32x32" type="image/png"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Geometry</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+</head>
+
+<body onload="setScore()">
+<div id="app">
+    <div class="popup-container">
+        <div class="popup">
+            <div class="animation1">
+                <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="popup-upper">
+                <div class="popup-close-icon" onclick="switchQuestion()" style="font-size: 15px">
+                    <i class="fa fa-times close-icon"></i>
+                </div>
+                <div class="popup-check-icon">
+                    <img alt="" class="check-img" id="starId1" src="./img/awesome.gif"/>
+                </div>
+                <div class="popup-action" onclick="switchQuestion()">
+                    <p>Next Challenge</p>&#160;
+                    <i class="fa fa-arrow-circle-right" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+
+        <!-- Info panel -->
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container" style="margin-left: 1%">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">ANSWERED</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content"><span id="question-count">1</span><span
+                        class="all-count">/8</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">TIME</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <label id="timerhrs">00</label>:<label id="timermin">00</label>:<label id="timersec">00</label>
+                    H
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">SCORE</div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <label id="current-score">0</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question panel -->
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q1">
+
+                    <!-- Question title -->
+                    <div class="question-title-box">
+                        <i class='fa fa-volume-up' onclick="playSound('What is the length of BC?')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title-text">What is the length of <span
+                                style="border-top: 1px solid black">BC</span>?</span>
+                    </div>
+
+                    <div style="display: flex; justify-content:center;">
+                        <div class="q1-line-container">
+
+                            <!-- arrow - line -->
+                            <div class="q1-line-arrow">
+                                <div class="q1-middle-line"></div>
+                                <div class="q1-line-arrow q1-arrow-left">></div>
+
+                                <div class="q1-line-box">
+                                    <div class="q1-mark-container">
+                                        <div class="q1-line-marker">
+                                            <div class="q1-mark-circle"></div>
+                                        </div>
+                                    </div>
+                                    <div class="q1-points">
+                                        <p class="q1-text">C</p>
+                                    </div>
+                                    <div class="q1-box-content">
+                                        <p class="q1-text">4</p>
+                                    </div>
+                                </div>
+
+                                <div class="q1-line-box">
+                                    <div class="q1-mark-container">
+                                        <div class="q1-line-marker">
+                                        </div>
+                                    </div>
+
+                                    <div class="q1-box-content">
+                                        <p class="q1-text">3</p>
+                                    </div>
+                                </div>
+
+                                <div class="q1-line-box">
+                                    <div class="q1-mark-container">
+                                        <div class="q1-line-marker">
+                                            <div class="q1-mark-circle"></div>
+                                        </div>
+                                    </div>
+                                    <div class="q1-points">
+                                        <p class="q1-text">B</p>
+                                    </div>
+                                    <div class="q1-box-content">
+                                        <p class="q1-text">2</p>
+                                    </div>
+                                </div>
+
+                                <div class="q1-line-box">
+                                    <div class="q1-mark-container">
+                                        <div class="q1-line-marker">
+                                        </div>
+                                    </div>
+
+                                    <div class="q1-box-content">
+                                        <p class="q1-text">1</p>
+                                    </div>
+                                </div>
+
+                                <div class="q1-line-box">
+                                    <div class="q1-mark-container">
+                                        <div class="q1-line-marker">
+                                        </div>
+                                    </div>
+
+                                    <div class="q1-box-content">
+                                        <p class="q1-text">0</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style=" display: inline-flex;align-items: center; margin-top: 160px; ">
+                                <input class="q1-input-box" id="q1input1" maxlength="2"
+                                       onchange="checkAnswerQ1('q1input1', '2')" type="text"/>
+                                <div class="q1-text">Points</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <div style="display: flex; justify-content: center; margin-top: 100px;">
+                        <button class="submit-button" id="q1-submit" onclick="submitAnswerQ1()">Submit
+                        </button>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="./js/app.js"></script>
+</body>
+
+</html>

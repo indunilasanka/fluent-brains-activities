@@ -1,0 +1,28 @@
+<svg width="272" height="272" xmlns="http://www.w3.org/2000/svg">
+ <title/>
+
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="68.934425" height="68.934425" id="canvas_background" fill="none"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path class="cls-1" d="m72,264l112,0a24,24 0 0 0 24,-24l0,-217a15,15 0 0 0 -15,-15l-145,0l0,232a24,24 0 0 0 24,24z" id="svg_1" fill="#666666"/>
+  <polygon class="cls-1" points="48 56 16 8 48 8 48 56" id="svg_2" fill="#666666"/>
+  <path class="cls-1" d="m234.75,48l-34.75,0l0,16l34.75,0a13.27,13.27 0 0 1 13.25,13.25l0,93.5a13.27,13.27 0 0 1 -13.25,13.25l-34.75,0l0,16l34.75,0a29.25,29.25 0 0 0 29.25,-29.25l0,-93.5a29.25,29.25 0 0 0 -29.25,-29.25z" id="svg_3" fill="#666666"/>
+  <path class="cls-2" d="m56,24.873038l0,197.310686a24,29.016277 0 0 0 24,29.016277l96,0a24,29.016277 0 0 0 24,-29.016277l0,-197.310686l-144,0z" id="svg_4" fill="#ffffff" stroke="null"/>
+  <path stroke="null" class="cls-2" d="m55.999997,44.998735l0,180.353322a24,26.522551 0 0 0 24,26.522551l96,0a24,26.522551 0 0 0 24,-26.522551l0,-180.353322l-144,0z" id="svg_10" fill="#ffd54f"/>
+  <rect stroke="null" id="svg_6" height="4.563728" width="34.988586" y="43.536948" x="55.754426" stroke-opacity="null" stroke-width="null" fill="#191919"/>
+  <rect stroke="null" id="svg_7" height="4.563728" width="34.988586" y="80.046779" x="55.754426" stroke-opacity="null" stroke-width="null" fill="#191919"/>
+  <rect stroke="null" id="svg_8" height="4.563728" width="34.988586" y="114.274744" x="55.754426" stroke-opacity="null" stroke-width="null" fill="#191919"/>
+  <rect stroke="null" id="svg_9" height="4.563728" width="34.988586" y="148.502709" x="55.754426" stroke-opacity="null" stroke-width="null" fill="#191919"/>
+  <rect stroke="null" id="svg_11" height="4.563728" width="34.988586" y="181.970054" x="55.754426" stroke-opacity="null" stroke-width="null" fill="#191919"/>
+  <rect stroke="null" id="svg_12" height="4.563728" width="34.988586" y="216.958641" x="55.754426" stroke-opacity="null" stroke-width="null" fill="#191919"/>
+  <text font-weight="bold" stroke="null" transform="matrix(0.9963888210352536,0,0,0.6360079646110534,-43.70835307996571,12.974166626874649) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_13" y="61.791864" x="140.944028" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#191919">600ml</text>
+  <text style="cursor: move;" font-weight="bold" stroke="null" transform="matrix(0.9963888210352536,0,0,0.6360079646110531,-43.70835307996571,14.495409603063308) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_14" y="114.412817" x="140.944028" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#191919">500ml</text>
+  <text style="cursor: move;" font-weight="bold" stroke="null" transform="matrix(0.9963888210352536,0,0,0.6360079646110531,-43.70835307996571,14.495409603063308) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_15" y="168.229701" x="140.944028" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#191919">400ml</text>
+  <text style="cursor: move;" font-weight="bold" stroke="null" transform="matrix(0.9963888210352536,0,0,0.6360079646110531,-43.70835307996571,14.495409603063308) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_16" y="222.046586" x="140.944028" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#191919">300ml</text>
+  <text style="cursor: move;" font-weight="bold" stroke="null" transform="matrix(0.9963888210352536,0,0,0.6360079646110531,-43.70835307996571,14.495409603063308) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_17" y="274.667539" x="140.944028" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#191919">200ml</text>
+  <text style="cursor: move;" font-weight="bold" stroke="null" transform="matrix(0.9963888210352536,0,0,0.6360079646110531,-43.70835307996571,14.495409603063308) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_18" y="329.680354" x="140.944028" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#191919">100ml</text>
+ </g>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 701 561">
+    <defs>
+        <style>
+            .cls-1, .cls-2 {
+            fill: none;
+            stroke-miterlimit: 10;
+            }
+
+            .cls-1 {
+            stroke: #3fa9f5;
+            }
+
+            .cls-2 {
+            stroke: orange;
+            stroke-width: 5px;
+            }
+        </style>
+    </defs>
+    <title>shape2</title>
+    <g id="grid">
+        <rect class="cls-1" x="0.5" y="0.5" width="140" height="140"/>
+        <rect class="cls-1" x="140.5" y="0.5" width="140" height="140"/>
+        <rect class="cls-1" x="280.5" y="0.5" width="140" height="140"/>
+        <rect class="cls-1" x="420.5" y="0.5" width="140" height="140"/>
+        <rect class="cls-1" x="560.5" y="0.5" width="140" height="140"/>
+        <rect class="cls-1" x="0.5" y="140.5" width="140" height="140"/>
+        <rect class="cls-1" x="140.5" y="140.5" width="140" height="140"/>
+        <rect class="cls-1" x="280.5" y="140.5" width="140" height="140"/>
+        <rect class="cls-1" x="420.5" y="140.5" width="140" height="140"/>
+        <rect class="cls-1" x="560.5" y="140.5" width="140" height="140"/>
+        <rect class="cls-1" x="0.5" y="280.5" width="140" height="140"/>
+        <rect class="cls-1" x="140.5" y="280.5" width="140" height="140"/>
+        <rect class="cls-1" x="280.5" y="280.5" width="140" height="140"/>
+        <rect class="cls-1" x="420.5" y="280.5" width="140" height="140"/>
+        <rect class="cls-1" x="560.5" y="280.5" width="140" height="140"/>
+        <rect class="cls-1" x="0.5" y="420.5" width="140" height="140"/>
+        <rect class="cls-1" x="140.5" y="420.5" width="140" height="140"/>
+        <rect class="cls-1" x="280.5" y="420.5" width="140" height="140"/>
+        <rect class="cls-1" x="420.5" y="420.5" width="140" height="140"/>
+        <rect class="cls-1" x="560.5" y="420.5" width="140" height="140"/>
+    </g>
+    <g id="shape2">
+        <line class="cls-2" x1="140.5" y1="140.5" x2="140.5" y2="280.5"/>
+        <line class="cls-2" x1="560.5" y1="140.5" x2="140.5" y2="140.5"/>
+        <line class="cls-2" x1="140.5" y1="280.5" x2="280.5" y2="420.5"/>
+        <line class="cls-2" x1="560.5" y1="140.5" x2="560.5" y2="280.5"/>
+        <line class="cls-2" x1="280.5" y1="420.5" x2="420.5" y2="280.5"/>
+        <line class="cls-2" x1="560.5" y1="280.5" x2="560.5" y2="420.5"/>
+        <line class="cls-2" x1="420.5" y1="280.5" x2="560.5" y2="420.5"/>
+        <line class="cls-2" x1="280.5" y1="140.5" x2="280.5" y2="420.5"/>
+        <line class="cls-2" x1="420.5" y1="140.5" x2="420.5" y2="280.5"/>
+        <line class="cls-2" x1="140.5" y1="280.5" x2="560.5" y2="280.5"/>
+    </g>
+</svg>

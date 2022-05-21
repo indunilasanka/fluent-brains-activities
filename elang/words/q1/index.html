@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="./img/favicon.ico"
+      rel="shortcut icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Grammer</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="../js/DragDropTouch.js"></script>
+  </head>
+
+<body onload="setScore()">
+<div id="app">
+  <div class="popup-container">
+    <div class="popup">
+      <div class="animation1">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div class="popup-upper">
+        <div class="popup-close-icon" onclick="switchQuestion()" style="font-size: 15px">
+          <i class="fa fa-times close-icon"></i>
+        </div>
+        <div class="popup-check-icon">
+          <img alt="" class="check-img" id="starId1" src="./img/awesome.gif"/>
+        </div>
+        <div class="popup-action" onclick="switchQuestion()">
+          <p>Next Challenge</p>&#160;
+          <i class="fa fa-arrow-circle-right" style="font-size: 20px"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex-container">
+    <div class="info-panel">
+      <div
+              class="stats-container problems-attempted-stats-container"
+              style="margin-left: 1%"
+      >
+            <div class="stats-header problems-attempted-stats-header">
+              <span class="txt-question-answered">ANSWERED</span>
+            </div>
+            <div class="stats-content problems-attempted-stats-content">
+              <span id="question-count">1</span
+              ><span class="all-count">/8</span>
+            </div>
+          </div>
+
+          <div class="stats-container time-elapsed-stats-container">
+            <div class="stats-header time-elapsed-stats-header">
+              <span class="txt-time-elapsed">TIME</span>
+            </div>
+            <div class="stats-content time-elapsed-stats-content">
+              <label id="timerhrs">00</label>:<label id="timermin">00</label
+              >:<label id="timersec">00</label> H
+            </div>
+          </div>
+
+          <div class="stats-container score-and-link-container">
+            <div class="stats-header score-stats-header">
+              <div class="txt-smartscore">SCORE</div>
+            </div>
+            <div class="stats-content score-stats-content">
+              <label id="current-score">0</label>
+            </div>
+          </div>
+        </div>
+        <div class="question-panel" id="qpanel">
+          <ul class="question-list">
+            <li class="question" id="q1">
+              <div class="question-title-box">
+                <i
+                  class="fa fa-volume-up"
+                  onclick="playSound('Pick the correct answer matching the sentence.')"
+                  style="font-size: 20px; color: #419ae2; cursor: pointer"
+                ></i>
+                <span class="question-title-text"
+                  >Pick the correct answer matching the sentence.</span
+                >
+              </div>
+
+              <div class="q1-main-cnt">
+                <div class="q1-row-container">
+                  <div class="q1-row1">
+                    <div class="q1-row1-first">
+                      <p>I see a kite</p>
+                    </div>
+
+                    <div id="q1-row1" class="q1-row1-second">
+                      <div id="kite" class="q1-row1-img-container">
+                        <img class="q1-img" src="../img/row1/kite.svg" alt="" />
+                      </div>
+                      <div id="car" class="q1-row1-img-container">
+                        <img class="q1-img" src="../img/row1/car2.svg" alt="" />
+                      </div>
+                      <div id="dog" class="q1-row1-img-container">
+                        <img class="q1-img" src="../img/row1/dog.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- jhgjhgh -->
+                  <div class="q1-row2">
+                    <div class="q1-row2-first">
+                      <p>I see a cat</p>
+                    </div>
+
+                    <div id="q1-row2" class="q1-row2-second">
+                      <div id="fish" class="q1-row2-img-container">
+                        <img
+                          class="q1-img"
+                          src="../img/row2/fish_4.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div id="cat" class="q1-row2-img-container">
+                        <img class="q1-img" src="../img/row2/cat.svg" alt="" />
+                      </div>
+                      <div id="house" class="q1-row2-img-container">
+                        <img
+                          class="q1-img"
+                          src="../img/row2/house.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- dfdsfsf -->
+                  <div class="q1-row3">
+                    <div class="q1-row3-first">
+                      <p>I see a bee</p>
+                    </div>
+
+                    <div id="q1-row3" class="q1-row3-second">
+                      <div id="duck" class="q1-row3-img-container">
+                        <img class="q1-img" src="../img/row3/duck.svg" alt="" />
+                      </div>
+                      <div id="bug" class="q1-row3-img-container">
+                        <img
+                          class="q1-img"
+                          src="../img/row3/bug_insect.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div id="bee" class="q1-row3-img-container">
+                        <img class="q1-img" src="../img/row3/bee.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style="display: flex; justify-content: center; margin-top: 20px"
+              >
+                <button class="submit-button" onclick="q1SubmitAnswer()">
+                  Submit
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

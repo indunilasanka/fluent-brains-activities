@@ -1,0 +1,62 @@
+<svg id="Layer_12" data-name="Layer 12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 392.7 353.4">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: none;
+            stroke: #000;
+            stroke-miterlimit: 10;
+            stroke-width: 3px;
+            }
+
+            .cls-2 {
+            font-size: 17px;
+            font-family: Verdana;
+            }
+
+            .cls-3 {
+            letter-spacing: -0.02em;
+            }
+
+            .cls-4 {
+            letter-spacing: -0.1em;
+            }
+        </style>
+    </defs>
+    <title>q16-img</title>
+    <g id="Layer_13" data-name="Layer 13">
+        <polyline class="cls-1" points="39.8 46.7 39.8 319 389.2 319"/>
+        <line class="cls-1" x1="32.9" y1="273.2" x2="45.4" y2="273.2"/>
+        <line class="cls-1" x1="32.9" y1="223.7" x2="45.4" y2="223.7"/>
+        <line class="cls-1" x1="32.9" y1="174.2" x2="45.4" y2="174.2"/>
+        <line class="cls-1" x1="32.9" y1="124.7" x2="45.4" y2="124.7"/>
+        <line class="cls-1" x1="32.9" y1="75.1" x2="45.4" y2="75.1"/>
+        <polyline class="cls-1" points="33.5 59.1 39.4 46.6 45.4 59.1"/>
+        <polyline class="cls-1" points="376.7 313.1 389.2 319 376.7 324.9"/>
+        <polyline class="cls-1" points="65.3 316.6 65.3 223.6 114.3 223.6 114.3 319"/>
+        <polyline class="cls-1" points="138.9 319 138.8 124.4 189 124.4 189 319"/>
+        <polyline class="cls-1" points="212.1 319 212.3 75.4 262.5 75.4 261.9 319"/>
+        <polyline class="cls-1" points="286.1 319 285.7 223.6 335.9 223.6 335.9 319"/>
+    </g>
+    <g id="Layer_14" data-name="Layer 14">
+        <text class="cls-2" transform="translate(14.4 325.4)">0</text>
+        <text class="cls-2" transform="translate(13.5 278.1)">2</text>
+        <text class="cls-2" transform="translate(13.8 228.1)">4</text>
+        <text class="cls-2" transform="translate(13.7 177.5)">6</text>
+        <text class="cls-2" transform="translate(14 128.2)">8</text>
+        <text class="cls-2" transform="translate(6.1 80.5)">10</text>
+        <text class="cls-2" transform="translate(0 14.7)">Number of
+            <tspan x="27.5" y="20.4">cars</tspan>
+        </text>
+        <text class="cls-2" transform="translate(71 214.4)">
+            <tspan class="cls-3">F</tspan>
+            <tspan x="9.4" y="0">ord</tspan>
+        </text>
+        <text class="cls-2" transform="translate(143 110.3)">Benz</text>
+        <text class="cls-2" transform="translate(216.4 58.6)">BMW</text>
+        <text class="cls-2" transform="translate(267.4 206.3)">Lambogini</text>
+        <text class="cls-2" transform="translate(153.1 348.3)">
+            <tspan class="cls-4">T</tspan>
+            <tspan x="8.8" y="0">ype of car</tspan>
+        </text>
+    </g>
+</svg>

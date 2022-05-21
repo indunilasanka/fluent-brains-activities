@@ -1,0 +1,26 @@
+<svg width="447.75" height="265.34" xmlns="http://www.w3.org/2000/svg">
+
+    <g>
+        <title>background</title>
+        <rect fill="none" id="canvas_background" height="267.34" width="449.75" y="-1" x="-1"/>
+    </g>
+    <g>
+        <title>Layer 1</title>
+        <g id="svg_4">
+            <path id="svg_1" fill="#C9711A"
+                  d="m68.664,23.042c0,0 -11.132,198.275 266.939,139.492l-3.802,40.84c-1.804,19.377 -17.676,34.424 -37.122,35.191l-213.763,8.43c-28.489,1.318 -61.489,-34.651 -60.869,-63.164l-0.01,-160.789l48.627,0z"/>
+            <path id="svg_2" fill="#352517"
+                  d="m14.057,0c-7.763,0 -14.057,6.291 -14.057,14.057l0,167.389c0,46.259 37.635,83.894 83.894,83.894l179.988,0c46.259,0 83.894,-37.635 83.894,-83.894l0,-48.116l37.151,0c34.642,0 62.825,-28.183 62.825,-62.825l0,-56.448c-0.002,-7.766 -6.296,-14.057 -14.059,-14.057l-419.636,0zm305.603,181.446c0,30.757 -25.022,55.779 -55.779,55.779l-179.987,0c-30.757,0 -55.779,-25.022 -55.779,-55.779l0,-153.332l291.545,0l0,153.332zm99.976,-110.94c0,19.14 -15.571,34.711 -34.711,34.711l-37.151,0l0,-77.103l71.861,0l0,42.392l0.001,0z"/>
+        </g>
+        <text stroke="null"
+              transform="matrix(17.459331512451172,0,0,3.762249231338501,-4788.379584848881,-475.9308303485632) "
+              xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24"
+              id="svg_5" y="165.494335" x="307" fill-opacity="null" stroke-opacity="null" stroke-width="0"
+              fill="#000000">200m</text>
+        <text font-weight="bold" stroke="null"
+              transform="matrix(3.85068678855896,0,0,4.028504396654853,-149.83922432363033,-102.78076881829318) "
+              xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="25"
+              id="svg_6" y="64.490961" x="50.20731" fill-opacity="null" stroke-opacity="null" stroke-width="0"
+              fill="#000000">300ml</text>
+    </g>
+</svg>

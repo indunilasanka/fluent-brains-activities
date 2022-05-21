@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <link href="../img/favicon.ico" rel="shortcut icon" sizes="32x32" type="image/png"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Multiplication</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="../js/DragDropTouch.js"></script>
+</head>
+
+<body onload="setScore()">
+<div id="app">
+    <div class="popup-container">
+        <div class="popup">
+            <div class="animation1">
+                <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="popup-upper">
+                <div class="popup-close-icon" onclick="switchQuestion()" style="font-size: 15px">
+                    <i class="fa fa-times close-icon"></i>
+                </div>
+                <div class="popup-check-icon">
+                    <img alt="" class="check-img" id="starId1" src="./img/awesome.gif"/>
+                </div>
+                <div class="popup-action" onclick="switchQuestion()">
+                    <p>Next Challenge</p>&#160;
+                    <i class="fa fa-arrow-circle-right" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+
+        <!-- Info panel -->
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container" style="margin-left: 1%">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">ANSWERED</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content"><span id="question-count">1</span><span
+                        class="all-count">/8</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">TIME</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <label id="timerhrs">00</label>:<label id="timermin">00</label>:<label id="timersec">00</label>
+                    H
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">SCORE</div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <label id="current-score">0</label>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Question panel -->
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q3">
+
+                    <!-- Question title -->
+                    <div class="question-title-box">
+                        <i class="fa fa-volume-up" onclick="playSound('Classify the numbers as multiples of 6 and multiples of 7.')"
+                           style="font-size: 20px; color: #419ae2; cursor: pointer"></i>
+                        <span class="question-title-text">Classify the numbers as multiples of 6 and multiples of
+                7</span>
+                    </div>
+
+                    <!-- drag item area -->
+                    <div class="q3-answer-drop-container" id="imgCnt">
+
+                        <div class="q3-letter-container" id="greenCnt">
+                            <div canswer="6" class="q3-answer-drop-div num-6" draggable="true"
+                                 id="sixOne" ondragover="allowDrop(event)" ondragstart="drag(event)" ondrop="dropQ3(event)">
+                                12
+                            </div>
+                        </div>
+
+                        <div class="q3-letter-container" id="redCnt1">
+                            <div canswer="7" class="q3-answer-drop-div num-7" draggable="true"
+                                 id="sevenOne" ondragover="allowDrop(event)" ondragstart="drag(event)" ondrop="dropQ3(event)">
+                                14
+                            </div>
+                        </div>
+
+                        <div class="q3-letter-container" id="redCnt2">
+                            <div canswer="6" class="q3-answer-drop-div num-6" draggable="true"
+                                 id="sixTwo" ondragover="allowDrop(event)" ondragstart="drag(event)" ondrop="dropQ3(event)">
+                                18
+                            </div>
+                        </div>
+
+                        <div class="q3-letter-container" id="redCnt3">
+                            <div canswer="7" class="q3-answer-drop-div num-7" draggable="true"
+                                 id="sevenTwo" ondragover="allowDrop(event)" ondragstart="drag(event)" ondrop="dropQ3(event)">
+                                21
+                            </div>
+                        </div>
+
+                        <div class="q3-letter-container" id="redCnt3">
+                            <div canswer="6" class="q3-answer-drop-div num-6" draggable="true"
+                                 id="sixThree" ondragover="allowDrop(event)" ondragstart="drag(event)" ondrop="dropQ3(event)">
+                                24
+                            </div>
+                        </div>
+
+                        <div class="q3-letter-container" id="redCnt3">
+                            <div canswer="7" class="q3-answer-drop-div num-7" draggable="true"
+                                 id="sevenThree" ondragover="allowDrop(event)" ondragstart="drag(event)" ondrop="dropQ3(event)">
+                                28
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Drop box area -->
+                    <div class="q3-main-container">
+
+                        <!-- 6 multiples -->
+                        <div class="q3-container1">
+                            <div class="q3-container-header">multiples of 6</div>
+
+                            <div class="q3-ans-box">
+                                <div class="q3-dd-grid-ans-box-column-six">
+                                    <div class="q3-answer-box-drop-div" draggable="true" ondragover="allowDrop(event)"
+                                         ondragstart="drag(event)" ondrop="dropQ3(event)"></div>
+                                </div>
+                            </div>
+
+                            <div class="q3-ans-box">
+                                <div class="q3-dd-grid-ans-box-column-six">
+                                    <div class="q3-answer-box-drop-div" draggable="true" ondragover="allowDrop(event)"
+                                         ondragstart="drag(event)" ondrop="dropQ3(event)"></div>
+                                </div>
+                            </div>
+
+                            <div class="q3-ans-box">
+                                <div class="q3-dd-grid-ans-box-column-six">
+                                    <div class="q3-answer-box-drop-div" draggable="true" ondragover="allowDrop(event)"
+                                         ondragstart="drag(event)" ondrop="dropQ3(event)"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7 multiples -->
+                        <div class="q3-container2">
+                            <div class="q3-container-header">multiples of 7</div>
+
+                            <div class="q3-ans-box">
+                                <div class="q3-dd-grid-ans-box-column-seven">
+                                    <div class="q3-answer-box-drop-div" draggable="true" ondragover="allowDrop(event)"
+                                         ondragstart="drag(event)" ondrop="dropQ3(event)"></div>
+                                </div>
+                            </div>
+
+                            <div class="q3-ans-box">
+                                <div class="q3-dd-grid-ans-box-column-seven">
+                                    <div class="q3-answer-box-drop-div" draggable="true" ondragover="allowDrop(event)"
+                                         ondragstart="drag(event)" ondrop="dropQ3(event)"></div>
+                                </div>
+                            </div>
+
+                            <div class="q3-ans-box">
+                                <div class="q3-dd-grid-ans-box-column-seven">
+                                    <div class="q3-answer-box-drop-div" draggable="true" ondragover="allowDrop(event)"
+                                         ondragstart="drag(event)" ondrop="dropQ3(event)"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Submit button -->
+                    <div style="display: flex; justify-content: center; margin-top: 20px;">
+                        <button class="submit-button" id="q3-submit" onclick="q3SubmitAnswer()">
+                            Submit
+                        </button>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="./js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<svg id="q14"
+     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 333 253">
+    <defs>
+        <style>
+            .cls-1, .cls-2 {
+            fill: none;
+            }
+
+            .cls-1, .cls-2, .cls-3 {
+            stroke: #000;
+            stroke-miterlimit: 10;
+            stroke-width: 3px;
+            }
+
+            .cls-2 {
+            stroke-dasharray: 8.26 8.26;
+            }
+
+            .cls-4 {
+            font-size: 17px;
+            font-family: Verdana;
+            }
+
+            @media (max-width: 350px) {
+            .cls-4 {
+            font-size: 20px;
+            }
+            }
+        </style>
+    </defs>
+    <title>q14-perimeter</title>
+    <g id="Layer_20" data-name="Layer 20">
+        <path class="cls-1"
+              d="M30,143.3h82.5S112.5,60,195,60s82.5,83.3,82.5,83.3H360S360,310,195,310,30,143.3,30,143.3Z"
+              transform="translate(-28.5 -58.5)"/>
+        <g>
+            <line class="cls-1" x1="249" y1="84.8" x2="245" y2="84.8"/>
+            <line class="cls-2" x1="236.7" y1="84.8" x2="92.1" y2="84.8"/>
+            <line class="cls-1" x1="88" y1="84.8" x2="84" y2="84.8"/>
+        </g>
+        <circle class="cls-3" cx="166.5" cy="86.5" r="5"/>
+        <line class="cls-1" x1="41.5" y1="77.3" x2="41.5" y2="92.3"/>
+        <line class="cls-1" x1="46.5" y1="77.3" x2="46.5" y2="92.3"/>
+        <line class="cls-1" x1="130.2" y1="77.3" x2="130.2" y2="92.3"/>
+        <line class="cls-1" x1="135.2" y1="77.3" x2="135.2" y2="92.3"/>
+        <line class="cls-1" x1="286.5" y1="77.3" x2="286.5" y2="92.3"/>
+        <line class="cls-1" x1="291.5" y1="77.3" x2="291.5" y2="92.3"/>
+        <text class="cls-4" transform="translate(188.5 109.5)">7 cm</text>
+    </g>
+</svg>

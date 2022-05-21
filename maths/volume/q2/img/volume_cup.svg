@@ -1,0 +1,19 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path fill="#ffd6c6" id="svg_2" d="m442.096389,243.7c0,104 -79.4,188.3 -177.5,188.3s-177.5,-84.3 -177.5,-188.3l355,0z" class="st0"/>
+  <path stroke-miterlimit="10" stroke-width="12" stroke="#000000" fill="none" id="svg_3" d="m445.804693,243.7c0,108.7 -80.5,196.9 -179.8,196.9s-179.7,-88.2 -179.7,-196.9l359.5,0z" class="st1"/>
+  <line stroke-miterlimit="10" stroke-width="12" stroke="#000000" fill="#ffd6c6" id="svg_4" y2="440.6" y1="440.6" x2="390.7" x1="144.2" class="st2"/>
+  <path stroke-miterlimit="10" stroke-width="12" stroke="#000000" fill="none" id="svg_6" d="m95.8,290.9c0,0 -38,-25.8 -56,-5.9s-13.3,65.7 50.8,85.8c37.1,11.6 53.6,13.1 53.6,13.1" class="st1"/>
+  <line stroke-miterlimit="10" stroke-width="12" stroke="#000000" fill="none" id="svg_11" y2="175.6" y1="218.3" x2="313.2" x1="313.2" class="st1"/>
+  <line stroke-miterlimit="10" stroke-width="12" stroke="#000000" fill="none" id="svg_12" y2="103" y1="220.5" x2="272.8" x1="272.8" class="st1"/>
+  <line stroke-miterlimit="10" stroke-width="12" stroke="#000000" fill="none" id="svg_13" y2="161.7" y1="218.3" x2="228.6" x1="228.6" class="st1"/>
+  <line stroke-miterlimit="10" stroke-width="12" stroke="#000000" fill="none" id="svg_14" y2="152.9" y1="161.7" x2="313.2" x1="313.2" class="st1"/>
+  <text font-weight="bold" stroke="#000000" transform="matrix(2.2069762931641073,0,0,2.0660590249255186,-517.98530963551,-376.11301896401153) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_15" y="349.691386" x="324.411833" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">100ml</text>
+ </g>
+</svg>

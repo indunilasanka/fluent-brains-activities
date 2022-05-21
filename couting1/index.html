@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+            href="./img/favicon.ico"
+            rel="shortcut icon"
+            sizes="32x32"
+            type="image/png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Counting</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="./js/DragDropTouch.js"></script>
+</head>
+
+<body>
+<div class="popup-container">
+    <div class="popup">
+        <div class="popup-upper">
+            <div
+                    onclick="swapNextQuestion()"
+                    class="popup-close-icon"
+                    style="font-size: 15px"
+            >
+                <i class="fa fa-times close-icon"></i>
+            </div>
+            <div class="popup-check-icon">
+                <img id="starId1" class="check-img" src="./img/star.gif" alt=""/>
+                <img id="starId2" class="check-img" src="./img/star.gif" alt=""/>
+                <img id="starId3" class="check-img" src="./img/star.gif" alt=""/>
+            </div>
+        </div>
+        <div class="popup-lower">
+            <div class="popup-great"><label id="salutation">Great</label>!</div>
+            <div class="popup-msg">
+                Your have scored <label id="star-count">3 stars</label>.
+            </div>
+            <div onclick="swapNextQuestion()" class="popup-explore">
+                <p class="explore-text">Continue</p>
+                <i
+                        style="font-size: 12px"
+                        class="fa fa-arrow-right explore-arrow"
+                ></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="app" style="position: absolute; width: 100%; height: 100%">
+    <div class="flex-container">
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">Answered</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content"><span id="question-count">1</span><span
+                        class="all-count">/8</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">Time</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <table class="timer practice-timer">
+                        <tbody>
+                        <tr class="box-value-hr-min-sec">
+                            <td style="width: 100%; padding-left: 5px; padding-right: 5px;"><label
+                                    id="timerhrs">00</label>:<label id="timermin">00</label>:<label
+                                    id="timersec">00</label> H
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">Score <i
+                            title="This is not your final score. When calculating the final score elapsed time also will be considering"
+                            class="fa fa-question-circle"></i></div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <label id="current-score">0</label>
+                </div>
+            </div>
+        </div>
+        <div class="question-panel">
+            <ul class="question-list">
+                <li class="question" id="q3">
+                    <div style="margin-bottom: 20px; margin-left: 10px;">
+                        <i class='fa fa-volume-up'
+                           onclick="playSound('Let\'s count numbers from 1 to 10. Click on the correct number')"
+                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer;'></i>
+                        <span class="question-title">Let's count numbers from 1 to 10. Click on the correct number.</span>
+                    </div>
+                    <div>
+                        <div style="display: inline; margin-bottom: 20px;">
+                            <ul>
+                                <li class="count-question" id="cq1">
+                                    <div style="display:inline">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('one')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="question-txt">1</span>
+                                    </div>
+                                    <div style="margin-top: 1rem; margin-left: 10px;">
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                        </div>
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="" src="./img/empty.png" style="width:100%;">
+                                            </div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 20px; margin-left: 10px;">
+                                        <button class="answer-txt-button" id="cq11"
+                                                onclick="handleCountAnswerClick('ten', 'cq1', 'cq11')">ten
+                                        </button>
+                                        <button class="answer-txt-button" id="cq12"
+                                                onclick="handleCountAnswerClick('three', 'cq1', 'cq12')">three
+                                        </button>
+                                        <button class="answer-txt-button" id="cq13"
+                                                onclick="handleCountAnswerClick('four', 'cq1', 'cq13')">four
+                                        </button>
+                                        <button class="answer-txt-button" id="cq14"
+                                                onclick="handleCountAnswerClick('one', 'cq1', 'cq14')">one
+                                        </button>
+                                        <button class="answer-txt-button" id="cq15"
+                                                onclick="handleCountAnswerClick('five', 'cq1', 'cq15')">five
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="count-question" id="cq2">
+                                    <div style="display:flex;">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('two')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="question-txt">2</span>
+                                    </div>
+                                    <div style="margin-top: 1rem; margin-left: 10px;">
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                        </div>
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 20px; margin-left: 10px;">
+                                        <button class="answer-txt-button" id="cq21"
+                                                onclick="handleCountAnswerClick('two', 'cq2', 'cq21')">two
+                                        </button>
+                                        <button class="answer-txt-button" id="cq22"
+                                                onclick="handleCountAnswerClick('seven', 'cq2', 'cq22')">seven
+                                        </button>
+                                        <button class="answer-txt-button" id="cq23"
+                                                onclick="handleCountAnswerClick('one', 'cq2', 'cq23')">one
+                                        </button>
+                                        <button class="answer-txt-button" id="cq24"
+                                                onclick="handleCountAnswerClick('nine', 'cq2', 'cq24')">nine
+                                        </button>
+                                        <button class="answer-txt-button" id="cq25"
+                                                onclick="handleCountAnswerClick('five', 'cq2', 'cq25')">five
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="count-question" id="cq3">
+                                    <div style="display:flex;">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('three')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="question-txt">3</span>
+                                    </div>
+                                    <div style="margin-top: 1rem; margin-left: 10px;">
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                        </div>
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 20px; margin-left: 10px;">
+                                        <button class="answer-txt-button" id="cq31"
+                                                onclick="handleCountAnswerClick('ten', 'cq3', 'cq31')">ten
+                                        </button>
+                                        <button class="answer-txt-button" id="cq32"
+                                                onclick="handleCountAnswerClick('three', 'cq3', 'cq32')">three
+                                        </button>
+                                        <button class="answer-txt-button" id="cq33"
+                                                onclick="handleCountAnswerClick('four', 'cq3', 'cq33')">four
+                                        </button>
+                                        <button class="answer-txt-button" id="cq34"
+                                                onclick="handleCountAnswerClick('six', 'cq3', 'cq34')">six
+                                        </button>
+                                        <button class="answer-txt-button" id="cq35"
+                                                onclick="handleCountAnswerClick('eight', 'cq3', 'cq35')">eight
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="count-question" id="cq4">
+                                    <div style="display:flex;">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('four')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="question-txt">4</span>
+                                    </div>
+                                    <div style="margin-top: 1rem; margin-left: 10px;">
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                        </div>
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 20px; margin-left: 10px;">
+                                        <button class="answer-txt-button" id="cq41"
+                                                onclick="handleCountAnswerClick('one', 'cq4', 'cq41')">one
+                                        </button>
+                                        <button class="answer-txt-button" id="cq42"
+                                                onclick="handleCountAnswerClick('three', 'cq4', 'cq42')">three
+                                        </button>
+                                        <button class="answer-txt-button" id="cq43"
+                                                onclick="handleCountAnswerClick('four', 'cq4', 'cq43')">four
+                                        </button>
+                                        <button class="answer-txt-button" id="cq44"
+                                                onclick="handleCountAnswerClick('two', 'cq4', 'cq44')">two
+                                        </button>
+                                        <button class="answer-txt-button" id="cq45"
+                                                onclick="handleCountAnswerClick('eight', 'cq4', 'cq45')">eight
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="count-question" id="cq5">
+                                    <div style="display:flex;">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('five')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="question-txt">5</span>
+                                    </div>
+                                    <div style="margin-top: 1rem; margin-left: 10px;">
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                        </div>
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 20px; margin-left: 10px;">
+                                        <button class="answer-txt-button" id="cq51"
+                                                onclick="handleCountAnswerClick('nine', 'cq5', 'cq51')">nine
+                                        </button>
+                                        <button class="answer-txt-button" id="cq52"
+                                                onclick="handleCountAnswerClick('three', 'cq5', 'cq52')">three
+                                        </button>
+                                        <button class="answer-txt-button" id="cq53"
+                                                onclick="handleCountAnswerClick('two', 'cq5', 'cq53')">two
+                                        </button>
+                                        <button class="answer-txt-button" id="cq54"
+                                                onclick="handleCountAnswerClick('six', 'cq5', 'cq54')">six
+                                        </button>
+                                        <button class="answer-txt-button" id="cq55"
+                                                onclick="handleCountAnswerClick('five', 'cq5', 'cq55')">five
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="count-question" id="cq6">
+                                    <div style="display:flex;">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('six')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="question-txt">6</span>
+                                    </div>
+                                    <div style="margin-top: 1rem; margin-left: 10px;">
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                        </div>
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 20px; margin-left: 10px;">
+                                        <button class="answer-txt-button" id="cq61"
+                                                onclick="handleCountAnswerClick('three', 'cq6', 'cq61')">three
+                                        </button>
+                                        <button class="answer-txt-button" id="cq62"
+                                                onclick="handleCountAnswerClick('seven', 'cq6', 'cq62')">seven
+                                        </button>
+                                        <button class="answer-txt-button" id="cq63"
+                                                onclick="handleCountAnswerClick('four', 'cq6', 'cq63')">four
+                                        </button>
+                                        <button class="answer-txt-button" id="cq64"
+                                                onclick="handleCountAnswerClick('eight', 'cq6', 'cq64')">eight
+                                        </button>
+                                        <button class="answer-txt-button" id="cq65"
+                                                onclick="handleCountAnswerClick('six', 'cq6', 'cq65')">six
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="count-question" id="cq7">
+                                    <div style="display:flex;">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('seven')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="question-txt">7</span>
+                                    </div>
+                                    <div style="margin-top: 1rem; margin-left: 10px;">
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column"></div>
+                                        </div>
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column"></div>
+                                            <div class="image-grid-column"></div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 20px; margin-left: 10px;">
+                                        <button class="answer-txt-button" id="cq71"
+                                                onclick="handleCountAnswerClick('seven', 'cq7', 'cq71')">seven
+                                        </button>
+                                        <button class="answer-txt-button" id="cq72"
+                                                onclick="handleCountAnswerClick('two', 'cq7', 'cq72')">two
+                                        </button>
+                                        <button class="answer-txt-button" id="cq73"
+                                                onclick="handleCountAnswerClick('nine', 'cq7', 'cq73')">nine
+                                        </button>
+                                        <button class="answer-txt-button" id="cq74"
+                                                onclick="handleCountAnswerClick('one', 'cq7', 'cq74')">one
+                                        </button>
+                                        <button class="answer-txt-button" id="cq75"
+                                                onclick="handleCountAnswerClick('four', 'cq7', 'cq75')">four
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="count-question" id="cq8">
+                                    <div style="display:flex;">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('eight')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="question-txt">8</span>
+                                    </div>
+                                    <div style="margin-top: 1rem; margin-left: 10px;">
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column"></div>
+                                        </div>
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column"></div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 20px; margin-left: 10px;">
+                                        <button class="answer-txt-button" id="cq81"
+                                                onclick="handleCountAnswerClick('one', 'cq8', 'cq81')">one
+                                        </button>
+                                        <button class="answer-txt-button" id="cq82"
+                                                onclick="handleCountAnswerClick('eight', 'cq8', 'cq82')">eight
+                                        </button>
+                                        <button class="answer-txt-button" id="cq83"
+                                                onclick="handleCountAnswerClick('four', 'cq8', 'cq83')">four
+                                        </button>
+                                        <button class="answer-txt-button" id="cq84"
+                                                onclick="handleCountAnswerClick('three', 'cq8', 'cq84')">three
+                                        </button>
+                                        <button class="answer-txt-button" id="cq85"
+                                                onclick="handleCountAnswerClick('five', 'cq8', 'cq85')">five
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="count-question" id="cq9">
+                                    <div style="display:flex;">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('nine')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="question-txt">9</span>
+                                    </div>
+                                    <div style="margin-top: 1rem; margin-left: 10px;">
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                        </div>
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="./img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column"></div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 20px; margin-left: 10px;">
+                                        <button class="answer-txt-button" id="cq91"
+                                                onclick="handleCountAnswerClick('teo', 'cq9', 'cq91')">two
+                                        </button>
+                                        <button class="answer-txt-button" id="cq92"
+                                                onclick="handleCountAnswerClick('three', 'cq9', 'cq92')">three
+                                        </button>
+                                        <button class="answer-txt-button" id="cq93"
+                                                onclick="handleCountAnswerClick('six', 'cq9', 'cq93')">six
+                                        </button>
+                                        <button class="answer-txt-button" id="cq94"
+                                                onclick="handleCountAnswerClick('nine', 'cq9', 'cq94')">nine
+                                        </button>
+                                        <button class="answer-txt-button" id="cq95"
+                                                onclick="handleCountAnswerClick('eight', 'cq9', 'cq95')">eight
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="count-question" id="cq10">
+                                    <div style="display:flex;">
+                                        <i class='fa fa-volume-up'
+                                           onclick="playSound('ten')"
+                                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer; float: left; margin-left: 10px;'></i>
+                                        <span class="question-txt">10</span>
+                                    </div>
+                                    <div style="margin-top: 1rem; margin-left: 10px;">
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="img/apple.png" style="width:100%">
+                                            </div>
+                                        </div>
+                                        <div class="image-grid-row">
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="img/apple.png" style="width:100%">
+                                            </div>
+                                            <div class="image-grid-column">
+                                                <img alt="Snow" src="img/apple.png" style="width:100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 20px; margin-left: 10px;">
+                                        <button class="answer-txt-button" id="cq101"
+                                                onclick="handleCountAnswerClick('ten', 'cq10', 'cq101')">ten
+                                        </button>
+                                        <button class="answer-txt-button" id="cq102"
+                                                onclick="handleCountAnswerClick('three', 'cq10', 'cq102')">three
+                                        </button>
+                                        <button class="answer-txt-button" id="cq103"
+                                                onclick="handleCountAnswerClick('four', 'cq10', 'cq103')">four
+                                        </button>
+                                        <button class="answer-txt-button" id="cq104"
+                                                onclick="handleCountAnswerClick('six', 'cq10', 'cq104')">six
+                                        </button>
+                                        <button class="answer-txt-button" id="cq105"
+                                                onclick="handleCountAnswerClick('eight', 'cq10', 'cq105')">eight
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="question" id="q14">
+                    <div style="margin-bottom: 20px; margin-left: 10px;">
+                        <i class='fa fa-volume-up' onclick="playSound('How many frogs are there?')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title">How many helicopters are there?</span>
+                    </div>
+                    <div>
+                        <div style="display: inline">
+                            <img alt="" class="image-question-box" src="./img/helicopter.svg">
+                            <img alt="" class="image-question-box" src="./img/helicopter.svg">
+                        </div>
+
+                        <div style="margin-top: 20px; margin-left: 10px;">
+                            <button class="answer-button" id="q14a1" onclick="handleSubmitAnswerComparison('q14a1')">1
+                            </button>
+                            <button class="answer-button" id="q14a2"
+                                    onclick="handleSubmitAnswerComparison('q14a2')">4
+                            </button>
+                            <button class="answer-button" id="q14a3" onclick="handleSubmitAnswerComparison('q14a3')">3
+                            </button>
+                            <button class="answer-button" id="q14a4" onclick="handleSubmitAnswerComparison('q14a4', true)">2
+                            </button>
+                            <button class="answer-button" id="q14a5" onclick="handleSubmitAnswerComparison('q14a5')">5
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <li class="question" id="q4">
+                    <div style="margin-bottom: 20px; margin-left: 10px;">
+                        <i class='fa fa-volume-up' onclick="playSound('Which shows four fishes?')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title">Which shows four(4) fishes?</span>
+                    </div>
+                    <div>
+                        <div style="display: inline">
+                            <img alt="" class="image-button" id="q4a1" onclick="handleNumberComparison('q4a1')"
+                                 src="./img/fish-9.png">
+                            <img alt="" class="image-button" id="q4a2" onclick="handleNumberComparison('q4a2', true)"
+                                 src="./img/fish-4.png">
+                            <img alt="" class="image-button" id="q4a3" onclick="handleNumberComparison('q4a3')"
+                                 src="./img/fish-3.png">
+                            <img alt="" class="image-button" id="q4a4" onclick="handleNumberComparison('q4a4')"
+                                 src="./img/fish-6.png">
+                        </div>
+                    </div>
+                </li>
+                <li class="question" id="q5">
+                    <div style="margin-bottom: 20px; margin-left: 10px;">
+                        <i class='fa fa-volume-up' onclick="playSound('How many frogs are there?')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title">How many frogs are there?</span>
+                    </div>
+                    <div>
+                        <div style="display: inline">
+                            <img alt="" class="image-question-box" src="./img/frog.png">
+                            <img alt="" class="image-question-box" src="./img/frog.png">
+                            <img alt="" class="image-question-box" src="./img/frog.png">
+                        </div>
+
+                        <div style="margin-top: 20px; margin-left: 10px;">
+                            <button class="answer-button" id="q5a1" onclick="handleSubmitAnswerComparison('q5a1')">5
+                            </button>
+                            <button class="answer-button" id="q5a2"
+                                    onclick="handleSubmitAnswerComparison('q5a2', true)">3
+                            </button>
+                            <button class="answer-button" id="q5a3" onclick="handleSubmitAnswerComparison('q5a3')">4
+                            </button>
+                            <button class="answer-button" id="q5a4" onclick="handleSubmitAnswerComparison('q5a4')">1
+                            </button>
+                            <button class="answer-button" id="q5a5" onclick="handleSubmitAnswerComparison('q5a5')">2
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <li class="question" id="q15">
+                    <div style="margin-bottom: 20px; margin-left: 10px;">
+                        <i class='fa fa-volume-up'
+                           onclick="playSound('Count the number of flowers in each group. Drag and drop the correct numbers.')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title">Count the number of oranges in each group. Drag and drop the correct numbers.</span>
+                    </div>
+                    <div style="margin-left: 10px; display: flex">
+                        <div canswer="5" class="answer-drop-div" draggable=true id="q15answer5"
+                             ondragover="allowDrop(event)"
+                             ondragstart="drag(event)" ondrop="drop(event)">5
+                        </div>
+                        <div canswer="2" class="answer-drop-div" draggable=true id="q15answer2"
+                             ondragover="allowDrop(event)"
+                             ondragstart="drag(event)" ondrop="drop(event)">2
+                        </div>
+                        <div canswer="4" class="answer-drop-div" draggable=true id="q15answer9"
+                             ondragover="allowDrop(event)"
+                             ondragstart="drag(event)" ondrop="drop(event)">4
+                        </div>
+                        <div canswer="3" class="answer-drop-div" draggable=true id="q15answer7"
+                             ondragover="allowDrop(event)"
+                             ondragstart="drag(event)" ondrop="drop(event)">3
+                        </div>
+                        <div canswer="1" class="answer-drop-div" draggable=true id="q15answer4"
+                             ondragover="allowDrop(event)"
+                             ondragstart="drag(event)" ondrop="drop(event)">1
+                        </div>
+                    </div>
+                    <div style="margin-top: 1.5rem; margin-left: 10px;">
+                        <div class="dd-grid-img-row">
+                            <div class="dd-grid-image-column">
+                                <img alt="" class="image-div" src="./img/orange-4.png">
+                            </div>
+                            <div class="dd-grid-image-column">
+                                <img alt="" class="image-div" src="./img/orange-1.png">
+                            </div>
+                            <div class="dd-grid-image-column">
+                                <img alt="" class="image-div" src="./img/orange-3.png">
+                            </div>
+                            <div class="dd-grid-image-column">
+                                <img alt="" class="image-div" src="./img/orange-5.png">
+                            </div>
+                        </div>
+                        <div class="dd-grid-ans-box-row">
+                            <div class="dd-grid-ans-box-column" id="block151">
+                                <div class="answer-box-drop-div" draggable=true ondragover="allowDrop(event)"
+                                     ondragstart="drag(event)" ondrop="drop(event)"></div>
+                            </div>
+                            <div class="dd-grid-ans-box-column" id="block152">
+                                <div class="answer-box-drop-div" draggable=true ondragover="allowDrop(event)"
+                                     ondragstart="drag(event)" ondrop="drop(event)"></div>
+                            </div>
+                            <div class="dd-grid-ans-box-column" id="block153">
+                                <div class="answer-box-drop-div" draggable=true ondragover="allowDrop(event)"
+                                     ondragstart="drag(event)" ondrop="drop(event)"></div>
+                            </div>
+                            <div class="dd-grid-ans-box-column" id="block154">
+                                <div class="answer-box-drop-div" draggable=true ondragover="allowDrop(event)"
+                                     ondragstart="drag(event)" ondrop="drop(event)"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 1rem; margin-left: 10px;">
+                        <button class="submit-button" onclick="submitCountsQ15()">Submit</button>
+                    </div>
+                </li>
+                <li class="question" id="q13">
+                    <div style="margin-bottom: 20px; margin-left: 10px;">
+                        <i class='fa fa-volume-up' onclick="playSound('How many frogs are there?')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title">How many butterflies are there?</span>
+                    </div>
+                    <div>
+                        <div style="display: inline">
+                            <img alt="" class="image-question-box" src="./img/butterfly.svg">
+                            <img alt="" class="image-question-box" src="./img/butterfly.svg">
+                            <img alt="" class="image-question-box" src="./img/butterfly.svg">
+                            <img alt="" class="image-question-box" src="./img/butterfly.svg">
+                            <img alt="" class="image-question-box" src="./img/butterfly.svg">
+                            <img alt="" class="image-question-box" src="./img/butterfly.svg">
+                        </div>
+
+                        <div style="margin-top: 20px; margin-left: 10px;">
+                            <button class="answer-button" id="q13a1" onclick="handleSubmitAnswerComparison('q13a1')">4
+                            </button>
+                            <button class="answer-button" id="q13a2"
+                                    onclick="handleSubmitAnswerComparison('q13a2')">2
+                            </button>
+                            <button class="answer-button" id="q13a3" onclick="handleSubmitAnswerComparison('q13a3')">7
+                            </button>
+                            <button class="answer-button" id="q13a4" onclick="handleSubmitAnswerComparison('q13a4', true)">6
+                            </button>
+                            <button class="answer-button" id="q13a5" onclick="handleSubmitAnswerComparison('q13a5')">3
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <li class="question" id="q6">
+                    <div style="margin-bottom: 20px; margin-left: 10px;">
+                        <i class='fa fa-volume-up'
+                           onclick="playSound('Count the number of flowers in each group. Drag and drop the correct numbers.')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title">Count the number of flowers in each group. Drag and drop the correct numbers.</span>
+                    </div>
+                    <div style="margin-left: 10px; display: flex">
+                        <div canswer="5" class="answer-drop-div" draggable=true id="q6answer5"
+                             ondragover="allowDrop(event)"
+                             ondragstart="drag(event)" ondrop="drop(event)">5
+                        </div>
+                        <div canswer="2" class="answer-drop-div" draggable=true id="q6answer2"
+                             ondragover="allowDrop(event)"
+                             ondragstart="drag(event)" ondrop="drop(event)">2
+                        </div>
+                        <div canswer="9" class="answer-drop-div" draggable=true id="q6answer9"
+                             ondragover="allowDrop(event)"
+                             ondragstart="drag(event)" ondrop="drop(event)">9
+                        </div>
+                        <div canswer="7" class="answer-drop-div" draggable=true id="q6answer7"
+                             ondragover="allowDrop(event)"
+                             ondragstart="drag(event)" ondrop="drop(event)">7
+                        </div>
+                        <div canswer="4" class="answer-drop-div" draggable=true id="q6answer4"
+                             ondragover="allowDrop(event)"
+                             ondragstart="drag(event)" ondrop="drop(event)">4
+                        </div>
+                    </div>
+                    <div style="margin-top: 1.5rem; margin-left: 10px;">
+                        <div class="dd-grid-img-row">
+                            <div class="dd-grid-image-column">
+                                <img alt="" class="image-div" src="./img/flower-4.png">
+                            </div>
+                            <div class="dd-grid-image-column">
+                                <img alt="" class="image-div" src="./img/flower-9.png">
+                            </div>
+                            <div class="dd-grid-image-column">
+                                <img alt="" class="image-div" src="./img/flower-5.png">
+                            </div>
+                            <div class="dd-grid-image-column">
+                                <img alt="" class="image-div" src="./img/flower-2.png">
+                            </div>
+                        </div>
+                        <div class="dd-grid-ans-box-row">
+                            <div class="dd-grid-ans-box-column" id="block1">
+                                <div class="answer-box-drop-div" draggable=true ondragover="allowDrop(event)"
+                                     ondragstart="drag(event)" ondrop="drop(event)"></div>
+                            </div>
+                            <div class="dd-grid-ans-box-column" id="block2">
+                                <div class="answer-box-drop-div" draggable=true ondragover="allowDrop(event)"
+                                     ondragstart="drag(event)" ondrop="drop(event)"></div>
+                            </div>
+                            <div class="dd-grid-ans-box-column" id="block3">
+                                <div class="answer-box-drop-div" draggable=true ondragover="allowDrop(event)"
+                                     ondragstart="drag(event)" ondrop="drop(event)"></div>
+                            </div>
+                            <div class="dd-grid-ans-box-column" id="block4">
+                                <div class="answer-box-drop-div" draggable=true ondragover="allowDrop(event)"
+                                     ondragstart="drag(event)" ondrop="drop(event)"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 1rem; margin-left: 10px;">
+                        <button class="submit-button" onclick="submitCountsQ1()">Submit</button>
+                    </div>
+                </li>
+                <li class="question" id="q12">
+                    <div style="margin-bottom: 20px; margin-left: 10px">
+                        <i
+                                class="fa fa-volume-up"
+                                onclick="playSound('Count how many fishes are there in each species in the below fish tank.')"
+                                style="font-size: 20px; color: #419ae2; cursor: pointer"
+                        ></i>
+                        <span class="question-title"
+                        >Count how many fishes are there in each species in the below fish tank.</span
+                        >
+                    </div>
+
+                    <div class="q12-main-container">
+                        <div class="q12-tank-container">
+                            <img
+                                    alt=""
+                                    class="q12-fish-tank"
+                                    src="./img/fish-tank.svg"
+                                    srcset=""
+                            />
+                        </div>
+                        <div class="q12-answer-box-container">
+                            <div class="q12-answer-box-row">
+                                <div class="q12-fish-and-answer-box">
+                                    <img
+                                            alt=""
+                                            class="q12-fish-img"
+                                            src="./img/2f.svg"
+                                            srcset=""
+                                    />
+                                    <div class="q12-input-field-container">
+                                        <input
+                                                class="q12-input-field"
+                                                id="q1-input-field-2"
+                                                name=""
+                                                type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="q12-fish-and-answer-box">
+                                    <img
+                                            alt=""
+                                            class="q12-fish-img"
+                                            src="./img/3f.svg"
+                                            srcset=""
+                                    />
+                                    <div class="q12-input-field-container">
+                                        <input
+                                                class="q12-input-field"
+                                                id="q1-input-field-3"
+                                                name=""
+                                                type="text"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="q12-answer-box-row">
+                                <div class="q12-fish-and-answer-box">
+                                    <img
+                                            alt=""
+                                            class="q12-fish-img"
+                                            src="./img/1f.svg"
+                                            srcset=""
+                                    />
+                                    <div class="q12-input-field-container">
+                                        <input
+                                                class="q12-input-field"
+                                                id="q1-input-field-1"
+                                                name=""
+                                                type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="q12-fish-and-answer-box">
+                                    <img
+                                            alt=""
+                                            class="q12-fish-img"
+                                            src="./img/4f.svg"
+                                            srcset=""
+                                    />
+                                    <div class="q12-input-field-container">
+                                        <input
+                                                class="q12-input-field"
+                                                id="q1-input-field-4"
+                                                name=""
+                                                type="text"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 1rem; margin-left: 10px">
+                        <button
+                                class="submit-button"
+                                id="q1-submit"
+                                onclick="submitCountQ12()"
+                        >
+                            Submit
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="./js/app.js"></script>
+</body>
+</html>

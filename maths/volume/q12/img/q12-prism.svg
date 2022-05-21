@@ -1,0 +1,46 @@
+<svg id="q12"
+  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 338.5 189.3">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        font-size: 17px;
+        font-family: Verdana;
+      }
+
+      @media (max-width: 596px) {
+        .cls-2 {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </defs>
+  <title>q12-prism</title>
+  <g id="Layer_16" data-name="Layer 16">
+    <path class="cls-1" d="M232.4,280.4,113.1,161.1l-.6.4v119H232.4Z" transform="translate(-32 -98.7)"/>
+    <path class="cls-1" d="M231.9,279.8a.8.8,0,0,1,.5,0,2,2,0,0,1,.8.4l123.3-66.7-104-113L112.9,160.3v.6C196.5,244.9,231.5,279.8,231.9,279.8Z" transform="translate(-32 -98.7)"/>
+    <path class="cls-1" d="M360.5,233.5" transform="translate(-32 -98.7)"/>
+    <line class="cls-1" x1="130.5" y1="173.3" x2="130.5" y2="189.3"/>
+    <line class="cls-1" x1="137.5" y1="173.3" x2="137.5" y2="189.3"/>
+    <line class="cls-1" x1="89" y1="116.7" x2="73" y2="116.9"/>
+    <line class="cls-1" x1="89.1" y1="123.7" x2="73.1" y2="123.9"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="56.5" y1="64.4" x2="56.5" y2="180.2"/>
+    <polygon points="50.4 69.4 51.5 70.4 56.5 65 61.6 70.4 62.7 69.4 56.5 62.8 50.4 69.4"/>
+    <polygon points="50.4 175.2 51.5 174.2 56.5 179.6 61.6 174.2 62.7 175.2 56.5 181.8 50.4 175.2"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="220.1" y1="186.9" x2="337.1" y2="123.6"/>
+    <path d="M264.5,287.1a.7.7,0,0,0-.7-.8l-11.4-.8,5.6-10.1a.8.8,0,0,0-.3-1,.9.9,0,0,0-1.1.3l-6.1,11.1a.9.9,0,0,0,0,.7.8.8,0,0,0,.6.4l12.6.9h.4A.5.5,0,0,0,264.5,287.1Z" transform="translate(-32 -98.7)"/>
+    <polygon points="335.7 131.3 334.2 130.9 336.6 123.8 329.4 122 329.8 120.5 338.5 122.8 335.7 131.3"/>
+  </g>
+  <text class="cls-2" transform="translate(0 126.7)">6 cm</text>
+  <text class="cls-2" transform="translate(295.5 176.3)">9 cm</text>
+</svg>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../img/favicon.ico" rel="shortcut icon" sizes="32x32" type="image/png"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Mean-Median</title>
+    <link href="../style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="../js/DragDropTouch.js"></script>
+</head>
+<!--<body onload="startAll()">-->
+
+<body onload="setScore()">
+<div id="app" style="position: absolute; width: 100%; height: 100%">
+    <div class="flex-container">
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">Answered</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content">0<span class="all-count">/20</span>
+                </div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">Time</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <table class="timer practice-timer">
+                        <tbody>
+                        <tr class="box-value-hr-min-sec">
+                            <td id="timerhrs">02 hrs</td>
+                            <td id="timermin">00 mins</td>
+                            <td id="timersec">00 secs</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">Score <i
+                            class="fa fa-question-circle"
+                            title="This is not your final score. When calculating the final score elapsed time also will be considering"></i></div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <span id="currentscore">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q24">
+
+                    <!-- Question section -->
+                    <div style="margin-bottom: 20px; margin-left: 10px;">
+                        <i class='fa fa-volume-up' onclick="playSound('Look at the below diagram and select the correct statements regarding magnitudes of different angles.')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title"> Look at the below diagram and select the correct statements
+                                regarding magnitudes of different angles. </span>
+                    </div>
+
+                    <div style="margin-bottom: 20px; margin-left: 10px;">
+                        <i class='fa fa-volume-up' onclick="playSound('You can use below hints to find the answers. 1.   Corresponding angles are equal. 2.   Alterate angles are equal. 3.   Vertically opposite angles are equal. ')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title"> You can use below hints to find the answers. </span>
+                    </div>
+
+                    <div style="margin-bottom: 10px; margin-left: 25px;">
+                            <span class="question-title" style="font-size: 19px"> 1. Corresponding angles are equal.
+                            </span>
+                    </div>
+                    <div style="margin-bottom: 10px; margin-left: 25px;">
+                        <span class="question-title" style="font-size: 19px"> 2. Alterate angles are equal. </span>
+                    </div>
+                    <div style="margin-bottom: 10px; margin-left: 25px;">
+                            <span class="question-title" style="font-size: 19px"> 3. Vertically opposite angles are
+                                equal. </span>
+                    </div>
+
+                    <!-- image section -->
+                    <div class="q24-img-container">
+                        <img alt="" src="../img/q24-img.svg">
+                    </div>
+
+                    <!-- Checkbox section -->
+                    <div class="question-container">
+
+                        <div class="q24-check-box-row">
+                            <label class="q24-check-box-container">
+                                <input id="q24Input01" type="checkbox"/>
+                                <span class="q24-checkmark"></span>
+                            </label>
+                            <div class="q24-check-box-text">a = d = g = e</div>
+                        </div>
+
+                        <div class="q24-check-box-row">
+                            <label class="q24-check-box-container">
+                                <input id="q24Input02" type="checkbox"/>
+                                <span class="q24-checkmark"></span>
+                            </label>
+                            <div class="q24-check-box-text">b = c = h = f</div>
+                        </div>
+
+                        <div class="q24-check-box-row">
+                            <label class="q24-check-box-container">
+                                <input id="q24Input03" type="checkbox"/>
+                                <span class="q24-checkmark"></span>
+                            </label>
+                            <div class="q24-check-box-text">c = b = f = h</div>
+                        </div>
+
+                        <div class="q24-check-box-row">
+                            <label class="q24-check-box-container">
+                                <input id="q24Input04" type="checkbox"/>
+                                <span class="q24-checkmark"></span>
+                            </label>
+                            <div class="q24-check-box-text">d = a = e = g</div>
+                        </div>
+
+                    </div>
+
+                    <!-- submit -->
+                    <div style="margin-top: 20px; margin-left: 10px;">
+                        <button class="submit-button" id="q24-submit" onclick="submitQ24()">Submit
+                        </button>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="../js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<svg id="q13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 351.7 229.8">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: none;
+            stroke: #000;
+            stroke-miterlimit: 10;
+            stroke-width: 3px;
+            }
+
+            .cls-2 {
+            font-size: 17px;
+            font-family: Verdana;
+            }
+        </style>
+    </defs>
+    <title>q13-perimeter</title>
+    <g id="Layer_18" data-name="Layer 18">
+        <polygon class="cls-1" points="200 36.1 80 36.1 20 196.1 340 196.1 200 36.1"/>
+        <polyline class="cls-1" points="135.7 204.2 111.4 196.1 134.3 184.7"/>
+        <polyline class="cls-1" points="135.7 44.2 111.4 36.1 134.3 24.7"/>
+        <text class="cls-2" transform="translate(120 14.7)">3 cm</text>
+        <text class="cls-2" transform="translate(140 224.7)">8 cm</text>
+        <text class="cls-2" transform="translate(0 94.7)">4 cm</text>
+        <text class="cls-2" transform="translate(260 84.7)">6 cm</text>
+        <text class="cls-2" transform="translate(0 204.7)">A</text>
+        <text class="cls-2" transform="translate(340 214.7)">B</text>
+        <text class="cls-2" transform="translate(200 24.7)">C</text>
+        <text class="cls-2" transform="translate(60 24.7)">D</text>
+    </g>
+</svg>

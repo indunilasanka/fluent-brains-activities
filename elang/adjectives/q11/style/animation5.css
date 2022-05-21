@@ -1,0 +1,191 @@
+.stars {
+    position: fixed;
+    top: 1.5%;
+    left: 0;
+    max-width: 960px;
+    width: 100%;
+    max-height: 640px;
+    height: 98%;
+    transform: rotate(180deg);
+    overflow: hidden;
+}
+
+.star {
+    --star-color: #70D2F5FF;
+    --star-tail-length: 6em;
+    --star-tail-height: 2px;
+    --star-width: calc(var(--star-tail-length) / 6);
+    --fall-duration: 9s;
+    --tail-fade-duration: var(--fall-duration);
+    position: absolute;
+    top: var(--top-offset);
+    left: 0;
+    width: var(--star-tail-length);
+    height: var(--star-tail-height);
+    color: var(--star-color);
+    background: linear-gradient(45deg, currentColor, transparent);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 6px currentColor);
+    transform: translate3d(65em, 0, 0);
+    animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+}
+
+@media (max-width: 450px) {
+    .star {
+        --fall-duration: 4s;
+        animation: fall 4s var(--fall-delay) linear infinite;
+        transform: translate3d(40em, 0, 0);
+    }
+}
+
+.star:nth-child(6) {
+    --star-tail-length: 6.85em;
+    --top-offset: 60.04vh;
+    --fall-duration: 11.704s;
+    --fall-delay: 2400ms;
+}
+
+.star:nth-child(7) {
+    --star-tail-length: 6.82em;
+    --top-offset: 63.3vh;
+    --fall-duration: 10.446s;
+    --fall-delay: 30ms;
+}
+
+.star:nth-child(8) {
+    --star-tail-length: 5.8em;
+    --top-offset: 65.53vh;
+    --fall-duration: 7.604s;
+    --fall-delay: 890ms;
+}
+
+.star:nth-child(9) {
+    --star-tail-length: 5.84em;
+    --top-offset: 18.19vh;
+    --fall-duration: 9.018s;
+    --fall-delay: 2800ms;
+}
+
+.star:nth-child(10) {
+    --star-tail-length: 5.43em;
+    --top-offset: 63.69vh;
+    --fall-duration: 10.531s;
+    --fall-delay: 220ms;
+}
+
+.star:nth-child(11) {
+    --star-tail-length: 6.76em;
+    --top-offset: 62.04vh;
+    --fall-duration: 11.849s;
+    --fall-delay: 890ms;
+}
+
+.star:nth-child(12) {
+    --star-tail-length: 7.13em;
+    --top-offset: 73.34vh;
+    --fall-duration: 9.461s;
+    --fall-delay: 12ms;
+}
+
+.star:nth-child(13) {
+    --star-tail-length: 6.2em;
+    --top-offset: 2.49vh;
+    --fall-duration: 9.911s;
+    --fall-delay: 550ms;
+}
+
+.star:nth-child(14) {
+    --star-tail-length: 7.5em;
+    --top-offset: 49.98vh;
+    --fall-duration: 11.562s;
+    --fall-delay: 3400ms;
+}
+
+.star:nth-child(15) {
+    --star-tail-length: 5.78em;
+    --top-offset: 80.00vh;
+    --fall-duration: 11.944s;
+    --fall-delay: 840ms;
+}
+
+.star:nth-child(16) {
+    --star-tail-length: 5.51em;
+    --top-offset: 16.34vh;
+    --fall-duration: 6.76s;
+    --fall-delay: 3600ms;
+}
+
+.star:nth-child(17) {
+    --star-tail-length: 6.86em;
+    --top-offset: 6.67vh;
+    --fall-duration: 8.326s;
+    --fall-delay: 1100ms;
+}
+
+.star:nth-child(18) {
+    --star-tail-length: 5.48em;
+    --top-offset: 42.58vh;
+    --fall-duration: 7.702s;
+    --fall-delay: 1100ms;
+}
+
+.star:nth-child(19) {
+    --star-tail-length: 5.83em;
+    --top-offset: 47.57vh;
+    --fall-duration: 6.477s;
+    --fall-delay: 1100ms;
+}
+
+.star:nth-child(20) {
+    --star-tail-length: 7.37em;
+    --top-offset: 70.87vh;
+    --fall-duration: 8.26s;
+    --fall-delay: 80ms;
+}
+
+.star::before, .star::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: calc(var(--star-width) / -2);
+    width: var(--star-width);
+    height: 100%;
+    background: linear-gradient(30deg, transparent, currentColor, transparent);
+    border-radius: inherit;
+    animation: blink 2s linear infinite;
+}
+
+.star::before {
+    transform: rotate(45deg);
+}
+
+.star::after {
+    transform: rotate(-45deg);
+}
+
+@keyframes fall {
+    to {
+        transform: translate3d(-30em, 0, 0);
+    }
+}
+
+@keyframes tail-fade {
+    0%, 50% {
+        width: var(--star-tail-length);
+        opacity: 1;
+    }
+    70%, 80% {
+        width: 0;
+        opacity: 0.4;
+    }
+    100% {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.6;
+    }
+}

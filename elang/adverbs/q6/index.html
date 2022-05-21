@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="./img/favicon.ico"
+      rel="shortcut icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Adverbs</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="../js/DragDropTouch.js"></script>
+  </head>
+
+<body onload="setScore()">
+<div id="app">
+    <div class="popup-container">
+        <div class="popup">
+            <div class="animation1">
+                <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="popup-upper">
+                <div class="popup-close-icon" onclick="switchQuestion()" style="font-size: 15px">
+                    <i class="fa fa-times close-icon"></i>
+                </div>
+                <div class="popup-check-icon">
+                    <img alt="" class="check-img" id="starId1" src="./img/awesome.gif"/>
+                </div>
+                <div class="popup-action" onclick="switchQuestion()">
+                    <p>Next Challenge</p>&#160;
+                    <i class="fa fa-arrow-circle-right" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="info-panel">
+            <div
+                    class="stats-container problems-attempted-stats-container"
+                    style="margin-left: 1%"
+            >
+            <div class="stats-header problems-attempted-stats-header">
+              <span class="txt-question-answered">ANSWERED</span>
+            </div>
+            <div class="stats-content problems-attempted-stats-content">
+              <span id="question-count">1</span
+              ><span class="all-count">/8</span>
+            </div>
+          </div>
+
+          <div class="stats-container time-elapsed-stats-container">
+            <div class="stats-header time-elapsed-stats-header">
+              <span class="txt-time-elapsed">TIME</span>
+            </div>
+            <div class="stats-content time-elapsed-stats-content">
+              <label id="timerhrs">00</label>:<label id="timermin">00</label
+              >:<label id="timersec">00</label> H
+            </div>
+          </div>
+
+          <div class="stats-container score-and-link-container">
+            <div class="stats-header score-stats-header">
+              <div class="txt-smartscore">SCORE</div>
+            </div>
+            <div class="stats-content score-stats-content">
+              <label id="current-score">0</label>
+            </div>
+          </div>
+        </div>
+        <div class="question-panel" id="qpanel">
+          <ul class="question-list">
+            <li class="question" id="q6">
+              <div class="question-title-box">
+                <i
+                  class="fa fa-volume-up"
+                  onclick="playSound('Classify the underline adverbs into the correct adverbs category. Write down the correct number.')"
+                  style="font-size: 20px; color: #419ae2; cursor: pointer"
+                ></i>
+                <span class="question-title-text"
+                  >Classify the underline adverbs into the correct adverbs
+                  category. Write down the correct number</span
+                >
+              </div>
+
+              <div class="q6-main-cnt">
+                <div class="q6-ans-cnt">
+                  <div class="q6-ans">1. Adverbs of Place</div>
+                  <div class="q6-ans">2. Adverbs of Time</div>
+                  <div class="q6-ans">3. Adverbs of Manner</div>
+                  <div class="q6-ans">4. Irreguler Adverbs</div>
+                </div>
+
+                <div class="q6-row-cnt">
+                  <div class="q6-row">
+                    <div class="q6-count-grid-column">
+                      <input
+                        class="q6-count-grid-input"
+                        onchange="checkMissingLetter('q6input1', '2',)"
+                        type="text"
+                        id="q6input1"
+                      />
+                    </div>
+                    <div class="q6-text">
+                      My home work is <u>already</u> done by me
+                    </div>
+                  </div>
+
+                  <div class="q6-row">
+                    <div class="q6-count-grid-column">
+                      <input
+                        class="q6-count-grid-input"
+                        onchange="checkMissingLetter('q6input2', '4',)"
+                        type="text"
+                        id="q6input2"
+                      />
+                    </div>
+                    <div class="q6-text">Mother makes sweets <u>daily</u></div>
+                  </div>
+
+                  <div class="q6-row">
+                    <div class="q6-count-grid-column">
+                      <input
+                        class="q6-count-grid-input"
+                        onchange="checkMissingLetter('q6input3', '3',)"
+                        type="text"
+                        id="q6input3"
+                      />
+                    </div>
+                    <div class="q6-text">
+                      She played the guiter very <u>well</u>
+                    </div>
+                  </div>
+
+                  <div class="q6-row">
+                    <div class="q6-count-grid-column">
+                      <input
+                        class="q6-count-grid-input"
+                        onchange="checkMissingLetter('q6input4', '1',)"
+                        type="text"
+                        id="q6input4"
+                      />
+                    </div>
+                    <div class="q6-text">
+                      My house is only 2 miles from <u>here</u>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style="display: flex; justify-content: center; margin-top: 20px"
+              >
+                <button class="submit-button" onclick="q6SubmitAnswer('q6')">
+                  Submit
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

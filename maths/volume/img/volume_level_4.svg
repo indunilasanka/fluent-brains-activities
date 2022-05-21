@@ -1,0 +1,35 @@
+<svg width="272" height="272" xmlns="http://www.w3.org/2000/svg">
+    <title/>
+
+    <g>
+        <title>background</title>
+        <rect x="-1" y="-1" width="61.365079" height="61.365079" id="canvas_background" fill="none"/>
+    </g>
+    <g>
+        <title>Layer 1</title>
+        <rect id="svg_5" height="43.849122" width="153.134626" y="183.517266" x="51.337454" fill-opacity="null"
+              stroke-opacity="null" stroke-width="null" stroke="null" fill="#ffd54f"/>
+        <path class="cls-1"
+              d="m72,264l112,0a24,24 0 0 0 24,-24l0,-217a15,15 0 0 0 -15,-15l-145,0l0,232a24,24 0 0 0 24,24z" id="svg_1"
+              fill="#666666"/>
+        <polygon class="cls-1" points="48 56 16 8 48 8 48 56" id="svg_2" fill="#666666"/>
+        <path class="cls-1"
+              d="m234.75,48l-34.75,0l0,16l34.75,0a13.27,13.27 0 0 1 13.25,13.25l0,93.5a13.27,13.27 0 0 1 -13.25,13.25l-34.75,0l0,16l34.75,0a29.25,29.25 0 0 0 29.25,-29.25l0,-93.5a29.25,29.25 0 0 0 -29.25,-29.25z"
+              id="svg_3" fill="#666666"/>
+        <path class="cls-2"
+              d="m56,24.87304l0,197.31068a24,29.01628 0 0 0 24,29.01628l96,0a24,29.01628 0 0 0 24,-29.01628l0,-197.31068l-144,0z"
+              id="svg_4" fill="#ffffff" stroke="null"/>
+        <path stroke="null" class="cls-2"
+              d="m56,218.48402l0,29.109739a24,4.280847 0 0 0 24,4.280847l96,0a24,4.280847 0 0 0 24,-4.280847l0,-29.109739l-144,0z"
+              id="svg_10" fill="#ffd54f"/>
+        <path stroke="null" class="cls-2"
+              d="m56,189.476138l0,29.109739a24,4.280847 0 0 0 24,4.280847l96,0a24,4.280847 0 0 0 24,-4.280847l0,-29.109739l-144,0z"
+              id="svg_6" fill="#ffd54f"/>
+        <path stroke="null" class="cls-2"
+              d="m56,160.468256l0,29.109739a24,4.280847 0 0 0 24,4.280847l96,0a24,4.280847 0 0 0 24,-4.280847l0,-29.109739l-144,0z"
+              id="svg_7" fill="#ffd54f"/>
+        <path stroke="null" class="cls-2"
+              d="m56,131.460374l0,29.109739a24,4.280847 0 0 0 24,4.280847l96,0a24,4.280847 0 0 0 24,-4.280847l0,-29.109739l-144,0z"
+              id="svg_8" fill="#ffd54f"/>
+    </g>
+</svg>

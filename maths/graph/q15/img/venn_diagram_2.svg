@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 491.5 351">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: #3fa9f5;
+            }
+
+            .cls-2 {
+            font-size: 22px;
+            font-family: Verdana;
+            }
+
+            .cls-3 {
+            fill: none;
+            stroke: #000;
+            stroke-miterlimit: 10;
+            stroke-width: 2px;
+            }
+            }
+        </style>
+    </defs>
+    <title>Untitled-2</title>
+    <g id="Layer_1" data-name="Layer 1">
+        <path class="cls-1"
+              d="M177.5,3A173.5,173.5,0,0,1,300.2,299.2,173.5,173.5,0,0,1,54.8,53.8,172.4,172.4,0,0,1,177.5,3m0-2C80.6,1,2,79.6,2,176.5S80.6,352,177.5,352,353,273.4,353,176.5,274.4,1,177.5,1Z"
+              transform="translate(-2 -1)"/>
+        <path class="cls-1"
+              d="M177.5,99.5a77,77,0,1,1-77,77,77.2,77.2,0,0,1,77-77m0-2a79,79,0,1,0,79,79,79,79,0,0,0-79-79Z"
+              transform="translate(-2 -1)"/>
+    </g>
+    <g id="Layer_3" data-name="Layer 3">
+        <text class="cls-2" transform="translate(42.5 185.8)">7</text>
+        <text class="cls-2" transform="translate(159.3 186.1)">25</text>
+    </g>
+    <g id="Layer_2" data-name="Layer 2">
+        <g>
+            <line class="cls-3" x1="405" y1="180" x2="255" y2="180.6"/>
+            <polyline class="cls-3" points="272.9 196.6 255 180.6 272.7 164.6"/>
+        </g>
+        <line class="cls-3" x1="405" y1="90.6" x2="330" y2="90.6"/>
+        <polyline class="cls-3" points="347.9 106.6 330 90.6 347.7 74.6"/>
+        <text class="cls-2" transform="translate(405.3 96.5)">English</text>
+        <text class="cls-2" transform="translate(409.4 186.2)">French</text>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+
+    <g>
+        <title>background</title>
+        <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+    </g>
+    <g>
+        <title>Layer 1</title>
+        <ellipse stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#000000"
+                 fill="#ff00ff" id="svg_1" ry="8" rx="7" cy="11" cx="16" class="st0"/>
+        <path stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#000000"
+              fill="#ff00ff" id="svg_2" d="m15.1,18.9l-2.1,2.1l0,0c1.8,1.2 4.2,1.2 6,0l0,0l-2,-2" class="st0"/>
+        <path stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#000000"
+              fill="none" id="svg_3"
+              d="m17,29l-0.4,-0.9c-0.3,-0.7 -0.3,-1.5 0,-2.2l0,0c0.3,-0.6 0.3,-1.2 0.1,-1.9l-0.7,-2.1" class="st0"/>
+    </g>
+</svg>

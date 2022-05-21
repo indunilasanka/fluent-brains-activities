@@ -1,0 +1,440 @@
+body {
+    font-family: Verdana, sans-serif;
+
+    color: #222;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px 10PX;
+}
+
+i.vol-icon {
+    font-size: 20px;
+    color: #419ae2;
+    cursor: pointer
+}
+
+/* Info-Panel styles start --------------------------------------------*/
+
+.info-panel {
+    text-align: center;
+    margin: 5px;
+}
+
+.stats-container {
+    float: left;
+    margin-right: 1%;
+    width: 32%;
+    border-radius: 0.5rem;
+}
+
+.problems-attempted-stats-container,
+.score-and-link-container,
+.time-elapsed-stats-container {
+    background-color: #E3E3E3C6;
+}
+
+.txt-question-answered {
+    display: block !important;
+}
+
+.txt-time-elapsed {
+    display: block;
+}
+
+.stats-content {
+    text-align: center;
+    align-content: center;
+}
+
+.problems-attempted-stats-content {
+    color: #777368;
+    font: bold 25px Verdana, sans-serif;
+    padding: 0.2rem;
+}
+
+.score-stats-content {
+    color: #777368;
+    font: bold 25px Verdana, sans-serif;
+    padding: 0.2rem;
+}
+
+.time-elapsed-stats-content {
+    padding: 0.22rem;
+}
+
+.practice-timer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.practice-timer td {
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+    color: #586656;
+    font-size: 12px;
+    height: 22px;
+    line-height: 1em;
+    padding-top: 1px;
+    text-align: center;
+    vertical-align: middle;
+    width: 50px;
+    border-radius: 0.2rem;
+}
+
+.stats-header {
+    box-sizing: border-box;
+    color: #fff;
+    font: 12px Verdana, sans-serif;
+    padding: 6px;
+    text-align: center;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.all-count {
+    font-size: 15px;
+    color: black;
+}
+
+.problems-attempted-stats-header {
+    background-color: #46cd46;
+}
+
+.time-elapsed-stats-header {
+    background-color: #419ae2;
+}
+
+.score-stats-header {
+    background-color: #e05d7c;
+}
+
+/* info-panel styles End -------------------------------------*/
+
+/* Question style start ------------------------------------ */
+
+.question-title {
+    font: 20px Verdana, sans-serif;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.question-title i {
+    font-size: 20px;
+    color: #419ae2;
+    cursor: pointer;
+}
+
+.question-title img {
+    vertical-align: middle;
+}
+
+.submit-button {
+    cursor: pointer;
+    padding: .5rem 1rem;
+    color: white;
+    font: 20px Verdana, sans-serif;
+    background-color: #46cd46;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    /* margin-top: 20px; */
+    margin-left: 10px;
+}
+
+.submit-button:hover {
+    background-color: #40af40;
+}
+
+/* Question style end ------------------------------------ */
+
+/* Start Answer style ------------------------------- */
+
+.answer-grid-row {
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+
+.answer-grid-column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.answer-grid-box-unfilled {
+    text-align: center;
+    cursor: pointer;
+    margin-right: 10px;
+    /* margin-top: 20px; */
+    padding: 0.5rem 0.5rem;
+    font: 19px Verdana, sans-serif;
+    border: 1px solid #4FAEFFFF;
+    border-radius: 2px;
+}
+
+.answer-grid-box-unfilled:hover {
+    border: 1px solid #3B95E0FF;
+}
+
+/* q3 ------------------------------------------- */
+
+.check-img-box {
+    border: 1px solid #4faeffff;
+    margin-right: 10px;
+    padding: 1px;
+    border-radius: 2px;
+}
+
+.check-img-box:hover {
+    border: 1px solid #3b95e0ff;
+}
+
+.cartesian-3-img {
+    width: 20vw;
+    margin-bottom: 1px;
+}
+
+.check-box-tik {
+    background-color: #77c0ff;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.checkIcon {
+    color: white;
+    cursor: pointer;
+}
+
+/* q4 ------------------------------------------*/
+.q4-container {
+    margin-left: 10px;
+    /*background-color: #40af40;*/
+    width: 450px;
+    height: 450px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.q4-vertical-line,
+.q4-horizontal-line {
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background-color: black;
+    top: 50%;
+    left: 20px;
+
+}
+
+.q4-vertical-container {
+    width: 100%;
+    height: 80px;
+    /*background-color: #419ae2;*/
+    position: absolute;
+    top: 45%;
+}
+
+.q4-left-mark {
+    font-size: 18px;
+    position: absolute;
+    top: 40%;
+}
+
+.q4-right-mark {
+    font-size: 18px;
+    position: absolute;
+    top: 40%;
+    left: 88%;
+}
+
+.q4-vertical-mark {
+    font-size: 18px;
+    top: 33%;
+    position: absolute;
+}
+
+.q4-horizontal-container {
+    width: 100%;
+    height: 80px;
+    /*background-color: #419ae2;*/
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 41%;
+    left: -10px;
+}
+
+.q4-horizontal-mark {
+    font-size: 18px;
+    top: 35%;
+    position: absolute;
+}
+
+.q4-drop-box {
+    width: 90px;
+    height: 40px;
+    border: 1px solid #4faeffff;
+    border-radius: 2px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    align-items: center;
+}
+
+.q4-drag-box {
+    font-size: 18px;
+    width: 90px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #4faeffff;
+    margin-left: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.q4-drag-box:hover,
+.q4-drop-box:hover {
+    border-color: #3b95e0ff;
+}
+
+/* End Answer style ------------------------------- */
+
+/* Cartesian plane style start -------------------- */
+
+#q2 .cartesian {
+    margin-bottom: 10px;
+}
+
+/* Cartesian plane style end -------------------- */
+
+
+/* media query start ---------------------------- */
+@media (max-width: 900px) {
+
+    body,
+    .question-title,
+    .submit-button {
+        font-size: 18px;
+    }
+
+    /* q3------------------- */
+    .cartesian-3-img {
+        width: 30vw;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* q1, q2 ----------------- */
+    .cartesian {
+        margin-bottom: 20px;
+    }
+
+    /* q3------------------- */
+    .cartesian-3-img {
+        width: 40vw;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    /* q3------------------- */
+    .cartesian-3-img {
+        width: 44vw;
+    }
+}
+
+@media (max-width: 530px) {
+    .q4-container {
+        width: 80%;
+        height: 80vw;
+    }
+
+    .q4-drop-box {
+        width: 18vw;
+        height: 8vw;
+    }
+
+    .q4-vertical-container,
+    .q4-horizontal-container {
+        height: 15vw;
+    }
+
+    .q4-left-mark,
+    .q4-right-mark {
+        font-size: 15px;
+    }
+
+    .q4-vertical-mark,
+    .q4-horizontal-mark {
+        font-size: 15px;
+    }
+
+    .q4-drag-box {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    /* q1 ----------------- */
+    #q1 .answer-grid-row {
+        flex-direction: column;
+    }
+
+    #q1 .answer-grid-box-unfilled {
+        margin-bottom: 10px;
+    }
+
+    .q4-right-mark {
+        left: 93%;
+    }
+
+    .q4-drop-box {
+        font-size: 4vw;
+    }
+
+    .q4-vertical-mark,
+    .q4-horizontal-mark {
+        top: 30%;
+        font-size: 14px;
+    }
+
+}
+
+
+/* media query ends ---------------------------- */

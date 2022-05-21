@@ -1,0 +1,49 @@
+<svg id="q11"
+     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 323 243">
+    <defs>
+        <style>
+            .cls-1, .cls-2, .cls-3 {
+            fill: none;
+            stroke: #000;
+            stroke-miterlimit: 10;
+            }
+
+            .cls-1, .cls-2 {
+            stroke-width: 3px;
+            }
+
+            .cls-1 {
+            stroke-dasharray: 10 10;
+            }
+
+            .cls-2 {
+            fill-rule: evenodd;
+            }
+
+            .cls-3 {
+            stroke-width: 2px;
+            }
+
+            .cls-4 {
+            font-size: 19px;
+            font-family: Verdana;
+            }
+        </style>
+    </defs>
+    <title>q11-perimeter</title>
+    <line class="cls-1" x1="321.5" y1="161.5" x2="1.5" y2="161.5"/>
+    <path class="cls-2" d="M40,220s0,80,80,80,80-80,80-80,0-80,80-80,80,80,80,80S360,60,200,60,40,220,40,220Z"
+          transform="translate(-38.5 -58.5)"/>
+    <g>
+        <line class="cls-3" x1="14.9" y1="151.5" x2="148.1" y2="151.5"/>
+        <polygon points="16 144.4 11.5 151.5 16 158.6 16 158.6 16 144.4 16 144.4"/>
+        <polygon points="147 144.4 151.5 151.5 147 158.6 147 158.6 147 144.4 147 144.4"/>
+    </g>
+    <g>
+        <line class="cls-3" x1="174.9" y1="171.5" x2="308.1" y2="171.5"/>
+        <polygon points="176 164.4 171.5 171.5 176 178.6 176 178.6 176 164.4 176 164.4"/>
+        <polygon points="307 164.4 311.5 171.5 307 178.6 307 178.6 307 164.4 307 164.4"/>
+    </g>
+    <text class="cls-4" transform="translate(61.5 141.5)">14 cm</text>
+    <text class="cls-4" transform="translate(221.5 191.5)">14 cm</text>
+</svg>

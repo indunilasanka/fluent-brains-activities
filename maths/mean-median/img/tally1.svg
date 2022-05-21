@@ -1,0 +1,14 @@
+<svg id="tally_1" data-name="tally 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 40.8">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: none;
+            stroke: #000;
+            stroke-miterlimit: 10;
+            stroke-width: 3px;
+            }
+        </style>
+    </defs>
+    <title>tally1</title>
+    <line class="cls-1" x1="1.5" x2="1.5" y2="40.8"/>
+</svg>

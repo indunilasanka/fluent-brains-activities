@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+            href="../img/favicon.ico"
+            rel="shortcut icon"
+            sizes="32x32"
+            type="image/png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Subtraction</title>
+    <link href="../style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+</head>
+<body onload="setScore()">
+<div id="app" style="position: absolute; width: 100%; height: 100%">
+    <div class="flex-container">
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">Answered</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content">0<span class="all-count">/20</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">Time</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <table class="timer practice-timer">
+                        <tbody>
+                        <tr class="box-value-hr-min-sec">
+                            <td id="timerhrs">02 hrs</td>
+                            <td id="timermin">00 mins</td>
+                            <td id="timersec">00 secs</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">Score <i
+                            class="fa fa-question-circle"
+                            title="This is not your final score. When calculating the final score elapsed time also will be considering"></i>
+                    </div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <span id="currentscore">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q55">
+                    <div style="margin-bottom: 20px; margin-left: 10px;">
+                        <i class='fa fa-volume-up'
+                           onclick="playSound('Which number makes the below equation true?')"
+                           style='font-size:20px; color: rgb(66, 165, 246); cursor: pointer;'></i>
+                        <span class="question-title">Which number makes the below equation true?</span>
+                    </div>
+                    <div style="margin-bottom: 25px; margin-left: 20px;">
+                        <span class="question-title"
+                              style="border: 1px black solid; padding: 5px; background-color: #fbc1f6">
+                            20411 - 6503 = <i class="fa fa-question-circle" style="color: #454545"></i> - 2176</span>
+                    </div>
+                    <div class="num-button-container">
+                        <button class="answer-number-button" id="q55input1" onclick="handleAnswerClick('q55input1', 1)">
+                            16084
+                        </button>
+                        <button class="answer-number-button" id="q55input2" onclick="handleAnswerClick('q55input2', 0)">
+                            13908
+                        </button>
+                        <button class="answer-number-button" id="q55input3" onclick="handleAnswerClick('q55input3', 0)">
+                            13084
+                        </button>
+                        <button class="answer-number-button" id="q55input4" onclick="handleAnswerClick('q55input4', 0)">
+                            16908
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="../js/app.js"></script>
+</body>
+</html>

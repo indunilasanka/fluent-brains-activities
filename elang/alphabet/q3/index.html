@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="./img/favicon.ico"
+      rel="shortcut icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Alphabet</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="../js/DragDropTouch.js"></script>
+  </head>
+
+<body onload="setScore()">
+<div id="app">
+    <div class="popup-container">
+        <div class="popup">
+            <div class="animation1">
+                <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="popup-upper">
+                <div class="popup-close-icon" onclick="switchQuestion()" style="font-size: 15px">
+                    <i class="fa fa-times close-icon"></i>
+                </div>
+                <div class="popup-check-icon">
+                    <img alt="" class="check-img" id="starId1" src="./img/awesome.gif"/>
+                </div>
+                <div class="popup-action" onclick="switchQuestion()">
+                    <p>Next Challenge</p>&#160;
+                    <i class="fa fa-arrow-circle-right" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="info-panel">
+            <div
+                    class="stats-container problems-attempted-stats-container"
+                    style="margin-left: 1%"
+            >
+            <div class="stats-header problems-attempted-stats-header">
+              <span class="txt-question-answered">ANSWERED</span>
+            </div>
+            <div class="stats-content problems-attempted-stats-content">
+              <span id="question-count">1</span
+              ><span class="all-count">/8</span>
+            </div>
+          </div>
+
+          <div class="stats-container time-elapsed-stats-container">
+            <div class="stats-header time-elapsed-stats-header">
+              <span class="txt-time-elapsed">TIME</span>
+            </div>
+            <div class="stats-content time-elapsed-stats-content">
+              <label id="timerhrs">00</label>:<label id="timermin">00</label
+              >:<label id="timersec">00</label> H
+            </div>
+          </div>
+
+          <div class="stats-container score-and-link-container">
+            <div class="stats-header score-stats-header">
+              <div class="txt-smartscore">SCORE</div>
+            </div>
+            <div class="stats-content score-stats-content">
+              <label id="current-score">0</label>
+            </div>
+          </div>
+        </div>
+        <div class="question-panel" id="qpanel">
+          <ul class="question-list">
+            <li class="question" id="q3">
+              <div class="question-title-box">
+                <i
+                  class="fa fa-volume-up"
+                  onclick="playSound('Lets learn English alphabet. Fill the missing simple letters')"
+                  style="font-size: 20px; color: #419ae2; cursor: pointer"
+                ></i>
+                <span class="question-title-text"
+                  >Lets learn English alphabet. Fill the missing simple
+                  letters</span
+                >
+              </div>
+
+              <div>
+                <div style="display: flex; justify-content: center">
+                  <div style="margin-top: 1rem; margin-left: 10px">
+                    <div class="count-grid-row">
+                      <div class="count-grid-column">a</div>
+                      <div class="count-grid-column">
+                        <input
+                          class="count-grid-input"
+                          onchange="checkMissingLetter('q3input1', 'b')"
+                          type="text"
+                          id="q3input1"
+                        />
+                      </div>
+                      <div class="count-grid-column">
+                        <input
+                          class="count-grid-input"
+                          onchange="checkMissingLetter('q3input2', 'c')"
+                          type="text"
+                          id="q3input2"
+                        />
+                      </div>
+                      <div class="count-grid-column">
+                        <input
+                          class="count-grid-input"
+                          onchange="checkMissingLetter('q3input3', 'd')"
+                          type="text"
+                          id="q3input3"
+                        />
+                      </div>
+
+                      <div class="count-grid-column">
+                        <input
+                          class="count-grid-input"
+                          onchange="checkMissingLetter('q3input4', 'e')"
+                          type="text"
+                          id="q3input4"
+                        />
+                      </div>
+                      <div class="count-grid-column">f</div>
+                    </div>
+
+                    <div class="count-grid-row">
+                      <div class="count-grid-column">g</div>
+                      <div class="count-grid-column">
+                        <input
+                          class="count-grid-input"
+                          onchange="checkMissingLetter('q3input5', 'h')"
+                          type="text"
+                          id="q3input5"
+                        />
+                      </div>
+                      <div class="count-grid-column">
+                        <input
+                          class="count-grid-input"
+                          onchange="checkMissingLetter('q3input6', 'i')"
+                          type="text"
+                          id="q3input6"
+                        />
+                      </div>
+                      <div class="count-grid-column">
+                        <input
+                          class="count-grid-input"
+                          onchange="checkMissingLetter('q3input7', 'j')"
+                          type="text"
+                          id="q3input7"
+                        />
+                      </div>
+
+                      <div class="count-grid-column">
+                        <input
+                          class="count-grid-input"
+                          onchange="checkMissingLetter('q3input8', 'k')"
+                          type="text"
+                          id="q3input8"
+                        />
+                      </div>
+                      <div class="count-grid-column">l</div>
+                    </div>
+
+                    <div class="count-grid-row">
+                      <div class="count-grid-column">m</div>
+                      <div class="count-grid-column">
+                        <input
+                          class="count-grid-input"
+                          onchange="checkMissingLetter('q3input9', 'n')"
+                          type="text"
+                          id="q3input9"
+                        />
+                      </div>
+                      <div class="count-grid-column">
+                        <input
+                          class="count-grid-input"
+                          onchange="checkMissingLetter('q3input10', 'o')"
+                          type="text"
+                          id="q3input10"
+                        />
+                      </div>
+                      <div class="count-grid-column">
+                        <input
+                          class="count-grid-input"
+                          onchange="checkMissingLetter('q3input11', 'p')"
+                          type="text"
+                          id="q3input11"
+                        />
+                      </div>
+
+                      <div class="count-grid-column">
+                        <input
+                          class="count-grid-input"
+                          onchange="checkMissingLetter('q3input12', 'q')"
+                          type="text"
+                          id="q3input12"
+                        />
+                      </div>
+                      <div class="count-grid-column">r</div>
+                    </div>
+                    <div class="count-grid-row">
+                      <div class="count-grid-column">s</div>
+                      <div class="count-grid-column">
+                        <input
+                          class="count-grid-input"
+                          onchange="checkMissingLetter('q3input13', 't')"
+                          type="text"
+                          id="q3input13"
+                        />
+                      </div>
+                      <div class="count-grid-column">
+                        <input
+                          class="count-grid-input"
+                          onchange="checkMissingLetter('q3input14', 'u')"
+                          type="text"
+                          id="q3input14"
+                        />
+                      </div>
+                      <div class="count-grid-column">
+                        <input
+                          class="count-grid-input"
+                          onchange="checkMissingLetter('q3input15', 'v')"
+                          type="text"
+                          id="q3input15"
+                        />
+                      </div>
+
+                      <div class="count-grid-column">
+                        <input
+                          class="count-grid-input"
+                          onchange="checkMissingLetter('q3input16', 'w')"
+                          type="text"
+                          id="q3input16"
+                        />
+                      </div>
+                      <div class="count-grid-column">x</div>
+                    </div>
+
+                    <div class="count-grid-row">
+                      <div class="count-grid-column">
+                        <input
+                          class="count-grid-input"
+                          onchange="checkMissingLetter('q3input17', 'y')"
+                          type="text"
+                          id="q3input17"
+                        />
+                      </div>
+                      <div class="count-grid-column">z</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style="display: flex; justify-content: center; margin-top: 20px"
+              >
+                <button class="submit-button" onclick="q3SubmitAnswer('q3')">
+                  Submit
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

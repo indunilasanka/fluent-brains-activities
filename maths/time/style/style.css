@@ -1,0 +1,607 @@
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 9px;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px 10PX;
+}
+
+/* Info-Panel styles start --------------------------------------------*/
+
+.info-panel {
+    text-align: center;
+    margin: 5px;
+}
+
+.stats-container {
+    float: left;
+    margin-right: 1%;
+    width: 32%;
+    border-radius: 0.5rem;
+}
+
+.problems-attempted-stats-container,
+.score-and-link-container,
+.time-elapsed-stats-container {
+    background-color: #E3E3E3C6;
+}
+
+.txt-question-answered {
+    display: block !important;
+}
+
+.txt-time-elapsed {
+    display: block;
+}
+
+.stats-content {
+    text-align: center;
+    align-content: center;
+}
+
+.problems-attempted-stats-content {
+    color: #777368;
+    font: bold 25px Verdana, sans-serif;
+    padding: 0.2rem;
+}
+
+.score-stats-content {
+    color: #777368;
+    font: bold 25px Verdana, sans-serif;
+    padding: 0.2rem;
+}
+
+.time-elapsed-stats-content {
+    padding: 0.22rem;
+}
+
+.practice-timer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.practice-timer td {
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+    color: #586656;
+    font-size: 12px;
+    height: 22px;
+    line-height: 1em;
+    padding-top: 1px;
+    text-align: center;
+    vertical-align: middle;
+    width: 50px;
+    border-radius: 0.2rem;
+}
+
+.stats-header {
+    box-sizing: border-box;
+    color: #fff;
+    font: 12px Verdana, sans-serif;
+    padding: 6px;
+    text-align: center;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.all-count {
+    font-size: 15px;
+    color: black;
+}
+
+.problems-attempted-stats-header {
+    background-color: #46cd46;
+}
+
+.time-elapsed-stats-header {
+    background-color: #419ae2;
+}
+
+.score-stats-header {
+    background-color: #e05d7c;
+}
+
+/* info-panel styles End -------------------------------------*/
+
+/* Question style start ------------------------------------ */
+
+.question-title {
+    font: 20px/1.4 Verdana, sans-serif;
+}
+
+.submit-button {
+    cursor: pointer;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    padding: .5rem 1rem;
+    color: white;
+    font: 1rem Verdana, sans-serif;
+    background-color: #46cd46;
+    border: 1px solid transparent;
+    border-radius: 0.2rem;
+}
+
+.submit-button:hover {
+    background-color: #40af40;
+}
+
+/* Question style end --------------------------------------- */
+
+/* Calender style start ------------------------------- */
+
+.calender {
+    width: 500px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+/* Month header */
+.month {
+    padding: 10px 25px;
+    background: #BA1CC6;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+#q6 .month {
+    background: #46cd46;
+}
+
+/* Month list */
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #D85AE2;
+}
+
+#q6 .weekdays {
+    background-color: #68E268;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(158, 158, 158);
+    border-left: 1px solid rgb(158, 158, 158);
+    border-right: 1px solid rgb(158, 158, 158);
+    margin: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: black;
+}
+
+/* Calender style end --------------------------- */
+
+/* Clock style start----------------------------- */
+.clock {
+    margin-left: 10px;
+    width: 290px;
+}
+
+.clock img {
+    width: 250px;
+    margin: auto;
+    display: block;
+}
+
+/* Clock style end----------------------------- */
+
+/* Duration table style start -------------------------- */
+.duration-table {
+    font-size: 15px;
+    text-align: center;
+    width: 600px;
+}
+
+.duration-table th {
+    background: #B17BFB;
+}
+
+/* Duration table style end ---------------------------- */
+
+/* Start Answer Grid style ------------------------------- */
+
+.answer-grid-row {
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.answer-grid-column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#q5 .answer-grid-column {
+    width: 290px;
+}
+
+.answer-grid-box {
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: .5rem 1rem;
+    color: white;
+    font: 20px Verdana, sans-serif;
+    background-color: #4FAEFFFF;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+#q3 .answer-grid-box {
+    width: 60px;
+}
+
+.answer-grid-box:hover {
+    background-color: #3B95E0FF;
+}
+
+.answer-grid-box-unfilled {
+    text-align: center;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: .5rem 0.5rem;
+    font: 20px Verdana, sans-serif;
+    border: 1px solid #4FAEFFFF;
+    border-radius: 2px;
+}
+
+.answer-grid-box-unfilled:hover {
+    border: 1px solid #3B95E0FF;
+}
+
+#q5 .answer-grid-box-unfilled {
+    width: 220px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.answer-grid-input {
+    border: solid 1px #4FAEFFFF;
+    width: 30px;
+    font-size: 20px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.answer-grid-input:focus,
+.count-grid-display-input:focus {
+    outline: none;
+    border: solid 1px #3B95E0FF;
+}
+
+#q7 .answer-grid-input {
+    width: auto;
+    font-size: 15px;
+    margin: 5px;
+}
+
+
+.digi-clock-answers img {
+    width: 100px;
+}
+
+.question-text {
+    font-size: 15px;
+}
+
+.question-text p {
+    margin: 10px 0;
+}
+
+.answer-text-input-line {
+    border: none;
+    width: 100px;
+    font-size: 15px;
+    display: inline-block;
+    border-bottom: 1px dashed #000;
+    text-align: center;
+    padding: 0 !important;
+}
+
+
+.answer-text-input-line:focus {
+    outline: none;
+}
+
+.month-box {
+    margin: auto 40px;
+    font-size: 15px;
+    line-height: 35px;
+    border: solid 1px #4FAEFFFF;
+    padding: 10px;
+}
+
+.month-box:hover {
+    border: solid 1px #3B95E0FF;
+}
+
+/* q10 */
+.timeline-container {
+    margin-left: 10px;
+    width: 50%;
+    height: auto;
+}
+
+.time-grid-box {
+    width: 40%;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #4FAEFFFF;
+    border-radius: 2px;
+    font-size: 19px;
+    background-color: white;
+    text-align: left;
+}
+
+.time-grid-box:hover {
+    border-color: #3B95E0FF;
+}
+
+.week-box {
+    margin: auto 40px;
+    font-size: 15px;
+    line-height: 30px;
+    border: solid 1px #4FAEFFFF;
+    padding: 10px;
+}
+
+.week-box:hover {
+    border: solid 1px #3B95E0FF;
+}
+
+/* End Answer Grid style------------------------------- */
+
+
+/* Start Media Queries------------------------ */
+@media (max-width: 900px) {
+    .timeline-container {
+        width: 70%;
+    }
+
+    .time-grid-box {
+        width: 60%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .question-title {
+        font-size: 18px;
+    }
+
+    .calender {
+        width: 80%;
+        margin-left: 10px;
+    }
+
+    .weekdays li {
+        font-size: 15px;
+    }
+
+    .timeline-container {
+        width: 50%;
+    }
+
+    .timeline-container {
+        width: 90%;
+    }
+
+    .time-grid-box {
+        width: 80%;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .question-title,
+    .month ul li {
+        font-size: 18px;
+    }
+
+    .calender {
+        width: 91%;
+        margin-left: 10px;
+    }
+
+
+    .weekdays li {
+        width: 13%;
+        font-size: 12px;
+    }
+
+
+    .days li {
+        width: 13%;
+        font-size: 12px;
+    }
+
+    .answer-grid-box {
+        width: 24%;
+        font-size: 17px;
+        padding: 0.5em;
+    }
+
+    .digi-clock-answers img {
+        width: 90% !important;
+    }
+
+    .clock {
+        width: 250px;
+    }
+
+    #q5 .answer-grid-column {
+        width: 250px;
+    }
+
+    #q5 .answer-grid-box-unfilled {
+        width: 200px;
+    }
+
+    .month-box {
+        margin: auto 20px;
+    }
+
+    .week-box {
+        margin: auto 20px;
+    }
+
+    .answer-text-input-line {
+        width: 95px;
+    }
+
+    .duration-table {
+        font-size: 15px;
+        width: 90%;
+    }
+
+    .time-grid-box {
+        width: 90%;
+        padding: 10px;
+    }
+
+
+}
+
+@media (max-width: 350px) {
+
+    .duration-table {
+        font-size: 14px;
+        width: 90%;
+        margin-right: 5px;
+    }
+
+    #q7 th,
+    #q7 td {
+        padding: 10px 5px;
+    }
+
+    #q7 .answer-grid-input {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    #q7input7,
+    #q7input6 {
+        width: 90px !important;
+    }
+
+    .week-box {
+        margin: auto 10px;
+    }
+
+    .time-grid-box {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 250px) {
+
+    .calender {
+        width: 98%;
+        margin-left: 10px;
+    }
+
+    .weekdays li {
+        width: 12%;
+        font-size: 9px;
+    }
+
+
+    .days li {
+        width: 12%;
+        font-size: 9px;
+    }
+
+    .answer-grid-box {
+        width: 20%;
+        font-size: 12px;
+        padding: 0.5em;
+    }
+
+    .clock {
+        width: 90%;
+    }
+
+    .clock img {
+        width: 90% !important;
+    }
+
+    .time-row {
+        width: 90% !important;
+    }
+
+    #q5 .answer-grid-column {
+        width: 90%;
+    }
+
+    #q5 .answer-grid-box-unfilled {
+        width: 80%;
+    }
+}
+
+/* End Media Queries------------------------  */

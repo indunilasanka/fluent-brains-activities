@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="./img/favicon.ico"
+      rel="shortcut icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Grammer</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="../js/DragDropTouch.js"></script>
+  </head>
+
+<body onload="setScore()">
+<div id="app">
+    <div class="popup-container">
+        <div class="popup">
+            <div class="animation1">
+                <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="popup-upper">
+                <div class="popup-close-icon" onclick="switchQuestion()" style="font-size: 15px">
+                    <i class="fa fa-times close-icon"></i>
+                </div>
+                <div class="popup-check-icon">
+                    <img alt="" class="check-img" id="starId1" src="./img/awesome.gif"/>
+                </div>
+                <div class="popup-action" onclick="switchQuestion()">
+                    <p>Next Challenge</p>&#160;
+                    <i class="fa fa-arrow-circle-right" style="font-size: 20px"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="info-panel">
+            <div
+                    class="stats-container problems-attempted-stats-container"
+                    style="margin-left: 1%"
+            >
+            <div class="stats-header problems-attempted-stats-header">
+              <span class="txt-question-answered">ANSWERED</span>
+            </div>
+            <div class="stats-content problems-attempted-stats-content">
+              <span id="question-count">1</span
+              ><span class="all-count">/8</span>
+            </div>
+          </div>
+
+          <div class="stats-container time-elapsed-stats-container">
+            <div class="stats-header time-elapsed-stats-header">
+              <span class="txt-time-elapsed">TIME</span>
+            </div>
+            <div class="stats-content time-elapsed-stats-content">
+              <label id="timerhrs">00</label>:<label id="timermin">00</label
+              >:<label id="timersec">00</label> H
+            </div>
+          </div>
+
+          <div class="stats-container score-and-link-container">
+            <div class="stats-header score-stats-header">
+              <div class="txt-smartscore">SCORE</div>
+            </div>
+            <div class="stats-content score-stats-content">
+              <label id="current-score">0</label>
+            </div>
+          </div>
+        </div>
+        <div class="question-panel" id="qpanel">
+          <ul class="question-list">
+            <li class="question" id="q3">
+              <div class="question-title-box">
+                <i
+                  class="fa fa-volume-up"
+                  onclick="playSound('See the image below. Pick the correct word matching to each image. You can drag and drop the words.')"
+                  style="font-size: 20px; color: #419ae2; cursor: pointer"
+                ></i>
+                <span class="question-title-text"
+                  >See the image below. Pick the correct word matching to each
+                  image. You can drag and drop the words.</span
+                >
+              </div>
+
+              <div class="q3-main-cnt">
+                <div class="q3-qpanel-container">
+                  <div id="imgCnt" class="q4-answer-drop-container">
+                    <div id="greenCnt" class="q4-letter-container">
+                      <div
+                        class="q4-answer-drop-div"
+                        draggable="true"
+                        ondragstart="drag(event)"
+                        ondragover="allowDrop(event)"
+                        ondrop="drop(event)"
+                        canswer="Bird"
+                        id="q4Bird"
+                      >
+                        Bird
+                      </div>
+                    </div>
+
+                    <div id="redCnt1" class="q4-letter-container">
+                      <div
+                        class="q4-answer-drop-div"
+                        draggable="true"
+                        ondragstart="drag(event)"
+                        ondragover="allowDrop(event)"
+                        ondrop="drop(event)"
+                        canswer="Butterfly"
+                        id="q4Butterfly"
+                      >
+                        Butterfly
+                      </div>
+                    </div>
+                    <div id="redCnt2" class="q4-letter-container">
+                      <div
+                        class="q4-answer-drop-div"
+                        draggable="true"
+                        ondragstart="drag(event)"
+                        ondragover="allowDrop(event)"
+                        ondrop="drop(event)"
+                        canswer="Hose"
+                        id="q4Hose"
+                      >
+                        Hose
+                      </div>
+                    </div>
+                    <div id="redCnt3" class="q4-letter-container">
+                      <div
+                        class="q4-answer-drop-div"
+                        draggable="true"
+                        ondragstart="drag(event)"
+                        ondragover="allowDrop(event)"
+                        ondrop="drop(event)"
+                        canswer="Sun"
+                        id="q4Sun"
+                      >
+                        Sun
+                      </div>
+                    </div>
+                    <div id="redCnt3" class="q4-letter-container">
+                      <div
+                        class="q4-answer-drop-div"
+                        draggable="true"
+                        ondragstart="drag(event)"
+                        ondragover="allowDrop(event)"
+                        ondrop="drop(event)"
+                        canswer="Sunflower"
+                        id="q4Sunflower"
+                      >
+                        Sunflower
+                      </div>
+                    </div>
+                  </div>
+                  <!-- sss -->
+                  <div id="imgCnt" class="q4-answer-drop-container">
+                    <div id="greenCnt" class="q4-letter-container">
+                      <div
+                        class="q4-answer-drop-div"
+                        draggable="true"
+                        ondragstart="drag(event)"
+                        ondragover="allowDrop(event)"
+                        ondrop="drop(event)"
+                        canswer="Gloves"
+                        id="q4Gloves"
+                      >
+                        Gloves
+                      </div>
+                    </div>
+
+                    <div id="redCnt1" class="q4-letter-container">
+                      <div
+                        class="q4-answer-drop-div"
+                        draggable="true"
+                        ondragstart="drag(event)"
+                        ondragover="allowDrop(event)"
+                        ondrop="drop(event)"
+                        canswer="Plant"
+                        id="q4Plant"
+                      >
+                        Plant
+                      </div>
+                    </div>
+                    <div id="redCnt2" class="q4-letter-container">
+                      <div
+                        class="q4-answer-drop-div"
+                        draggable="true"
+                        ondragstart="drag(event)"
+                        ondragover="allowDrop(event)"
+                        ondrop="drop(event)"
+                        canswer="Snail"
+                        id="q4Snail"
+                      >
+                        Snail
+                      </div>
+                    </div>
+                    <div id="redCnt3" class="q4-letter-container">
+                      <div
+                        class="q4-answer-drop-div"
+                        draggable="true"
+                        ondragstart="drag(event)"
+                        ondragover="allowDrop(event)"
+                        ondrop="drop(event)"
+                        canswer="Tree"
+                        id="q4Tree"
+                      >
+                        Tree
+                      </div>
+                    </div>
+                    <div id="redCnt3" class="q4-letter-container">
+                      <div
+                        class="q4-answer-drop-div"
+                        draggable="true"
+                        ondragstart="drag(event)"
+                        ondragover="allowDrop(event)"
+                        ondrop="drop(event)"
+                        canswer="Umbrella"
+                        id="q4Umbrella"
+                      >
+                        Umbrella
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="q3-row-container">
+                  <div class="q3-row">
+                    <div
+                      style="border-right: 0px; border-bottom: 0px"
+                      class="q3-column"
+                    >
+                      <div class="q3-img-container">
+                        <img class="q3-img" src="../img/sun.svg" alt="" />
+                      </div>
+                      <div class="q4-dd-grid-ans-box-column" id="q4block4">
+                        <div
+                          class="q4-answer-box-drop-div"
+                          draggable="true"
+                          ondragstart="drag(event)"
+                          ondragover="allowDrop(event)"
+                          ondrop="drop(event)"
+                        ></div>
+                      </div>
+                    </div>
+                    <div style="border-bottom: 0px" class="q3-column">
+                      <div class="q3-img-container">
+                        <img class="q3-img" src="../img/tree.svg" alt="" />
+                      </div>
+                      <div class="q4-dd-grid-ans-box-column" id="q4block4">
+                        <div
+                          class="q4-answer-box-drop-div"
+                          draggable="true"
+                          ondragstart="drag(event)"
+                          ondragover="allowDrop(event)"
+                          ondrop="drop(event)"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--  -->
+
+                  <div class="q3-row">
+                    <div
+                      style="border-right: 0px; border-bottom: 0px"
+                      class="q3-column"
+                    >
+                      <div class="q3-img-container">
+                        <img class="q3-img" src="../img/bird.svg" alt="" />
+                      </div>
+                      <div class="q4-dd-grid-ans-box-column" id="q4block4">
+                        <div
+                          class="q4-answer-box-drop-div"
+                          draggable="true"
+                          ondragstart="drag(event)"
+                          ondragover="allowDrop(event)"
+                          ondrop="drop(event)"
+                        ></div>
+                      </div>
+                    </div>
+                    <div style="border-bottom: 0px" class="q3-column">
+                      <div class="q3-img-container">
+                        <img class="q3-img" src="../img/umbrella.svg" alt="" />
+                      </div>
+                      <div class="q4-dd-grid-ans-box-column" id="q4block4">
+                        <div
+                          class="q4-answer-box-drop-div"
+                          draggable="true"
+                          ondragstart="drag(event)"
+                          ondragover="allowDrop(event)"
+                          ondrop="drop(event)"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--  -->
+
+                  <div class="q3-row">
+                    <div
+                      style="border-right: 0px; border-bottom: 0px"
+                      class="q3-column"
+                    >
+                      <div class="q3-img-container">
+                        <img class="q3-img" src="../img/gloves.svg" alt="" />
+                      </div>
+                      <div class="q4-dd-grid-ans-box-column" id="q4block4">
+                        <div
+                          class="q4-answer-box-drop-div"
+                          draggable="true"
+                          ondragstart="drag(event)"
+                          ondragover="allowDrop(event)"
+                          ondrop="drop(event)"
+                        ></div>
+                      </div>
+                    </div>
+                    <div style="border-bottom: 0px" class="q3-column">
+                      <div class="q3-img-container">
+                        <img class="q3-img" src="../img/sunflower.svg" alt="" />
+                      </div>
+                      <div class="q4-dd-grid-ans-box-column" id="q4block4">
+                        <div
+                          class="q4-answer-box-drop-div"
+                          draggable="true"
+                          ondragstart="drag(event)"
+                          ondragover="allowDrop(event)"
+                          ondrop="drop(event)"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--  -->
+
+                  <div class="q3-row">
+                    <div
+                      style="border-right: 0px; border-bottom: 0px"
+                      class="q3-column"
+                    >
+                      <div class="q3-img-container">
+                        <img class="q3-img" src="../img/hose.svg" alt="" />
+                      </div>
+                      <div class="q4-dd-grid-ans-box-column" id="q4block4">
+                        <div
+                          class="q4-answer-box-drop-div"
+                          draggable="true"
+                          ondragstart="drag(event)"
+                          ondragover="allowDrop(event)"
+                          ondrop="drop(event)"
+                        ></div>
+                      </div>
+                    </div>
+                    <div style="border-bottom: 0px" class="q3-column">
+                      <div class="q3-img-container">
+                        <img class="q3-img" src="../img/butterfly.svg" alt="" />
+                      </div>
+                      <div class="q4-dd-grid-ans-box-column" id="q4block4">
+                        <div
+                          class="q4-answer-box-drop-div"
+                          draggable="true"
+                          ondragstart="drag(event)"
+                          ondragover="allowDrop(event)"
+                          ondrop="drop(event)"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--  -->
+
+                  <div class="q3-row">
+                    <div style="border-right: 0px" class="q3-column">
+                      <div class="q3-img-container">
+                        <img class="q3-img" src="../img/snail.svg" alt="" />
+                      </div>
+                      <div class="q4-dd-grid-ans-box-column" id="q4block4">
+                        <div
+                          class="q4-answer-box-drop-div"
+                          draggable="true"
+                          ondragstart="drag(event)"
+                          ondragover="allowDrop(event)"
+                          ondrop="drop(event)"
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="q3-column">
+                      <div class="q3-img-container">
+                        <img class="q3-img" src="../img/plant.svg" alt="" />
+                      </div>
+                      <div class="q4-dd-grid-ans-box-column" id="q4block4">
+                        <div
+                          class="q4-answer-box-drop-div"
+                          draggable="true"
+                          ondragstart="drag(event)"
+                          ondragover="allowDrop(event)"
+                          ondrop="drop(event)"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style="display: flex; justify-content: center; margin-top: 20px"
+              >
+                <button class="submit-button" onclick="q3SubmitAnswer()">
+                  Submit
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

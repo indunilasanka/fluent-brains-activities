@@ -1,0 +1,18 @@
+<svg id="tally_5" data-name="tally 5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 42.4">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: none;
+            stroke: #000;
+            stroke-miterlimit: 10;
+            stroke-width: 3px;
+            }
+        </style>
+    </defs>
+    <title>tally5</title>
+    <line class="cls-1" x1="1.5" y1="0.9" x2="1.5" y2="41.7"/>
+    <line class="cls-1" x1="9.5" y1="0.9" x2="9.5" y2="41.7"/>
+    <line class="cls-1" x1="17.5" y1="0.9" x2="17.5" y2="41.7"/>
+    <line class="cls-1" x1="25.5" y1="0.9" x2="25.5" y2="41.7"/>
+    <line class="cls-1" x1="1.5" y1="0.8" x2="25.5" y2="41.7"/>
+</svg>

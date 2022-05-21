@@ -1,0 +1,30 @@
+<svg id="q5-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180.8 102.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        font-size: 19px;
+        font-family: Verdana;
+      }
+    </style>
+  </defs>
+  <title>q5-cube</title>
+  <g id="Layer_6" data-name="Layer 6">
+    <rect class="cls-1" x="54.9" y="20.8" width="58.2" height="54.7"/>
+    <rect class="cls-1" x="75.4" y="1.5" width="58.2" height="54.7"/>
+    <line class="cls-1" x1="54.9" y1="21" x2="75.6" y2="1.5"/>
+    <line class="cls-1" x1="112.8" y1="21" x2="133.6" y2="1.5"/>
+    <line class="cls-1" x1="112.8" y1="75.5" x2="133.6" y2="56"/>
+    <line class="cls-1" x1="54.9" y1="75.5" x2="75.6" y2="56"/>
+  </g>
+  <text class="cls-2" transform="translate(0 52.2)">2 cm</text>
+  <text class="cls-2" transform="translate(65.3 96.8)">2 cm</text>
+  <text class="cls-2" transform="translate(133.6 80.3)">2 cm</text>
+</svg>

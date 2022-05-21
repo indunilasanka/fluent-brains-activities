@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+            href="../img/favicon.ico"
+            rel="shortcut icon"
+            sizes="32x32"
+            type="image/png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Equations</title>
+    <link href="../style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Z7iixnyw"></script>
+    <script src="../js/DragDropTouch.js"></script>
+</head>
+<!--<body onload="startAll()">-->
+<body onload="startAll()">
+<div id="app" style="position: absolute; width: 100%; height: 100%">
+    <div class="flex-container">
+        <div class="info-panel">
+            <div class="stats-container problems-attempted-stats-container">
+                <div class="stats-header problems-attempted-stats-header">
+                    <span class="txt-question-answered">Answered</span>
+                </div>
+                <div class="stats-content problems-attempted-stats-content">0<span class="all-count">/20</span></div>
+            </div>
+
+            <div class="stats-container time-elapsed-stats-container">
+                <div class="stats-header time-elapsed-stats-header">
+                    <span class="txt-time-elapsed">Time</span>
+                </div>
+                <div class="stats-content time-elapsed-stats-content">
+                    <table class="timer practice-timer">
+                        <tbody>
+                        <tr class="box-value-hr-min-sec">
+                            <td id="timerhrs">02 hrs</td>
+                            <td id="timermin">00 mins</td>
+                            <td id="timersec">00 secs</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="stats-container score-and-link-container">
+                <div class="stats-header score-stats-header">
+                    <div class="txt-smartscore">Score <i
+                            class="fa fa-question-circle"
+                            title="This is not your final score. When calculating the final score elapsed time also will be considering"></i></div>
+                </div>
+                <div class="stats-content score-stats-content">
+                    <span id="currentscore">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="question-panel" id="qpanel">
+            <ul class="question-list">
+                <li class="question" id="q2">
+                    <div style="margin-bottom: 20px; margin-left: 10px;">
+                        <i class='fa fa-volume-up' onclick="playSound('See the number line. Pick the correct sign to complete the answer.')"
+                           style='font-size:20px; color: #419ae2; cursor: pointer'></i>
+                        <span class="question-title">See the number line. Pick the correct sign to complete the answer.</span>
+                    </div>
+                    <div class="line-container">
+                        <div class="line-arrow"><</div>
+                        <div class="middle-line" id="lineId"></div>
+                        <div class="line-arrow arrow-left">></div>
+                        <div class="q1-line-box">
+                            <div class="mark-container">
+                                <div class="q1-line-marker"></div>
+                            </div>
+                            <div class="q1-box-content">
+                                <p class="text">4</p>
+                            </div>
+
+                        </div>
+                        <div class="q1-line-box">
+                            <div class="mark-container">
+                                <div class="q1-line-marker">
+                                </div>
+                            </div>
+
+                            <div class="q1-box-content">
+                                <p class="text">3</p>
+                            </div>
+                        </div>
+                        <div class="q1-line-box">
+                            <div class="mark-container">
+                                <div class="q1-line-marker">
+                                    <div class="mark-circle"></div>
+                                </div>
+                            </div>
+                            <div class="q1-points">
+                                <p class="text">R</p>
+                            </div>
+                            <div class="q1-box-content">
+                                <p class="text">2</p>
+                            </div>
+                        </div>
+                        <div class="q1-line-box">
+                            <div class="mark-container">
+                                <div class="q1-line-marker">
+                                </div>
+                            </div>
+
+                            <div class="q1-box-content">
+                                <p class="text">1</p>
+                            </div>
+                        </div>
+                        <div class="q1-line-box">
+                            <div class="mark-container">
+                                <div class="q1-line-marker">
+                                    <div class="mark-circle"></div>
+                                </div>
+                            </div>
+                            <div class="q1-points">
+                                <p class="text">Q</p>
+                            </div>
+                            <div class="q1-box-content">
+                                <p class="text">0</p>
+                            </div>
+                        </div>
+                        <div class="q1-line-box">
+                            <div class="mark-container">
+                                <div class="q1-line-marker">
+                                </div>
+                            </div>
+
+                            <div class="q1-box-content">
+                                <p class="text">-1</p>
+                            </div>
+                        </div>
+                        <div class="q1-line-box">
+                            <div class="mark-container">
+                                <div class="q1-line-marker">
+                                    <div class="mark-circle"></div>
+                                </div>
+                            </div>
+                            <div class="q1-points">
+                                <p class="text">P</p>
+                            </div>
+                            <div class="q1-box-content">
+                                <p class="text">-2</p>
+                            </div>
+                        </div>
+                        <div class="q1-line-box">
+                            <div class="mark-container">
+                                <div class="q1-line-marker">
+                                </div>
+                            </div>
+
+                            <div class="q1-box-content">
+                                <p class="text">-3</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="q1-question-row">
+                        <div>P-Q</div>
+                        <button class="q1-input-box">?</button>
+                        <div>R-Q</div>
+                    </div>
+                    <div class="q1-answer-row">
+                        <button class="q1-answer-box" id="q1input1" onclick="handleSubmitQ1('q1input1', 0)"> ></button>
+                        <button class="q1-answer-box" id="q1input2" onclick="handleSubmitQ1('q1input2', 1)"><</button>
+                        <button class="q1-answer-box" id="q1input3" onclick="handleSubmitQ1('q1input3', 0)">=</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--        <div class="canvas-container">-->
+        <!--            <canvas id="gameCanvas" width="1920px" height="350px" style="position: absolute">Your browser doesnt-->
+        <!--                support HTML5 canvas-->
+        <!--            </canvas>-->
+        <!--        </div>-->
+    </div>
+</div>
+<script src="../js/app.js"></script>
+</body>
+</html>
